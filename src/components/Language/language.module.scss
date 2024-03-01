@@ -1,0 +1,45 @@
+.activeLanguage {
+  border-top: 1px solid #ccc !important;
+}
+
+.arrowLeft {
+  transition: .2s ease-in;
+}
+
+.arrowDown {
+  transition: .2s ease-in;
+  rotate: 90deg;
+}
+
+.language {
+  width: 90px;
+  height: 30px;
+  padding: 2px 2px 2px 10px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: flex;
+}
+
+.languageContainer {
+  position: relative;
+}
+
+.open {
+  scale: 1 1 !important;
+}
+
+.selectLanguage {
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  bottom: -1;
+  transition: 0.2s ease-in;
+  transform-origin: 0 0;
+  scale: 1 0;
+}

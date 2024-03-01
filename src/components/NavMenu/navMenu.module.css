@@ -1,0 +1,96 @@
+.wrap {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap span {
+  width: fit-content;
+  height: fit-content;
+  padding: 30px 20px;
+  border: 2px solid #444;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.expand {
+  transform: scale(1) rotate(0deg) !important;
+}
+.unExpand {
+  transform: scale(0);
+}
+
+.radialmenu {
+  background-color: white;
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  border-style: double;
+  border-color: #7f8bc8;
+  position: relative;
+  margin: auto;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+  transition: 0.7s;
+  transform: scale(0) rotate(270deg);
+}
+
+.a_cover {
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.a_cover:nth-child(1) {
+  top: 50%;
+  left: 50%;
+}
+
+.a_cover:nth-child(2) {
+  top: 47%;
+  left: -7%;
+  rotate: 60deg;
+}
+
+.a_cover:nth-child(3) {
+  top: -3%;
+  left: -32%;
+  rotate: 120deg;
+}
+
+.a_cover div {
+  width: inherit;
+  height: inherit;
+  position: relative;
+}
+
+.a_cover a {
+  position: absolute;
+  white-space: nowrap;
+}
+
+.a_cover a:first-child {
+  top: -20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.a_cover a:last-child {
+  bottom: -20%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  rotate: 180deg;
+}
+

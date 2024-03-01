@@ -1,0 +1,16 @@
+.radioLabel {
+  margin-left: .3rem;
+  font-size: 18px;
+  vertical-align: bottom;
+}
+
+.radioButton {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 1.5rem;
+}
+
+.checkBoxContainer {
+  display: inline;
+}

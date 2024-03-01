@@ -1,0 +1,97 @@
+.clipPathHexagon {
+  width: 100%;
+  height: 100%;
+  /* width: 50%; */
+  /* height: 300px; */
+  /* aspect-ratio: 4 / 3; */
+  padding: 0 60px;
+  background-color: #fff;
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clipPathShadow {
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.description {
+  width: 75%;
+  margin-bottom: 30px;
+}
+
+.left {
+  clip-path: polygon(
+    25% 0,
+    75% 0,
+    /* 92.5% 35%,
+    85% 50%,
+    92.5% 65%, */
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+}
+
+.center {
+  clip-path: polygon(
+    /* 42.0% 0, */
+    75% 0,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%,
+    /* 15% 18%,
+    32.5% 18% */
+  );
+}
+
+.right {
+  clip-path: polygon(
+    25% 0,
+    75% 0,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    /* 7.5% 65%,
+    15% 50%,
+    7.5% 35% */
+  );
+}
+
+.leftShadow,
+.centerShadow,
+.rightShadow {
+  width: 40%;
+  aspect-ratio: 4 / 3.46;
+
+  position: absolute;
+}
+
+.leftShadow {
+  left: 3%;
+  top: 0;
+  z-index: 5;
+}
+
+.centerShadow {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -15%);
+  z-index: 10;
+}
+
+.rightShadow {
+  right: 3%;
+  top: 0;
+  z-index: 11;
+}

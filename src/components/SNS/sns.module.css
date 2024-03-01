@@ -1,0 +1,29 @@
+.sns{
+  width: fit-content;
+  height: 30px;
+  margin: 5px 20px 0 ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .a {
+    height: 30px;
+  }
+}
+
+.snsIcons {
+  margin: 5px;
+  color: #30b3ff;
+}
+
+.facebook{
+  color: #1178f2;
+}
+
+.youtube {
+  color: #ff0000;
+}
+
+.instagram {
+  color: #000;
+}
