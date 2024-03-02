@@ -11,8 +11,8 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
+      <HeroImage />
       <div className={styles.contentsContainer}>
-        <HeroImage />
         <AboutUs />
         <Mission />
         <HandleItems />

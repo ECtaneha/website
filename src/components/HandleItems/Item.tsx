@@ -4,8 +4,8 @@ import styles from './handleItems.module.scss'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 type item = {
-  title: string,
-  description: string,
+  name: string,
+  class: string[],
   src: string,
   width: number,
   height: number,
@@ -23,8 +23,16 @@ export const Item = (props: item) => {
         alt={props.alt}
       />
       <div className={styles.descriptionWrapper}>
-        <h3 className={styles.h3}>{props.title}</h3>
-        <p className={styles.description}>{props.description}</p>
+        <h3 className={styles.h3}>{props.name}</h3>
+        <p className={styles.description}>
+          {props.class.map((array, key)=> (
+            <span
+              key={key}
+              className={styles.classArray}>
+              {array}
+            </span>
+          ))}
+        </p>
       </div>
       <PlayArrowIcon className={styles.itemArrow}/>
     </div>

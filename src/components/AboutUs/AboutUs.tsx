@@ -5,30 +5,29 @@ import { Card } from './Card'
 
 export const AboutUs = () => {
   return (
-    <article className={`
-      ${globalStyles.contentsWrapper}
-      ${styles.aboutUsContainer}
-    `}>
-      <h2 className={globalStyles.h2}>
-        <div className={globalStyles.h2Wrapper}>
-          <p>タイシンについて</p>
-          <span>about us</span>
+    <article className={globalStyles.contentsWrapper}>
+      <div className={styles.aboutUsContainer}>
+        <h2 className={globalStyles.h2}>
+          <div className={globalStyles.h2Wrapper}>
+            <p>タイシンについて</p>
+            <span>about us</span>
+          </div>
+        </h2>
+        <div className={styles.cardWrapper}>
+          {datas.map((data, key) =>
+            <Card
+              key={key}
+              title={data.title}
+              description={data.description}
+              src={data.src}
+              width={data.width}
+              height={data.height}
+              alt={data.alt}
+            />
+          )}
         </div>
-      </h2>
-      <div className={styles.cardWrapper}>
-        {datas.map((data, key) =>
-          <Card
-            key={key}
-            title={data.title}
-            description={data.description}
-            src={data.src}
-            width={data.width}
-            height={data.height}
-            alt={data.alt}
-          />
-        )}
+        <button className={styles.aboutAs}>会社概要</button>
       </div>
-      <button className={styles.aboutAs}>会社概要</button>
     </article>
   )
 }

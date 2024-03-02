@@ -8,13 +8,15 @@ import EmailIcon from '@mui/icons-material/Email';
 export const Header = (props: number) => {
   return (
     <header className={styles.header}>
-      <Link href='/'>
+      <Link
+        className={styles.logo}
+        href='/'>
         <h1 id="logo" className={styles.h1}>
             Taishin
         </h1>
-        {/* <p className={styles.catch}>人々の生活を支え続けて
+        <p className={styles.catch}>人々の生活を支え続けて
           <span className={styles.year}>{props.year}</span>年
-        </p> */}
+        </p>
       </Link>
       <div className={styles.space}></div>
       <SNS />

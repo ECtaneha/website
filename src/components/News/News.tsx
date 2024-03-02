@@ -15,36 +15,46 @@ export const News = () => {
   const [selectedTag, setSelectedTag] = useState<string>('すべて');
 
   return (
-    <div className={globalStyles.contentsWrapper}>
-      <h2 className={globalStyles.h2}>
-        <div className={globalStyles.h2Wrapper}>
-          <p>お知らせ</p>
-          <span>notification</span>
-        </div>
-      </h2>
-      <div className={styles.contents}>
-        <div className={styles.tags}>
-          {tags.map((tag: string, key: number) => (
-            <button
-              key={key}
-              className={`
-                ${styles.tagSelectButton}
-                ${tag === selectedTag && styles.isTagSelected}
-              `}
-              onClick={() => setSelectedTag(tag)}
-            >
-              {tag}
-            </button>
-          ))}
-        </div>
-        <ul className={styles.ul}>
-        {selectedTag !== 'すべて'
-          ? datas
-              // .filter((data: data) => {
-              //   return Array.isArray(data.tag) && data.tag.includes(selectedTag);
-              // })
-              .filter((data: data) => data.tag === selectedTag)
-              .map((data: data, key: number) => (
+    <div className={`
+      ${globalStyles.contentsWrapper}
+      ${styles.backGroundImage}
+    `}>
+      <div className={styles.addPadding}>
+        <h2 className={globalStyles.h2}>
+          <div className={globalStyles.h2Wrapper}>
+            <p>お知らせ</p>
+            <span>notification</span>
+          </div>
+        </h2>
+        <div className={styles.contents}>
+          <div className={styles.tags}>
+            {tags.map((tag: string, key: number) => (
+              <button
+                key={key}
+                className={`
+                  ${styles.tagSelectButton}
+                  ${tag === selectedTag && styles.isTagSelected}
+                `}
+                onClick={() => setSelectedTag(tag)}
+              >
+                {tag}
+              </button>
+            ))}
+          </div>
+          <ul className={styles.ul}>
+          {selectedTag !== 'すべて'
+            ? datas.filter((data: data) => data.tag === selectedTag)
+                .map((data: data, key: number) => (
+                  <NewsArticle
+                    key={key}
+                    createTime={data.createTime}
+                    tag={data.tag}
+                    title={data.title}
+                    text={data.text}
+                  />
+                )
+              )
+            : datas.map((data: data, key: number) => (
                 <NewsArticle
                   key={key}
                   createTime={data.createTime}
@@ -52,17 +62,9 @@ export const News = () => {
                   title={data.title}
                   text={data.text}
                 />
-              ))
-          : datas.map((data: data, key: number) => (
-              <NewsArticle
-                key={key}
-                createTime={data.createTime}
-                tag={data.tag}
-                title={data.title}
-                text={data.text}
-              />
-            ))}
-         </ul>
+              ))}
+          </ul>
+        </div>
       </div>
     </div>
   )

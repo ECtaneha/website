@@ -2,8 +2,12 @@ import React from 'react'
 import { Hexagon } from '../Hexagon/Hexagon'
 import globalStyles from '../../app/page.module.scss'
 import styles from './mission.module.scss'
+import Image from 'next/image'
+import missionImage from '../../static/mission.png'
 
 export const Mission = () => {
+  const width = 800;
+  const height = 600;
   return (
     <div className={globalStyles.contentsWrapper}>
       <h2 className={globalStyles.h2}>
@@ -12,7 +16,14 @@ export const Mission = () => {
           <span>mission</span>
         </div>
       </h2>
-      <div className={styles.missionWrapper}>
+      <Image
+        className={styles.missionImage}
+        src={missionImage}
+        width={width}
+        height={height}
+        alt='タイシン３つの使命'
+      />
+      {/* <div className={styles.missionWrapper}>
         {datas.map((data, key) =>
           <Hexagon
             key={key}
@@ -21,7 +32,7 @@ export const Mission = () => {
             description={data.description}
           />
         )}
-      </div>
+      </div> */}
     </div>
   )
 }

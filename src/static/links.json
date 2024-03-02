@@ -1,6 +1,9 @@
 [
   {
-    "class": "農業　土木　緑化　工業ゴム",
+    "name": "農業/土木",
+    "class": ["農業", "土木", "緑化", "工業ゴム"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "旭有機材 株式会社",
@@ -101,7 +104,10 @@
     ]
   },
   {
-    "class": "上水系水処理　ポンプ　水位制御",
+    "name": "水処理系",
+    "class": ["上水系水処理", "ポンプ", "水位制御"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "アイチポンプ興業 株式会社",
@@ -166,7 +172,10 @@
     ]
   },
   {
-    "class": "上水道本管　給水装置",
+    "name": "水道管",
+    "class": ["上水道本管", "給水装置"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "株式会社 イノアック住環境",
@@ -228,7 +237,9 @@
     ]
   },
   {
-    "class": "塩ビ管",
+    "name": "塩ビ管",
+    "class": ["塩ビ管"],
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "旭有機材 株式会社",
@@ -269,7 +280,10 @@
     ]
   },
   {
-    "class": "鋼管　ステンレス鋼管",
+    "name": "鋼・ステンレス鋼管",
+    "class": ["鋼管", "ステンレス鋼管"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "株式会社 アトムズ",
@@ -334,7 +348,10 @@
     ]
   },
   {
-    "class": "銅管　鉛管　樹脂管　断熱材",
+    "name": "銅・鉛・樹脂管/断熱材",
+    "class": ["銅管", "鉛管", "樹脂管", "断熱材"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "株式会社 イノアック住環境",
@@ -403,7 +420,10 @@
     ]
   },
   {
-    "class": "空調　換気　電機",
+    "name": "空調",
+    "class": ["空調", "換気", "電機"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "オーケー器材 株式会社",
@@ -492,7 +512,10 @@
     ]
   },
   {
-    "class": "消火　フレキ",
+    "name": "消火",
+    "class": ["消火", "フレキ"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "アイエススプリンクラー 株式会社",
@@ -545,7 +568,10 @@
     ]
   },
   {
-    "class": "ガス　計器　標示",
+    "name": "ガス計器類",
+    "class": ["ガス", "計器", "標示"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "愛知時計電機 株式会社",
@@ -638,7 +664,10 @@
     ]
   },
   {
-    "class": "バルブ　水栓",
+    "name": "水栓",
+    "class": ["バルブ", "水栓"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "旭有機材 株式会社",
@@ -707,7 +736,10 @@
     ]
   },
   {
-    "class": "排水金物　枡　蓋",
+    "name": "排水金物/枡/蓋",
+    "class": ["排水金物", "枡", "蓋"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "株式会社アウス",
@@ -772,7 +804,10 @@
     ]
   },
   {
-    "class": "機器",
+    "name": "機器",
+    "class": ["機器"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "株式会社 稲葉製作所",
@@ -925,7 +960,10 @@
     ]
   },
   {
-    "class": "排水系水処理　浄化槽 便槽　ブロワー",
+    "name": "排水処理系",
+    "class": ["排水系水処理", "浄化槽 便槽", "ブロワー"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "株式会社 アンレット",
@@ -978,7 +1016,10 @@
     ]
   },
   {
-    "class": "支持金物　ファスニング 溶剤",
+    "name": "支持金物類",
+    "class": ["支持金物", "ファスニング 溶剤"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "株式会社 アカギ",
@@ -1043,7 +1084,10 @@
     ]
   },
   {
-    "class": "工具",
+    "name": "工具類",
+    "class": ["工具"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
     "links": [
       {
         "name": "アックスブレーン 株式会社",

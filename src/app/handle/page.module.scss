@@ -1,1 +1,33 @@
-git commit -m "first commit"
+.a {
+  width: fit-content;
+  padding-right: .5rem;
+  background-color: #fff;
+  border: none;
+  border-bottom: 1px solid #444;
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+.contentsContainer {
+  width: 100%;
+  height: auto;
+  margin-top: 60px;
+}
+
+.h2 {
+  padding-left: 1rem;
+  border-bottom: 2px solid #444;
+}
+
+.itemArrow {
+  padding-top: 2px;
+  font-size: .75rem;
+}
+
+.linksContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 5px;
+}
+
