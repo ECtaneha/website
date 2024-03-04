@@ -1,7 +1,5 @@
 import styles from "./page.module.scss";
 import { HeroImage } from "../components/HeroImage/HeroImage";
-import { Monologue } from "../components/Monologue/Monologue";
-import { NavMenu } from "../components/NavMenu/NavMenu";
 import { News } from "../components/News/News";
 import { Mission } from '../components/Mission/Mission'
 import { AboutUs } from "@/components/AboutUs/AboutUs";

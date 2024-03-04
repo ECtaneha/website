@@ -30,8 +30,11 @@ const links =[
   },
 ]
 
-export const Footer = (props: number) => {
+export const Footer = () => {
   const [arrowSwitch, setArrowSwitch] = useState<boolean>(false);
+
+  const d = new Date();
+  const now = d.getFullYear();
 
   return (
     <footer className={`
@@ -84,7 +87,7 @@ export const Footer = (props: number) => {
               <div className={styles.ninteiWrapper}>
                 <Image
                   className={styles.nintei}
-                  src={nintei}
+                  src='/public/images/nintei_logo.jpg'
                   width={40}
                   height={40}
                   alt='経済産業省認定マーク'
@@ -94,7 +97,7 @@ export const Footer = (props: number) => {
           </div>
         </div>
 
-        <small className={styles.small}>©Taishin Co.,Ltd. {props.now} since1978</small>
+        <small className={styles.small}>©Taishin Co.,Ltd. {now} since1978</small>
     </footer>
   )
 }

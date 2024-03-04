@@ -1,7 +1,7 @@
 import React from 'react'
-import globalStyles from '../page.module.css'
+import globalStyles from '../page.module.scss'
 
-export default function page(props) {
+export default function page(props: any) {
   return (
     <div className={globalStyles.container}>
       <h2>以下の内容で送信してよろしいですか？</h2>

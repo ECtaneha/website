@@ -1,6 +1,6 @@
 'use client'
 import globalStyles from '../page.module.scss'
-import styles from './page.module.css'
+import styles from './page.module.scss'
 import { TextField } from '@mui/material';
 import WarningIcon from '@mui/icons-material/Warning';
 import { useState } from 'react';

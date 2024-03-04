@@ -23,8 +23,9 @@ export const HandleItems = () => {
             <Link
               key={key}
               className={styles.link}
-              as={`/handle/${data.name}`}
-              href={{ pathname: `/handle/${data.name}`, query: data.name}}
+              href=''
+              // as={`/handle/${data.name}`}
+              // href={{ pathname: `/handle/${data.name}`, query: data.name}}
             >
               <Item
                 name={data.name}
@@ -40,7 +41,7 @@ export const HandleItems = () => {
         <button className={styles.list}>
           <Link
             href="/handle"
-            as={`/handle/list`}
+            // as={`/handle/list`}
             // href={{ pathname: `/handle/list`, query: '一覧'}}
           >
             一覧はこちら

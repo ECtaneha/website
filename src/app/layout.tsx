@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import Favicon from '/public/images/Metadata/Favicon.ico';
 import { Inter } from "next/font/google";
 import { Header } from "../components//Header/Header";
-import { Nav } from "../components/Nav/Nav";
 import { Footer } from "../components/Footer/Footer";
 import { CssBaseline } from "@mui/material";
 
@@ -23,17 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const d = new Date();
-  const now = d.getFullYear();
-  const year = now - 1978;
-
   return (
     <html lang="jp">
       <body className={inter.className}>
         <CssBaseline />
-        <Header year={year}/>
+        <Header />
         {children}
-        <Footer  now={now}/>
+        <Footer />
       </body>
     </html>
   );

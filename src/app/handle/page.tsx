@@ -6,7 +6,7 @@ import links from '../../static/links.json'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { useState } from 'react';
 
-export default function Page(props: string) {
+export default function Page() {
   const [activeClass, setActiveClass] = useState<string>('一覧');
 
   return (

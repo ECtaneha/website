@@ -1,11 +1,15 @@
 import React from 'react'
-import styles from './header.module.css'
+import styles from './header.module.scss'
 import Link from 'next/link'
 import { SNS } from "../SNS/SNS"
 import { Language } from '../Language/Language'
 import EmailIcon from '@mui/icons-material/Email';
 
-export const Header = (props: number) => {
+export const Header = () => {
+  const d = new Date();
+  const now = d.getFullYear();
+  const year = now - 1978;
+
   return (
     <header className={styles.header}>
       <Link
@@ -15,7 +19,7 @@ export const Header = (props: number) => {
             Taishin
         </h1>
         <p className={styles.catch}>人々の生活を支え続けて
-          <span className={styles.year}>{props.year}</span>年
+          <span className={styles.year}>{year}</span>年
         </p>
       </Link>
       <div className={styles.space}></div>
