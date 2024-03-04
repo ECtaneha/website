@@ -1,4 +1,4 @@
-import globalStyles from '../page.module.css'
+import globalStyles from '../page.module.scss'
 
 export default function Page() {
   return (

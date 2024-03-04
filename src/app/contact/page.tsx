@@ -1,12 +1,11 @@
 'use client'
-import globalStyles from '../page.module.css'
+import globalStyles from '../page.module.scss'
 import styles from './page.module.css'
-import { Button, TextField } from '@mui/material';
+import { TextField } from '@mui/material';
 import WarningIcon from '@mui/icons-material/Warning';
 import { useState } from 'react';
 import Link from 'next/link'
 import { CheckBoxContainer } from '../../components/CheckBoxContainer/CheckBoxContainer';
-import { sendEmail } from '../api/sendEmail';
 
 type FormProps = {
   company: string;
@@ -79,7 +78,7 @@ export default function Page() {
         <h1 className={styles.h1}>お問い合わせ</h1>
 
         <div className={styles.attention1}>
-          <Link href=''>質問前にお読みください</Link>
+          <Link href=''>ご質問前にお読みください</Link>
         </div>
 
         <br />

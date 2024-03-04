@@ -1,10 +1,11 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import styles from './footer.module.scss'
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SNS } from '../SNS/SNS';
-import nintei from '../../static/nintei_logo.jpg'
+import nintei from '/public/images/nintei_logo.jpg'
 
 const links =[
   {
@@ -30,8 +31,13 @@ const links =[
 ]
 
 export const Footer = (props: number) => {
+  const [arrowSwitch, setArrowSwitch] = useState<boolean>(false);
+
   return (
-    <footer className={styles.footer}>
+    <footer className={`
+      ${styles.footer}
+      ${arrowSwitch && styles.activeFooter}
+    `}>
         <div className={styles.linksContainer}>
           <div className={styles.linksWrapper}>
             {links.map((link, key) => (
@@ -44,9 +50,18 @@ export const Footer = (props: number) => {
               </Link>
             ))}
           </div>
-          <div className={styles.arrowContainer}>
+          <input
+            id="switch"
+            className={styles.arrowSwitch}
+            type="checkbox"
+          />
+          <label
+            htmlFor='switch'
+            className={styles.arrowContainer}
+            onClick={() => setArrowSwitch(!arrowSwitch)}
+          >
             <KeyboardDoubleArrowUpIcon className={styles.arrow}/>
-          </div>
+          </label>
         </div>
         <div className={styles.informationContainer}>
           <div className={styles.informationWrapper}>

@@ -1,5 +1,5 @@
 import React from 'react'
-import globalStyles from '../../app/page.module.scss'
+import globalStyles from '/src/app/page.module.scss'
 import styles from './aboutUs.module.scss'
 import { Card } from './Card'
 
@@ -39,7 +39,7 @@ const datas = [
   {
     'title': '設立',
     'description': 'description',
-    'src': '/src/elements/ピクトグラム-設立.png',
+    'src': '/public/images/founding.png',
     'width': width,
     'height': height,
     'alt': '設立'
@@ -47,7 +47,7 @@ const datas = [
   {
     'title': '売上高',
     'description': 'description',
-    'src': '/src/elements/ピクトグラム-売上高.png',
+    'src': '/public/images/sales.png',
     'width': width,
     'height': height,
     'alt': '売上高'
@@ -55,7 +55,7 @@ const datas = [
   {
     'title': '従業員数',
     'description': 'description',
-    'src': '/src/elements/ピクトグラム-従業員数.png',
+    'src': '/public/images/employees.png',
     'width': width,
     'height': height,
     'alt': '従業員数'
@@ -63,7 +63,7 @@ const datas = [
   {
     'title': '取引社数',
     'description': 'description',
-    'src': '/src/elements/ピクトグラム-握手.png',
+    'src': '/public/images/tradingCompanies.png',
     'width': width,
     'height': height,
     'alt': '取引社数'

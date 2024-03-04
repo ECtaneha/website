@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../HeroImage/heroImage.module.css'
 import Image from 'next/image'
-import localImage from '../../static/hero-image1.jpg'
+import localImage from '/public/images/hero-image1.jpg'
 
 export const HeroImage = () => {
   return (
