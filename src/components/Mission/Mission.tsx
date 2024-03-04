@@ -9,7 +9,10 @@ export const Mission = () => {
   const width = 800;
   const height = 600;
   return (
-    <div className={globalStyles.contentsWrapper}>
+    <div className={`
+      ${globalStyles.contentsWrapper}
+      ${styles.missionContainer}
+    `}>
       <h2 className={globalStyles.h2}>
         <div className={globalStyles.h2Wrapper}>
           <p>タイシン　３つの使命</p>
