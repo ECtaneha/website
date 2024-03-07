@@ -1,5 +1,5 @@
 .articleContainer {
-  width: 65%;
+  width: 55%;
   margin: 80px auto 0;
   padding: 40px;
   background-color: #fff;
@@ -30,7 +30,7 @@
 }
 
 .handleItemsContainer {
-  width: 80%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
   gap: 10px 20px;

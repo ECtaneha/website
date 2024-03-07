@@ -215,8 +215,7 @@
       },
       {
         "name": "株式会社 タブチ",
-        "url": "https://www.tabuchi.co.jp/",
-        "catalog": "https://catalog.tabuchi.co.jp/"
+        "url": "https://www.tabuchi.co.jp/"
       },
       {
         "name": "株式会社 日邦バルブ",
@@ -239,6 +238,7 @@
   {
     "name": "塩ビ管",
     "class": ["塩ビ管"],
+    "description": "",
     "src": "/src/elements/oroshi.jpg",
     "links": [
       {

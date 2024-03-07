@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import globalStyles from '../../app/page.module.scss'
 import styles from './handleItems.module.scss'
@@ -7,6 +8,21 @@ import datas from '../../static/links.json'
 
 const width = 150;
 const height = 30;
+
+type Link = {
+  name: string;
+  url: string;
+};
+
+type ElementData = {
+  name: string;
+  class: string[];
+  description: string;
+  src: string;
+  links: Link[];
+};
+
+const query: ElementData[] = datas;
 
 export const HandleItems = () => {
   return (
@@ -23,9 +39,22 @@ export const HandleItems = () => {
             <Link
               key={key}
               className={styles.link}
-              href=''
-              // as={`/handle/${data.name}`}
-              // href={{ pathname: `/handle/${data.name}`, query: data.name}}
+              as={`/handle/${data.name}`}
+              href={{
+                pathname: `/handle/${data.name}`,
+                query: {
+                  name: data.name,
+                  class: data.class,
+                  description: data.description,
+                  src:  data.src,
+                  links: [
+                    {
+                      name: data.links[0].name,
+                      url: data.links[0].url,
+                    },
+                  ],
+                },
+              }}
             >
               <Item
                 name={data.name}
@@ -40,9 +69,11 @@ export const HandleItems = () => {
         </div>
         <button className={styles.list}>
           <Link
-            href="/handle"
-            // as={`/handle/list`}
-            // href={{ pathname: `/handle/list`, query: '一覧'}}
+            as='/src/app/handle/list'
+            href={{
+              pathname: '/src/app/handle/list',
+              query: datas,
+            }}
           >
             一覧はこちら
           </Link>

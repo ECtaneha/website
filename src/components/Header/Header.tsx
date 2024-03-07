@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { SNS } from "../SNS/SNS"
 import { Language } from '../Language/Language'
 import EmailIcon from '@mui/icons-material/Email';
+import Image from 'next/image';
+import logo from '/public/images/logo-taishin.png'
 
 export const Header = () => {
   const d = new Date();
@@ -16,7 +18,7 @@ export const Header = () => {
         className={styles.logo}
         href='/'>
         <h1 id="logo" className={styles.h1}>
-            Taishin
+            <Image src={logo} width={256} height={31} alt='logo' />
         </h1>
         <p className={styles.catch}>人々の生活を支え続けて
           <span className={styles.year}>{year}</span>年

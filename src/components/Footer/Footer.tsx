@@ -10,7 +10,7 @@ import nintei from '/public/images/nintei_logo.jpg'
 const links =[
   {
     title: '会社概要',
-    url: '',
+    url: '/information',
   },
   {
     title: '採用情報',
@@ -63,7 +63,13 @@ export const Footer = () => {
             className={styles.arrowContainer}
             onClick={() => setArrowSwitch(!arrowSwitch)}
           >
-            <KeyboardDoubleArrowUpIcon className={styles.arrow}/>
+            <KeyboardDoubleArrowUpIcon
+              className={
+                arrowSwitch
+                  ? styles.arrowReverse
+                  : styles.arrow
+              }
+            />
           </label>
         </div>
         <div className={styles.informationContainer}>
@@ -87,7 +93,7 @@ export const Footer = () => {
               <div className={styles.ninteiWrapper}>
                 <Image
                   className={styles.nintei}
-                  src='/public/images/nintei_logo.jpg'
+                  src={nintei}
                   width={40}
                   height={40}
                   alt='経済産業省認定マーク'

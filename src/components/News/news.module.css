@@ -3,8 +3,9 @@
   padding-right: 1rem;
 }
 
-.addPadding {
+.newsContainer {
   width: 60%;
+  height: 800px;
   margin: 0 auto;
   padding: 40px;
   background-color: #fff;

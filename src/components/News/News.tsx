@@ -7,7 +7,7 @@ import { NewsArticle } from './NewsArticle'
 const tags = [
   "すべて",
   "お知らせ",
-  "レク",
+  "社内行事",
   "テキスト"
 ]
 
@@ -19,7 +19,7 @@ export const News = () => {
       ${globalStyles.contentsWrapper}
       ${styles.backGroundImage}
     `}>
-      <div className={styles.addPadding}>
+      <div className={styles.newsContainer}>
         <h2 className={globalStyles.h2}>
           <div className={globalStyles.h2Wrapper}>
             <p>お知らせ</p>
@@ -93,7 +93,7 @@ const datas = [
   },
   {
     'createTime': '2024-06-01',
-    'tag': 'レク',
+    'tag': '社内行事',
     'title':'社内行事による臨時休業のお知らせ',
     'text': '2024年6月25日(月)・26日(火)の2日間、社内行事のため臨時休業させていただきます。大変ご迷惑をお掛けいたしますが、よろしくお願い申し上げます。',
   },

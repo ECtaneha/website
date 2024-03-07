@@ -1,0 +1,144 @@
+.breadList {
+  margin-top: 20px;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.greet {
+  padding: 40px;
+  padding-bottom: 100px;
+  background-color: #f2f2f2;
+  box-shadow: 5px 5px 5px #aaa;
+}
+
+.greetWrapper {
+}
+
+.history {
+
+}
+
+.h1, .h2 {
+  margin: 40px auto 20px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.h1 {
+  width: fit-content;
+  margin-bottom: 60px;
+  padding: 10px 30px;
+  border-bottom: 2px solid #b5c3ff;
+}
+
+.h2 {
+  margin-bottom: 10px;
+}
+
+.h1Container {
+  width: 100%;
+  height: fit-content;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 8px 8px 0 #a5a5a5;
+}
+
+.informationContainer {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0 10%;
+}
+
+.informationWrapper {
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.links {
+  width: 400px;
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+}
+
+.link {
+  scroll-behavior: smooth;
+}
+
+.presidentGreetContainer {
+
+}
+
+.presidentNameContainer {
+  width: 220px;
+  margin-top: 20px;
+  float: right;
+
+  &::after {
+    clear: both;
+  }
+}
+
+.presidentName {
+  padding-left: 1rem;
+  font-size: 20px;
+}
+
+.presidentPhoto {
+  margin-right: 40px;
+  float: left;
+
+  &::after {
+    clear: both;
+  }
+}
+
+.rightNow {
+  text-align: right;
+}
+
+.table01 {
+  border-top: 1px solid #444;
+  // border-bottom: 0;
+  border-spacing: 0;
+
+  & tr {
+    border: 1px solid #444;
+  }
+
+  & th, td {
+    padding: 10px .5rem;
+    border-bottom: 1px solid #444;
+  }
+
+  & th {
+    width: 20%;
+    background-color: #eee;
+    border-right: 1px solid #444;
+    text-align: left;
+  }
+
+  & td {
+    padding-left: 1rem;
+  }
+}
+
+/* sp */
+@media screen and (max-width: 480px) {
+  .table01 {
+    & th, td {
+      width: 100%;
+      display: block;
+    }
+
+    & th {
+      width: 100%;
+    }
+
+    & td {
+      padding-top: 0;
+    }
+  }
+}

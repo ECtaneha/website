@@ -14,18 +14,23 @@
   position: relative;
 }
 
+.arrowReverse {
+  transform: rotateX(180deg);
+}
+
 .arrowSwitch {
   display: none;
 }
-
 
 .footer {
   width: 100%;
   height: fit-content;
   background-color: #fff;
   position: fixed;
-  bottom: -200px;
   left: 0;
+  bottom: -200px;
+  // position: relative;
+  // bottom: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -68,7 +73,7 @@
 
 .link {
   width: fit-content;
-  margin-right: 20px;
+  // margin-right: 20px;
   padding: 8px;
   color: #444;
   font-weight: 600;
@@ -90,7 +95,7 @@
 }
 
 .linksWrapper {
-  width: fit-content;
+  width: 50%;
   display: flex;
   justify-content: space-between;
 }

@@ -1,10 +1,54 @@
-.main {
+.card {
+  padding: 1rem 1.2rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+}
+
+.card span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.card h2 {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.card p {
+  margin: 0;
+  opacity: 0.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 30ch;
+  text-wrap: balance;
+}
+
+
+.code {
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.contentsContainer {
   width: 100%;
-  height: 420vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 200px;
+  padding-top: 110px;
+}
+
+.contentsWrapper {
+  width: 100%;
+  margin: 80px auto 0;
   background-color: #fff;
-  background: url(../../public/images/motonosumijinja001.jpg);
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .description {
@@ -34,62 +78,11 @@
   border-radius: var(--border-radius);
 }
 
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
   max-width: 100%;
   width: var(--max-width);
-}
-
-.card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
-}
-
-.card span {
-  display: inline-block;
-  transition: transform 200ms;
-}
-
-.card h2 {
-  font-weight: 600;
-  margin-bottom: 0.7rem;
-}
-
-.card p {
-  margin: 0;
-  opacity: 0.6;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  max-width: 30ch;
-  text-wrap: balance;
-}
-
-.container {
-  width: 60%;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.contentsContainer {
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 200px;
-  padding-top: 110px;
-}
-
-.contentsWrapper {
-  width: 100%;
-  margin: 80px auto 0;
-  background-color: #fff;
 }
 
 .h2 {
@@ -110,28 +103,6 @@
     z-index: 1;
   }
 }
-
-/* .h2 div::before,
-.h2 div::after {
-  content: '';
-  width: 60%;
-  height: 50%;
-  border: none;
-  border-bottom: 1px solid #444;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-}
-
-.h2 div::before {
-  left: 0;
-  transform: translateX(-50%);
-}
-
-.h2 div::after {
-  right: 0;
-  transform: translateX(50%);
-} */
 
 .h2 span {
   font-size: 16px;
@@ -154,6 +125,15 @@
   position: relative;
 }
 
+.main {
+  width: 100%;
+  height: 420vh;
+  background-color: #fff;
+  background: url(../../public/images/motonosumijinja001.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  scroll-behavior: smooth;
+}
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
