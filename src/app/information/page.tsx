@@ -60,6 +60,7 @@ export default function page() {
           `}>
             社長あいさつ
           </h2>
+          <br />
           <div className={styles.greet}>
             <Image
             className={styles.presidentPhoto}
