@@ -46,13 +46,7 @@ export const HandleItems = () => {
                   name: data.name,
                   class: data.class,
                   description: data.description,
-                  // src:  data.src,
-                  // links: [
-                  //   {
-                  //     name: data.links.name,
-                  //     url: data.links.url
-                  //   },
-                  // ],
+                  src:  data.src
                 },
               }}
             >
@@ -72,7 +66,7 @@ export const HandleItems = () => {
             as='/src/app/handle/list'
             href={{
               pathname: '/src/app/handle/list',
-              query: datas,
+              query: 'query',
             }}
           >
             一覧はこちら
