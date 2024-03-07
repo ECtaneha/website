@@ -46,13 +46,13 @@ export const HandleItems = () => {
                   name: data.name,
                   class: data.class,
                   description: data.description,
-                  src:  data.src,
-                  links: [
-                    {
-                      name: data.links[0].name,
-                      url: data.links[0].url,
-                    },
-                  ],
+                  // src:  data.src,
+                  // links: [
+                  //   {
+                  //     name: data.links.name,
+                  //     url: data.links.url
+                  //   },
+                  // ],
                 },
               }}
             >
