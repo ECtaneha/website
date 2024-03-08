@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import globalStyles from '../page.module.scss'
 import styles from './page.module.scss'
 import Image from 'next/image'
@@ -6,6 +7,7 @@ import history from './history.json'
 import information from './information.json'
 import presidentPhoto from '/public/images/presidentPhoto.jpg'
 import Link from 'next/link'
+import { BreadCrumb } from '../../components/BreadCrumb/BreadCrumb'
 
 function toFullWidth(str: string) {
   str = str.replace(/[A-Za-z0-9]/g, function(s) {
@@ -25,7 +27,8 @@ const texts = (target: string) => {
   return <>{text}</>
 }
 
-export default function page() {
+export default function Page() {
+  const [isActiveLink, setIsActiveLink] = useState<boolean>(false);
   const d = new Date();
   const year = d.getFullYear();
   const month = d.getMonth();
@@ -40,12 +43,20 @@ export default function page() {
       </div>
 
       <div className={styles.informationContainer}>
-        <div className={styles.breadList}>bread list</div>
+        <BreadCrumb />
 
         <div className={styles.links}>
-          <Link className={styles.link} href='#president'>社長あいさつ</Link>
-          <Link className={styles.link} href='#history'>会社沿革</Link>
-          <Link className={styles.link} href='#information'>会社情報</Link>
+          {linkMenu.map((menu, key) => (
+            <Link
+              key={key}
+              className={`
+                ${styles.link}
+                ${isActiveLink && styles.isActiveLink}
+              `}
+              href={menu.url}>
+                {menu.title}
+            </Link>
+          ))}
         </div>
 
         <div
@@ -131,3 +142,19 @@ export default function page() {
     </div>
   )
 }
+
+const linkMenu = [
+  {
+    'title': '社長あいさつ',
+    'url': '#president'
+  },
+  {
+    'title': '会社沿革',
+    'url': '#history'
+  },
+  {
+    'title': '会社情報',
+    'url': '#information'
+  },
+]
+

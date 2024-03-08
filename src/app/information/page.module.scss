@@ -11,13 +11,6 @@
   box-shadow: 5px 5px 5px #aaa;
 }
 
-.greetWrapper {
-}
-
-.history {
-
-}
-
 .h1, .h2 {
   margin: 40px auto 20px;
   font-family: 'Noto Serif JP', serif;
@@ -64,11 +57,28 @@
 }
 
 .link {
+  width: fit-content;
+  height: 20px;
+  margin: 0 10px;
   scroll-behavior: smooth;
-}
+  text-align: center;
+  display: block;
+  position: relative;
 
-.presidentGreetContainer {
+  &::after {
+    content: '';
+    width: 120%;
+    border-bottom: 1px solid #444;
+    display: block;
+    transition: .2s ease-in-out;
+    position: absolute;
+    translate: -10% 0;
+    scale: 0;
+  }
 
+  &:hover::after {
+    scale: 1;
+  }
 }
 
 .presidentNameContainer {

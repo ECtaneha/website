@@ -73,7 +73,6 @@
 
 .link {
   width: fit-content;
-  // margin-right: 20px;
   padding: 8px;
   color: #444;
   font-weight: 600;
@@ -113,13 +112,10 @@
 .ninteiWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .small {
   margin-bottom: 10px;
   color: #444;
-}
-
-.sns {
 }
