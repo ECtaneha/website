@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+
+$tab: 1280px;
+$sp: 768px;
+
+.allMembersPhoto {
+  width: calc(100% / 4);
+  height: auto;
+  position: relative;
+  z-index: 10;
+
+  @media (max-width: 1280px) {
+    width: 100%;
+  }
+}
+
+.allMembersPhotoWrapper {
+  width: 100%;
+  height: 330px;
+  box-shadow: 7px 7px 5px #999999;
+  position: relative;
+  z-index: 10;
+
+  @media (max-width: $tab) {
+    width: 200%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(110px, 1fr));
+  }
+}
+
+.allMembersPhotoContainer {
+  width: 880px;
+  height: auto;
+  margin: 20px auto 20px;
+  position: relative;
+  z-index: 5;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 880px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &::before {
+    top: -15px;
+    left: -15px;
+    background-color: #f8ff2a;
+  }
+  &::after {
+    bottom: -15px;
+    right: -15px;
+    background-color: #d0d3ffcb;
+  }
+
+  @media (max-width: $tab) {
+    width: 440px;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 220px);
+
+    &::before,
+    &::after {
+      content: '';
+      width: 440px;
+      height: 100px;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+
+  @media (max-width: $sp) {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+
+    &::before,
+    &::after {
+      width: 100%;
+      height: 100px;
+    }
+  }
+}
+
+.answer {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-left: 2.5rem;
+}
+
+.bgcGray {
+  width: 100%;
+  padding: 80px 0;
+  background-color:  rgba(217, 217, 217, .1);
+}
+.bgcWhite {
+  width: 100%;
+  padding: 80px 0;
+  background-color:  #fff;
+}
+
+.breadList {
+  margin-top: 20px;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.contentsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexReverese {
+  @media (min-width: $tab) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.greet {
+  height: fit-content;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 7px 7px 7px #ddd;
+}
+
+.h1, .h2 {
+  margin: 120px auto 20px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.h1 {
+  width: fit-content;
+  margin-bottom: 60px;
+  padding: 10px 30px;
+  border-bottom: 2px solid #d0d3ffcb;
+}
+
+.h1Container {
+  width: 100%;
+  height: fit-content;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 8px 8px 0 #a5a5a5;
+}
+
+.h2 {
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.informationContainer {
+  width: 60%;
+  margin: 0 auto 100px;
+  @media (max-width: 768px) {
+    margin-bottom: 60px;
+  }
+}
+
+.interview {
+  width: calc(100% - 340px);
+  overflow-wrap: break-word;
+
+  @media (max-width: $tab) {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.interviewContainer {
+  width: 60%;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow:
+    7px 7px 7px #ddd,
+    -1px -1px 5px #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.interviewWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $tab) {
+    flex-direction: column;
+  }
+}
+
+.link {
+  font-weight: bold;
+}
+
+.links {
+  width: 400px;
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    width: fit-content;
+
+    flex-direction: column;
+  }
+}
+
+.memberName {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.memberPhoto {
+  width: 260px;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  position: relative;
+  z-index: 10;
+
+  @media (max-width: 1280px) {
+    width: 100%;
+  }
+}
+
+.memberPhotoWrapper {
+  width: 300px;
+  height: auto;
+  margin: 20px auto 20px;
+  position: relative;
+  z-index: 5;
+
+  &::before,
+  &::after {
+    content: '';
+    width: 280px;
+    height: 100px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &::before {
+    top: -10px;
+    left: 0;
+    background-color: #f8ff2a;
+  }
+  &::after {
+    bottom: -10px;
+    right: 0px;
+    background-color: #99a0ff;
+  }
+}
+
+.memberWrapper {
+  text-align: center;
+}
+
+.message {
+  width: 100%;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  border: 1px solid #000;
+  overflow-wrap: break-word;
+}
+
+.messageTitle {
+  padding-left: 1rem;
+  font-size: 20px;
+}
+
+.messageWrapper {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.recruitWrapper {
+  width: 100%;
+}
+
+.presidentSignatureContainer {
+  margin: 60px 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  @media (max-width: $sp) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.presidentGreetContainer {
+  @extend .recruitWrapper;
+  width: 60%;
+  margin: 40px auto 0;
+
+
+  @media (max-width: 1280px) {
+    width: 80%;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+.presidentNameContainer {
+  width: 360px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.presidentName {
+  padding-left: 1rem;
+  font-size: 28px;
+}
+
+.presidentPhoto {
+  width: 300px;
+  height: 300px;
+  margin-right: 40px;
+  box-shadow: 5px 5px 5px #c2c2c2;
+
+  @media (max-width: $sp) {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+}

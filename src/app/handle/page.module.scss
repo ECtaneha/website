@@ -3,15 +3,15 @@
   padding-right: .5rem;
   background-color: #fff;
   border: none;
-  border-bottom: 1px solid #444;
   font-size: .75rem;
   line-height: 1.5;
+  cursor: pointer;
 }
 
 .allClass {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 20px;
 }
 
@@ -24,6 +24,30 @@
   width: fit-content;
   padding: 10px;
   list-style: none;
+}
+
+.groupDesc {
+  width: 65%;
+  height: inherit;
+  border: 1px solid #444;
+}
+
+.groupDescription {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.groupDescriptionWrapper {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.groupImage {
+  width: 30%;
+  border: 1px solid #444;
 }
 
 .handleContainer {
@@ -57,4 +81,8 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+}
+
+.tradingCompany {
+  margin-top: 40px;
 }

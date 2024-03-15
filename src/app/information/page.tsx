@@ -8,6 +8,7 @@ import information from './information.json'
 import presidentPhoto from '/public/images/presidentPhoto.jpg'
 import Link from 'next/link'
 import { BreadCrumb } from '../../components/BreadCrumb/BreadCrumb'
+import { usePathname } from 'next/navigation';
 
 function toFullWidth(str: string) {
   str = str.replace(/[A-Za-z0-9]/g, function(s) {
@@ -35,6 +36,8 @@ export default function Page() {
   const YEAR = toFullWidth(year.toString());
   const MONTH = toFullWidth(month.toString());
   const now = year - 1978;
+  const _pathname = usePathname()
+  const pathName = _pathname.replace(`/`, '');
 
   return (
     <div className={globalStyles.contentsWrapper}>
@@ -43,7 +46,11 @@ export default function Page() {
       </div>
 
       <div className={styles.informationContainer}>
-        <BreadCrumb />
+        <BreadCrumb
+          parentPath='トップ'
+          childPath='会社概要'
+        />
+
 
         <div className={styles.links}>
           {linkMenu.map((menu, key) => (

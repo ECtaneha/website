@@ -9,7 +9,6 @@ import datas from '../../static/links.json'
 
 export default function Page() {
   const [activeClass, setActiveClass] = useState<string>('一覧');
-  const [dataIndex, setDataIndex] = useState<number>(0);
 
   return (
     <div className={globalStyles.contentsContainer}>
@@ -36,16 +35,17 @@ export default function Page() {
             </button>
           </div>
           <div className={styles.contentsContainer}>
-
-              {datas.map((data, key) => (
-
-                activeClass === data.name
-                  ? <div key={key}>
-                      <h2 className={styles.h2}>{activeClass}</h2>
-                      <h2 className={styles.h2}>取引業者一覧</h2>
+            {activeClass === '一覧'
+              ? <div>
+                  <h2 className={styles.h2}>取扱業者一覧</h2>
+                  <div className={styles.allClass}>
+                      {datas.map((data, key) => (
                         <ul
+                          key={key}
                           className={styles.companyUl}
                         >
+                          <li>{data.name}</li>
+                          <hr />
                           {data.links.map((company, subKey) => (
                             <li key={subKey}>
                               <Link
@@ -57,33 +57,53 @@ export default function Page() {
                             </li>
                           ))}
                         </ul>
-                      </div>
-                  : activeClass === '一覧' &&
-                      <div>
-                        <h2 className={styles.h2}>取引業者一覧</h2>
-                        <div className={styles.allClass}>
-                            {datas.map((data, key) => (
-                              <ul
-                                key={key}
-                                className={styles.companyUl}
-                              >
-                                <li>{data.name}</li>
-                                <hr />
-                                {data.links.map((company, subKey) => (
-                                  <li key={subKey}>
-                                    <Link
-                                      className={styles.companyLink}
-                                      href={company.url}
-                                    >
-                                      {company.name}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            ))}
-                          </div>
-                      </div>
-              ))}
+                      ))}
+                    </div>
+                </div>
+              : <div>
+                  <h2 className={styles.h2}>{activeClass}</h2>
+                  <div className={styles.groupDescriptionWrapper}>
+                    <h3>小分類</h3>
+                    <div className={styles.groupDescription}>
+                      <p className={styles.groupDesc}>説明文</p>
+                      <p className={styles.groupImage}>画像</p>
+                    </div>
+                  </div>
+                  <div className={styles.groupDescriptionWrapper}>
+                    <h3>小分類</h3>
+                    <div className={styles.groupDescription}>
+                      <p className={styles.groupDesc}>説明文</p>
+                      <p className={styles.groupImage}>画像</p>
+                    </div>
+                  </div>
+                  <h2
+                    className={`
+                      ${styles.h2}
+                      ${styles.tradingCompany}
+                    `}
+                  >
+                    取引業者一覧
+                  </h2>
+                  {datas.map((data: any, key: number) => (
+                    activeClass === data.name &&
+                      <ul
+                        key={key}
+                        className={styles.companyUl}
+                      >
+                        {data.links.map((company: any, subKey: number) => (
+                          <li key={subKey}>
+                            <Link
+                              className={styles.companyLink}
+                              href={company.url}
+                            >
+                              {company.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                  ))}
+                </div>
+            }
           </div>
         </div>
       </div>

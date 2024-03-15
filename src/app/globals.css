@@ -1,3 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* height: 4400px; */
+  position: relative;
+}
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;

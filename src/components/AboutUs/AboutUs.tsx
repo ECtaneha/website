@@ -38,24 +38,24 @@ const height = 200;
 const datas = [
   {
     'title': '設立',
-    'description': 'description',
-    'src': '/public/images/founding.png',
+    'description': '昭和53年2月17日',
+    'src': '/images/founding.png',
     'width': width,
     'height': height,
     'alt': '設立'
   },
   {
     'title': '売上高',
-    'description': 'description',
-    'src': '/public/images/sales.png',
+    'description': '26億5千万円（令和3年度）',
+    'src': '/images/sales.png',
     'width': width,
     'height': height,
     'alt': '売上高'
   },
   {
     'title': '従業員数',
-    'description': 'description',
-    'src': '/public/images/employees.png',
+    'description': '35名',
+    'src': '/images/employees.png',
     'width': width,
     'height': height,
     'alt': '従業員数'
@@ -63,7 +63,7 @@ const datas = [
   {
     'title': '取引社数',
     'description': 'description',
-    'src': '/public/images/tradingCompanies.png',
+    'src': '/images/tradingCompanies.png',
     'width': width,
     'height': height,
     'alt': '取引社数'

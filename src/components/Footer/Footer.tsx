@@ -14,7 +14,7 @@ const links =[
   },
   {
     title: '採用情報',
-    url: '',
+    url: '/recruit',
   },
   {
     title: '取扱品目',
@@ -22,7 +22,7 @@ const links =[
   },
   {
     title: 'お問い合わせ',
-    url: '',
+    url: '/contact',
   },
   {
     title: 'プライバシーポリシー',

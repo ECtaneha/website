@@ -13,7 +13,9 @@ export const Header = () => {
   const year = now - 1978;
 
   return (
-    <header className={styles.header}>
+    <header
+      id='header'
+      className={styles.header}>
       <Link
         className={styles.logo}
         href='/'>

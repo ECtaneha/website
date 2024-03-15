@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { Header } from "../components//Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import { CssBaseline } from "@mui/material";
+import { ToTopButton } from "@/components/ToTopButton/ToTopButton";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,6 +29,7 @@ export default function RootLayout({
         <CssBaseline />
         <Header />
         {children}
+        <ToTopButton />
         <Footer />
       </body>
     </html>

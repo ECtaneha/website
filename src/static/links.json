@@ -1,6 +1,6 @@
 [
   {
-    "name": "農業/土木",
+    "name": "農業 / 土木",
     "class": ["農業", "土木", "緑化", "工業ゴム"],
     "description": "",
     "src": "/src/elements/oroshi.jpg",
@@ -348,7 +348,7 @@
     ]
   },
   {
-    "name": "銅・鉛・樹脂管/断熱材",
+    "name": "銅・鉛・樹脂管 / 断熱材",
     "class": ["銅管", "鉛管", "樹脂管", "断熱材"],
     "description": "",
     "src": "/src/elements/oroshi.jpg",
@@ -512,62 +512,6 @@
     ]
   },
   {
-    "name": "消火",
-    "class": ["消火", "フレキ"],
-    "description": "",
-    "src": "/src/elements/oroshi.jpg",
-    "links": [
-      {
-        "name": "アイエススプリンクラー 株式会社",
-        "url": "http://www.aiesu-sp.com/"
-      },
-      {
-        "name": "アキレス 株式会社",
-        "url": "https://www.achilles-rf.com/"
-      },
-      {
-        "name": "株式会社 立売堀製作所",
-        "url": "https://www.itachibori.co.jp/"
-      },
-      {
-        "name": "株式会社 北浦製作所",
-        "url": "https://kitaura-ss.co.jp/"
-      },
-      {
-        "name": "櫻護謨 株式会社",
-        "url": "http://www.sakura-rubber.co.jp/"
-      },
-      {
-        "name": "千住スプリンクラー 株式会社",
-        "url": "https://www.senjusp.jp/"
-      },
-      {
-        "name": "株式会社 テクノフレックス",
-        "url": "https://www.technoflex.co.jp/"
-      },
-      {
-        "name": "株式会社 TOZEN",
-        "url": "https://www.tozen.co.jp/"
-      },
-      {
-        "name": "株式会社 初田製作所",
-        "url": "https://hatsuta.co.jp/"
-      },
-      {
-        "name": "ヤマトプロテック 株式会社",
-        "url": "https://www.yamatoprotec.co.jp/"
-      },
-      {
-        "name": "ユニット 株式会社",
-        "url": "https://www.unit-signs.co.jp/"
-      },
-      {
-        "name": "ユーシー産業 株式会社",
-        "url": "https://www.evuc.co.jp/"
-      }
-    ]
-  },
-  {
     "name": "ガス計器類",
     "class": ["ガス", "計器", "標示"],
     "description": "",
@@ -664,6 +608,62 @@
     ]
   },
   {
+    "name": "消火",
+    "class": ["消火", "フレキ"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
+    "links": [
+      {
+        "name": "アイエススプリンクラー 株式会社",
+        "url": "http://www.aiesu-sp.com/"
+      },
+      {
+        "name": "アキレス 株式会社",
+        "url": "https://www.achilles-rf.com/"
+      },
+      {
+        "name": "株式会社 立売堀製作所",
+        "url": "https://www.itachibori.co.jp/"
+      },
+      {
+        "name": "株式会社 北浦製作所",
+        "url": "https://kitaura-ss.co.jp/"
+      },
+      {
+        "name": "櫻護謨 株式会社",
+        "url": "http://www.sakura-rubber.co.jp/"
+      },
+      {
+        "name": "千住スプリンクラー 株式会社",
+        "url": "https://www.senjusp.jp/"
+      },
+      {
+        "name": "株式会社 テクノフレックス",
+        "url": "https://www.technoflex.co.jp/"
+      },
+      {
+        "name": "株式会社 TOZEN",
+        "url": "https://www.tozen.co.jp/"
+      },
+      {
+        "name": "株式会社 初田製作所",
+        "url": "https://hatsuta.co.jp/"
+      },
+      {
+        "name": "ヤマトプロテック 株式会社",
+        "url": "https://www.yamatoprotec.co.jp/"
+      },
+      {
+        "name": "ユニット 株式会社",
+        "url": "https://www.unit-signs.co.jp/"
+      },
+      {
+        "name": "ユーシー産業 株式会社",
+        "url": "https://www.evuc.co.jp/"
+      }
+    ]
+  },
+  {
     "name": "水栓",
     "class": ["バルブ", "水栓"],
     "description": "",
@@ -736,7 +736,7 @@
     ]
   },
   {
-    "name": "排水金物/枡/蓋",
+    "name": "排水金物 / 枡 / 蓋",
     "class": ["排水金物", "枡", "蓋"],
     "description": "",
     "src": "/src/elements/oroshi.jpg",
@@ -800,6 +800,62 @@
       {
         "name": "森永エンジニアリング 株式会社",
         "url": "https://www.morieng.co.jp/?doing_wp_cron=1709265689.0906128883361816406250"
+      }
+    ]
+  },
+  {
+    "name": "排水処理系",
+    "class": ["排水系水処理", "浄化槽 便槽", "ブロワー"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
+    "links": [
+      {
+        "name": "株式会社 アンレット",
+        "url": "https://www.anlet.co.jp/"
+      },
+      {
+        "name": "株式会社 石垣",
+        "url": "https://www.ishigaki.co.jp/"
+      },
+      {
+        "name": "関西化工 株式会社",
+        "url": "https://kansaikako.co.jp/"
+      },
+      {
+        "name": "クボタ浄化槽システム 株式会社",
+        "url": "https://www.kubota.co.jp/product/johkasou/index.html"
+      },
+      {
+        "name": "セイコー化工機 株式会社",
+        "url": "https://seikow.co.jp/"
+      },
+      {
+        "name": "株式会社 テクノ高槻",
+        "url": "https://www.takatsuki.co.jp/products/"
+      },
+      {
+        "name": "東浜工業 株式会社",
+        "url": "https://www.tohin.co.jp/"
+      },
+      {
+        "name": "日東工器 株式会社",
+        "url": "https://www.nitto-kohki.co.jp/"
+      },
+      {
+        "name": "ネポン 株式会社",
+        "url": "https://www.nepon.co.jp/"
+      },
+      {
+        "name": "株式会社 ハマネツ",
+        "url": "https://www.hamanetsu.co.jp/"
+      },
+      {
+        "name": "ホーコス 株式会社",
+        "url": "https://www.horkos.co.jp/"
+      },
+      {
+        "name": "前澤化成工業 株式会社",
+        "url": "https://www.maezawa-k.co.jp/"
       }
     ]
   },
@@ -960,130 +1016,6 @@
     ]
   },
   {
-    "name": "排水処理系",
-    "class": ["排水系水処理", "浄化槽 便槽", "ブロワー"],
-    "description": "",
-    "src": "/src/elements/oroshi.jpg",
-    "links": [
-      {
-        "name": "株式会社 アンレット",
-        "url": "https://www.anlet.co.jp/"
-      },
-      {
-        "name": "株式会社 石垣",
-        "url": "https://www.ishigaki.co.jp/"
-      },
-      {
-        "name": "関西化工 株式会社",
-        "url": "https://kansaikako.co.jp/"
-      },
-      {
-        "name": "クボタ浄化槽システム 株式会社",
-        "url": "https://www.kubota.co.jp/product/johkasou/index.html"
-      },
-      {
-        "name": "セイコー化工機 株式会社",
-        "url": "https://seikow.co.jp/"
-      },
-      {
-        "name": "株式会社 テクノ高槻",
-        "url": "https://www.takatsuki.co.jp/products/"
-      },
-      {
-        "name": "東浜工業 株式会社",
-        "url": "https://www.tohin.co.jp/"
-      },
-      {
-        "name": "日東工器 株式会社",
-        "url": "https://www.nitto-kohki.co.jp/"
-      },
-      {
-        "name": "ネポン 株式会社",
-        "url": "https://www.nepon.co.jp/"
-      },
-      {
-        "name": "株式会社 ハマネツ",
-        "url": "https://www.hamanetsu.co.jp/"
-      },
-      {
-        "name": "ホーコス 株式会社",
-        "url": "https://www.horkos.co.jp/"
-      },
-      {
-        "name": "前澤化成工業 株式会社",
-        "url": "https://www.maezawa-k.co.jp/"
-      }
-    ]
-  },
-  {
-    "name": "支持金物類",
-    "class": ["支持金物", "ファスニング 溶剤"],
-    "description": "",
-    "src": "/src/elements/oroshi.jpg",
-    "links": [
-      {
-        "name": "株式会社 アカギ",
-        "url": "http://www.akagi-nt.co.jp/"
-      },
-      {
-        "name": "旭有機材 株式会社",
-        "url": "https://www.asahi-yukizai.co.jp/"
-      },
-      {
-        "name": "旭化成 株式会社",
-        "url": "https://www.asahi-kasei.com/jp/"
-      },
-      {
-        "name": "株式会社 エービーシー商会",
-        "url": "https://www.abc-t.co.jp/"
-      },
-      {
-        "name": "サンコーテクノ 株式会社",
-        "url": "https://sanko-techno.co.jp/"
-      },
-      {
-        "name": "株式会社 スリーボンドホールディングス",
-        "url": "https://www.threebond.co.jp/"
-      },
-      {
-        "name": "東洋ベース 株式会社",
-        "url": "http://www.toyo-base.co.jp/"
-      },
-      {
-        "name": "日栄インテック 株式会社",
-        "url": "https://www.nichieiintec.jp/"
-      },
-      {
-        "name": "日東電工 株式会社",
-        "url": "https://www.nitto.com/jp/ja/"
-      },
-      {
-        "name": "日本ヘルメチックス 株式会社",
-        "url": "http://www.nihon-hermetics.co.jp/"
-      },
-      {
-        "name": "ネグロス電工 株式会社",
-        "url": "https://www.negurosu.co.jp/"
-      },
-      {
-        "name": "株式会社 ヘルメチック",
-        "url": "https://www.hermetic.co.jp/"
-      },
-      {
-        "name": "ユニカ 株式会社",
-        "url": "https://www.unika.co.jp/"
-      },
-      {
-        "name": "ローバル 株式会社",
-        "url": "https://www.roval.co.jp/"
-      },
-      {
-        "name": "若井ホールディングス 株式会社",
-        "url": "https://www.wakaisangyo.co.jp/"
-      }
-    ]
-  },
-  {
     "name": "工具類",
     "class": ["工具"],
     "description": "",
@@ -1216,6 +1148,74 @@
       {
         "name": "株式会社 ロブテックス",
         "url": "https://www.lobtex.co.jp/"
+      }
+    ]
+  },
+  {
+    "name": "支持金物類",
+    "class": ["支持金物", "ファスニング 溶剤"],
+    "description": "",
+    "src": "/src/elements/oroshi.jpg",
+    "links": [
+      {
+        "name": "株式会社 アカギ",
+        "url": "http://www.akagi-nt.co.jp/"
+      },
+      {
+        "name": "旭有機材 株式会社",
+        "url": "https://www.asahi-yukizai.co.jp/"
+      },
+      {
+        "name": "旭化成 株式会社",
+        "url": "https://www.asahi-kasei.com/jp/"
+      },
+      {
+        "name": "株式会社 エービーシー商会",
+        "url": "https://www.abc-t.co.jp/"
+      },
+      {
+        "name": "サンコーテクノ 株式会社",
+        "url": "https://sanko-techno.co.jp/"
+      },
+      {
+        "name": "株式会社 スリーボンドホールディングス",
+        "url": "https://www.threebond.co.jp/"
+      },
+      {
+        "name": "東洋ベース 株式会社",
+        "url": "http://www.toyo-base.co.jp/"
+      },
+      {
+        "name": "日栄インテック 株式会社",
+        "url": "https://www.nichieiintec.jp/"
+      },
+      {
+        "name": "日東電工 株式会社",
+        "url": "https://www.nitto.com/jp/ja/"
+      },
+      {
+        "name": "日本ヘルメチックス 株式会社",
+        "url": "http://www.nihon-hermetics.co.jp/"
+      },
+      {
+        "name": "ネグロス電工 株式会社",
+        "url": "https://www.negurosu.co.jp/"
+      },
+      {
+        "name": "株式会社 ヘルメチック",
+        "url": "https://www.hermetic.co.jp/"
+      },
+      {
+        "name": "ユニカ 株式会社",
+        "url": "https://www.unika.co.jp/"
+      },
+      {
+        "name": "ローバル 株式会社",
+        "url": "https://www.roval.co.jp/"
+      },
+      {
+        "name": "若井ホールディングス 株式会社",
+        "url": "https://www.wakaisangyo.co.jp/"
       }
     ]
   }

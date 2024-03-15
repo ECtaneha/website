@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './aboutUs.module.scss'
-
 type item = {
   title: string,
   description: string,
@@ -18,6 +17,7 @@ export const Card = (props: item) => {
       <p className={styles.description}>{props.description}</p>
       <div className={styles.space}></div>
       <Image
+        className={styles.image}
         src={props.src}
         width={props.width}
         height={props.height}

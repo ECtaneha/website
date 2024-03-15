@@ -1,11 +1,13 @@
 import React from 'react';
-import { usePathname } from 'next/navigation';
 import styles from './breadCrumb.module.scss';
+import Link from 'next/link';
 
-export const BreadCrumb = () => {
-  const _pathname = usePathname()
-  const pathName = _pathname.replace(`/`, '');
+export const BreadCrumb = (props: { parentPath: string, childPath: string }) => {
   return (
-    <div className={styles.breadCrumb}>{pathName}</div>
+    <p className={styles.breadCrumb}>
+      <Link className={styles.breadCrumbParent} href='/'>{props.parentPath}</Link>
+      <span className={styles.breadCrumb}>{`　>　${props.childPath}`}</span>
+    </p>
+
   )
 }
