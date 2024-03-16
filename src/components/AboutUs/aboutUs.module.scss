@@ -1,3 +1,6 @@
+$tab: 1280px;
+$sp: 768px;
+
 .aboutAs {
   width: 150px;
   height: 40px;
@@ -20,8 +23,10 @@
 }
 
 .cardContainer {
-  width: 25%;
-  height: 200px;
+  width: 100%;
+  min-width: 150px;
+  height: auto;
+  aspect-ratio: 1 / 1.42;
   margin-right: 20px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -29,6 +34,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: $tab) {
+    max-width: 200px;
+    margin-right: 0;
+  }
+
+  @media (max-width: $sp) {
+    height: auto;
+    aspect-ratio: 2 / 3;
+  }
 }
 
 .cardWrapper {
@@ -36,6 +51,13 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 1280px) {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }
 
 .description {
@@ -58,11 +80,15 @@
 .image {
   width: 100%;
   height: auto;
-  padding: 10px;
+  padding: 15px;
 }
 
 .space {
   flex: 1;
+
+  @media (max-width: 1280px) {
+    display: none;
+  }
 }
 
 .title {

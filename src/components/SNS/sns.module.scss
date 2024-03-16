@@ -1,3 +1,6 @@
+$tab: 1280px;
+$sp: 768px;
+
 .sns{
   width: fit-content;
   height: 30px;
@@ -8,6 +11,10 @@
 
   .a {
     height: 30px;
+  }
+
+  @media (max-width: $sp) {
+    display: none;
   }
 }
 

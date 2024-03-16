@@ -3,14 +3,19 @@
   height: 60px;
   background-color: #fff;
   border: 2px solid #c1c1c1;
-  border-radius: 50%;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   right: 40px;
   bottom: 80px;
-  mix-blend-mode: difference;
+  transition: .2s ease-in-out;
+  z-index: 100;
+
+  &:hover {
+    border-radius: 50%;
+  }
 }
 
 .upArrow {

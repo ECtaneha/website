@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import globalStyles from '../../app/page.module.scss'
-import styles from './news.module.css'
+import styles from './news.module.scss'
 import { NewsArticle } from './NewsArticle'
 
 const tags = [

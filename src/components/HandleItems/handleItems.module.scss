@@ -1,3 +1,6 @@
+$tab: 1280px;
+$sp: 768px;
+
 .articleContainer {
   width: 55%;
   margin: 80px auto 0;
@@ -6,6 +9,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: $tab) {
+    width: 90%;
+
+  }
+
+  @media (max-width: $sp) {
+    width: 90%;
+    padding: 40px 0;
+  }
 }
 
 .classArray {
@@ -14,6 +27,7 @@
 
 .description {
   width: inherits;
+  height: 2rem;
   font-size: .8rem;
   word-wrap: nowrap;
   text-overflow: ellipsis;
@@ -26,6 +40,11 @@
   padding: 0 5px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $sp) {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .handleItemsContainer {
@@ -39,7 +58,7 @@
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -51,7 +70,7 @@
 }
 
 .image {
-  width: 33%;
+  width: 100%;
   height: auto;
   aspect-ratio: 1 / 1;
   margin-right: 10px;
@@ -65,6 +84,10 @@
   position: absolute;
   bottom: 10px;
   right: 0;
+
+  @media (max-width: $sp) {
+    bottom: 20px;
+  }
 }
 
 .itemContainer {
@@ -81,6 +104,13 @@
   &:hover {
     translate: 2px 2px;
     box-shadow: 0px 0px 0px #999;
+  }
+
+  @media (max-width: $sp) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1.1;
+    flex-direction: column;
   }
 }
 

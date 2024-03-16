@@ -1,3 +1,6 @@
+$tab: 1280px;
+$sp: 768px;
+
 .a {
   width: 85%;
   padding-right: 1rem;
@@ -9,6 +12,11 @@
   margin: 0 auto;
   padding: 40px;
   background-color: #fff;
+
+  @media (max-width: $tab) {
+    width: 95%;
+    padding: 0 !important;
+  }
 }
 
 .contents {
@@ -18,6 +26,10 @@
 
 .backGroundImage {
   padding: 0px 40px;
+  @media (max-width: $tab) {
+    padding: 0;
+  }
+
 }
 
 .head {

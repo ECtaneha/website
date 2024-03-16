@@ -1,0 +1,111 @@
+.menu {
+  width: 100%;
+  height: auto;
+  margin-top: 58px;
+  padding: 0 0 10px 0;
+  background: #fff;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clear: both;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+  transform: scale(1, 0);
+  transform-origin: top;
+}
+
+.menuBtn:checked ~ .menu {
+  transform: scale(1, 1);
+  transform-origin: top;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #000;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu li {
+  border-top: 1px solid rgb(75, 75, 75);
+  padding: 15px 0;
+  margin: 0 54px;
+  opacity: 0;
+  transition: 0.5s;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.menuBtn:checked ~ .menu a,
+.menuBtn:checked ~ .menu li {
+  opacity: 1;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+}
+
+.menuBtn {
+  display: none;
+}
+
+.menuIcon {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding: 24px 14px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.menuBtn:checked ~ .menuIcon .navIcon:before {
+  transform: rotate(-45deg);
+}
+
+.menuBtn:checked ~ .menuIcon .navIcon:after {
+  transform: rotate(45deg);
+}
+
+.menuBtn:checked ~ .menuIcon:not(.steps) .navIcon:before {
+  top: 0;
+}
+.menuBtn:checked ~ .menuIcon:not(.steps) .navIcon:after {
+  bottom: 0;
+}
+
+.menuBtn:checked ~ .menuIcon .navIcon {
+  background: rgba(0, 0, 0, 0);
+  transition: 0.2192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+
+.navIcon {
+  width: 26px;
+  height: 3px;
+  background: #029dd9;
+  display: block;
+  position: relative;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navIcon:before,
+.navIcon:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #029dd9;
+  display: block;
+  position: absolute;
+  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+}
+
+.navIcon:before {
+  top: 9px;
+}
+
+.navIcon:after {
+  bottom: 9px;
+}

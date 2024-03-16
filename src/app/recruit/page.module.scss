@@ -197,7 +197,25 @@ $sp: 768px;
 }
 
 .link {
+  margin: 5px 0;
   font-weight: bold;
+  display: block;
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 120%;
+    border-bottom: 1px solid #444;
+    display: block;
+    transition: .2s ease-in-out;
+    position: absolute;
+    translate: -10% 0;
+    scale: 0;
+  }
+
+  &:hover::after {
+    scale: 1;
+  }
 }
 
 .links {
@@ -335,4 +353,34 @@ $sp: 768px;
     height: auto;
     margin-right: 0;
   }
+}
+
+.requirementsContainer {
+  @extend .recruitWrapper;
+  width: 60%;
+  margin: 0 auto 100px;
+}
+
+.requirementsHeader1 {
+  background-color: #cbe7ff;
+  text-align: center;
+}
+
+.requirementsHeader2 {
+  text-align: left;
+
+  & th, td {
+    padding: 5px .5rem;
+  }
+
+  & th {
+    width: 200px;
+    background-color: #cbe7ff;
+  }
+}
+
+.requirementsTable {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid #444;
 }

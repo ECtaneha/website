@@ -45,28 +45,28 @@ export default function Page() {
 						src={presidentPhoto}
 						width={200}
 						height={200}
-						alt='presidentPhoto'
+						alt='member1'
 					/>
 					<Image
 						className={styles.allMembersPhoto}
 						src={presidentPhoto}
 						width={200}
 						height={200}
-						alt='presidentPhoto'
+						alt='member2'
 					/>
 					<Image
 						className={styles.allMembersPhoto}
 						src={presidentPhoto}
 						width={200}
 						height={200}
-						alt='presidentPhoto'
+						alt='member3'
 					/>
 					<Image
 						className={styles.allMembersPhoto}
 						src={presidentPhoto}
 						width={200}
 						height={200}
-						alt='presidentPhoto'
+						alt='member4'
 					/>
 				</div>
 			</div>
@@ -83,22 +83,11 @@ export default function Page() {
 				</h2>
 				<div className={styles.greet}>
 					<p>
-						人生は河の流れに例えられます。
-						源流は流れが急でも、海に近づくほど流れは穏やかになります。
-						流れが穏やかになるということは、それだけ進む力が必要になるということです。人生も同様で、始まりは人の助けに背を押されながらも、いずれは自力で泳いでいかなければなりません。
-						仕事もまた然り。
-						先達に支えられている間に、自分で泳ぐ力を身に付けなければなりません。
-						その為に必要なもののひとつが「忍耐力」だと思います。
-						成長というのは失敗と成功の繰り返しです。
-						成長できる人間というのは、失敗のくやしさと成功の喜びを知っています。
-						そしてそれらは、人生や仕事を充実させる原動力になると思っています。
-						失敗しても腐らず成功を目指せる忍耐力を持ち、また、境遇を同じくするチームメイトのくやしさに共感し、支え、成功を共に喜び合えることができる人間。
-						私はそんな人間を志し、生きてきました。
-						そして幸運なことに、私は志を同じくする先輩、同僚、後輩に囲まれて、
-						充実した日々を経て今日に至ります。
-						私は常々、そんな方々と仕事をしたいと考えています。
-						私が知ることのできたくやしさと喜びを共有し、共に成長したい。
-						そんな私の情熱に共感を抱ける方々とこれからも共に仕事ができることを、願ってやみません。
+						人生は河の流れに例えられます。<br />
+						川の源流では急な流れも、海に近づくほど穏やかになります。流れが穏やかな場所では、それだけ進む力が必要となります。
+						人生も同様で、始めは人の助けに背を押され進むことが出来たとしても、いずれは自分の力で泳いでいかなければなりません。仕事もまた然り。皆に支えられている間に、泳ぐ力を身に付けていかなければなりません。<br />
+						その力に必要なもののひとつに「忍耐力」があると私は思います。成長というのは失敗と成功の繰り返しです。成長できる人間というのは、失敗のくやしさと成功の喜びを知っています。そしてそれらは、人生や仕事を充実させる原動力になると思っています。失敗しても腐らず成功を目指せる忍耐力を持ち、また、境遇を同じくするチームメイトのくやしさに共感し、支え、成功を共に喜び合えることができる。私はそんな人間を志し、生きてきました。そして幸運なことに、私は志を同じくする先輩、同僚、後輩に囲まれ、充実した日々を経て今日に至ります。<br /><br />
+						そんな私たちの情熱に共感を抱ける方々共に成長しながら一緒に仕事ができることを、願ってやみません。
 					</p>
 					<div className={styles.presidentSignatureContainer}>
 						<Image
@@ -230,6 +219,47 @@ export default function Page() {
 					</div>
 				</div>
 
+			</div>
+
+			<div
+				id='Requirements'
+				className={styles.requirementsContainer}
+			>
+				<h2 className={styles.h2}>
+					募集要項
+				</h2>
+
+				<table className={styles.requirementsTable}>
+					<tbody>
+						<tr>
+							<th className={styles.requirementsHeader1} colSpan={2}>営業職</th>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>給与</th>
+							<td>200,000</td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>給与</th>
+							<td>200,000</td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>給与</th>
+							<td>200,000</td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>給与</th>
+							<td>200,000</td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>給与</th>
+							<td>200,000</td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>給与</th>
+							<td>200,000</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
     </div>
   )

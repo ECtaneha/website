@@ -1,3 +1,6 @@
+$tab: 1280px;
+$sp: 768px;
+
 .activeLanguage {
   border-top: 1px solid #ccc !important;
 }
@@ -21,6 +24,10 @@
   font-size: 1rem;
   line-height: 1.5;
   display: flex;
+
+  @media (max-width: $sp) {
+    display: none;
+  }
 }
 
 .languageContainer {

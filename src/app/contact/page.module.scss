@@ -1,28 +1,3 @@
-.h1 {
-  text-align: center;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.icon {
-  width: 30px;
-  height: 30px;
-}
-
-.confirmAttribute {
-  margin-bottom: 20px;
-  align-self: flex-start;
-}
-
-.span{
-  display: inline-block;
-  height: 42px;
-  line-height: 1.5;
-}
 
 .attention1 {
   width: fit-content;
@@ -41,18 +16,44 @@
   align-items: center;
 }
 
+.confirmAttribute {
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
 .section {
   padding: 20px;
   border-top: 1px solid #ccc;
+}
+
+.span{
+  display: inline-block;
+  height: 42px;
+  line-height: 1.5;
 }
 
 .submit {
   width: 200px;
   height: 40px;
   margin: 20px 0;
-  border-radius: 20px;
+  border-radius: 5px;
   border: none;
-  background-color: rgb(56, 56, 247);
+  background-color: rgb(195, 195, 255);
   color: #fff;
   font-size: 20px;
 }

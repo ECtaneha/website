@@ -16,23 +16,32 @@ export default function Page() {
         <h1 className={styles.h1}>取扱品目</h1>
         <div className={styles.linksContainer}>
           <div className={styles.linksWrapper}>
-            {links.map((link, key) => (
-              <button
-                key={key}
-                className={styles.a}
-                onClick={() => setActiveClass(link.name)}
-              >
-                <PlayArrowIcon className={styles.itemArrow}/>
-                {link.name}
-              </button>
-            ))}
-            <button
-              className={styles.a}
-              onClick={() => setActiveClass('一覧')}
-            >
-              <PlayArrowIcon className={styles.itemArrow}/>
-              一覧
-            </button>
+            <p className={styles.linksHeader}>品目一覧</p>
+            <ul className={styles.linksUl}>
+              {links.map((link, key) => (
+                <li
+                  key={key}
+                  className={styles.li}
+                >
+                  <button
+                    className={styles.button}
+                    onClick={() => setActiveClass(link.name)}
+                  >
+                    {/* <PlayArrowIcon className={styles.itemArrow}/> */}
+                    {link.name}
+                  </button>
+                </li>
+              ))}
+              <li className={styles.li}>
+                <button
+                  className={styles.button}
+                  onClick={() => setActiveClass('一覧')}
+                >
+                  {/* <PlayArrowIcon className={styles.itemArrow}/> */}
+                  一覧
+                </button>
+              </li>
+            </ul>
           </div>
           <div className={styles.contentsContainer}>
             {activeClass === '一覧'
@@ -47,7 +56,10 @@ export default function Page() {
                           <li>{data.name}</li>
                           <hr />
                           {data.links.map((company, subKey) => (
-                            <li key={subKey}>
+                            <li
+                              key={subKey}
+                              className={styles.companyLi}
+                            >
                               <Link
                                 className={styles.companyLink}
                                 href={company.url}
@@ -91,7 +103,10 @@ export default function Page() {
                         className={styles.companyUl}
                       >
                         {data.links.map((company: any, subKey: number) => (
-                          <li key={subKey}>
+                          <li
+                            key={subKey}
+                            className={styles.companyLi}
+                          >
                             <Link
                               className={styles.companyLink}
                               href={company.url}

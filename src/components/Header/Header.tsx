@@ -6,6 +6,7 @@ import { Language } from '../Language/Language'
 import EmailIcon from '@mui/icons-material/Email';
 import Image from 'next/image';
 import logo from '/public/images/logo-taishin.png'
+import { Hamburger } from '../Hamburger/Hamburger'
 
 export const Header = () => {
   const d = new Date();
@@ -38,6 +39,7 @@ export const Header = () => {
           className={styles.iconContact}
         />
       </Link>
+      <Hamburger />
     </header>
   )
 }

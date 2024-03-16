@@ -14,6 +14,7 @@ export const AboutUs = () => {
           </div>
         </h2>
         <div className={styles.cardWrapper}>
+          <div className={styles.space}></div>
           {datas.map((data, key) =>
             <Card
               key={key}
@@ -25,6 +26,7 @@ export const AboutUs = () => {
               alt={data.alt}
             />
           )}
+          <div className={styles.space}></div>
         </div>
         <button className={styles.aboutAs}>会社概要</button>
       </div>
@@ -46,7 +48,7 @@ const datas = [
   },
   {
     'title': '売上高',
-    'description': '26億5千万円（令和3年度）',
+    'description': '26億5千万円\n（令和3年度）',
     'src': '/images/sales.png',
     'width': width,
     'height': height,

@@ -1,8 +1,15 @@
+$tab: 1280px;
+$sp: 768px;
+
 .catch {
   line-height: 1.1;
   font-size: .7rem;
   font-family: 'Noto Sans';
   text-align: right;
+
+  @media (max-width: $sp) {
+    display: none;
+  }
 }
 
 .header {
@@ -18,10 +25,20 @@
   );
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   position: fixed;
   inset: 0;
   z-index: 10000;
+
+  @media (max-width: $sp) {
+    padding: 0;
+    border-bottom: 1px solid #d3d3d3;
+    box-shadow: 0px 3px 7px #d3d3d3;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(255,255,255);
+  }
 }
 
 .h1 {
@@ -48,18 +65,27 @@
   border: 1px solid #ccc;
   font-weight: 500;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+
+  @media (max-width: $sp) {
+    display: none;
+  }
 }
 
 .logo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .space {
   flex: 1;
+
+  @media (max-width: $sp) {
+    display: none;
+  }
 }
 
 .year {

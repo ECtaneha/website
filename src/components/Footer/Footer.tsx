@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SNS } from '../SNS/SNS';
 import nintei from '/public/images/nintei_logo.jpg'
+import logo from '/public/images/logo-taishin.png'
 
 const links =[
   {
@@ -39,7 +40,7 @@ export const Footer = () => {
   return (
     <footer className={`
       ${styles.footer}
-      ${arrowSwitch && styles.activeFooter}
+      ${arrowSwitch && styles.openFooter}
     `}>
         <div className={styles.linksContainer}>
           <div className={styles.linksWrapper}>
@@ -76,7 +77,9 @@ export const Footer = () => {
           <div className={styles.informationWrapper}>
             <div className={styles.informationWrapperLeft}>
                 <div>
-                  <div className={styles.logo}>logo</div>
+                  <div className={styles.logo}>
+                    <Image src={logo} width={250} height={30} alt='logo'/>
+                  </div>
                   <div className={styles.sns}>
                     <SNS />
                     <Link href=''><small>ソーシャルメディアポリシー</small></Link>

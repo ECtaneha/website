@@ -2,7 +2,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import styles from './sns.module.css'
+import styles from './sns.module.scss'
 import Link from 'next/link';
 
 const snsIconsList = [
