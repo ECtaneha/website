@@ -3,8 +3,8 @@ import globalStyles from '../page.module.scss'
 import styles from './page.module.scss'
 import Link from 'next/link'
 import links from '../../static/links.json'
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import { useState } from 'react';
+import Image from 'next/image'
 import datas from '../../static/links.json'
 
 export default function Page() {
@@ -27,7 +27,6 @@ export default function Page() {
                     className={styles.button}
                     onClick={() => setActiveClass(link.name)}
                   >
-                    {/* <PlayArrowIcon className={styles.itemArrow}/> */}
                     {link.name}
                   </button>
                 </li>
@@ -37,7 +36,6 @@ export default function Page() {
                   className={styles.button}
                   onClick={() => setActiveClass('一覧')}
                 >
-                  {/* <PlayArrowIcon className={styles.itemArrow}/> */}
                   一覧
                 </button>
               </li>
@@ -78,7 +76,13 @@ export default function Page() {
                     <h3>小分類</h3>
                     <div className={styles.groupDescription}>
                       <p className={styles.groupDesc}>説明文</p>
-                      <p className={styles.groupImage}>画像</p>
+                      <Image
+                        className={styles.groupImage}
+                        width={300}
+                        height={200}
+                        src=''
+                        alt=''
+                      />
                     </div>
                   </div>
                   <div className={styles.groupDescriptionWrapper}>

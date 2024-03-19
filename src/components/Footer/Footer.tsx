@@ -82,7 +82,7 @@ export const Footer = () => {
                   </div>
                   <div className={styles.sns}>
                     <SNS />
-                    <Link href=''><small>ソーシャルメディアポリシー</small></Link>
+                    <Link href=''><small>メディアポリシー</small></Link>
                   </div>
                 </div>
             </div>
