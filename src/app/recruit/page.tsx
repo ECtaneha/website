@@ -17,7 +17,7 @@ export default function Page() {
         <h1 className={styles.h1}>採用情報</h1>
       </div>
 
-      <div className={styles.informationContainer}>
+      <div className={styles.recruitHeaderContainer}>
         <BreadCrumb
           parentPath='トップ'
           childPath='採用情報'

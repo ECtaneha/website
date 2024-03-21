@@ -1,0 +1,65 @@
+$tab: 1280px;
+$sp: 768px;
+
+.informationContainer {
+  width: 100%;
+  margin: 20px 0;
+  color: #444;
+  display: flex;
+
+  @media (max-width: $sp) {
+    margin: 0;
+    background-color: #fff;
+    position: absolute;
+    bottom: 90px;
+  }
+}
+
+.informationWrapper {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.informationWrapperLeft,
+.informationWrapperRight {
+  width: 30%;
+}
+
+.informationWrapperRight {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.informationWrapperRight p{
+  white-space: nowrap;
+}
+
+.logo {
+  width: 250px;
+  height: 30px;
+}
+
+.mediaPolicy {
+  @media (max-width: $sp) {
+    // display: none;
+  }
+}
+
+.nintei {
+  margin-bottom: 10px;
+}
+
+.ninteiWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}

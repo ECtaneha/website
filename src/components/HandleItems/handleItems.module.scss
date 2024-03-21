@@ -27,7 +27,7 @@ $sp: 768px;
 
 .description {
   width: inherits;
-  height: 2rem;
+  min-height: 2.5rem;
   font-size: .8rem;
   word-wrap: nowrap;
   text-overflow: ellipsis;
@@ -36,7 +36,7 @@ $sp: 768px;
 
 .descriptionWrapper {
   width: calc(100% - 90px);
-  height: 100px;
+  // height: 100px;
   padding: 0 5px;
   display: flex;
   flex-direction: column;
@@ -53,12 +53,16 @@ $sp: 768px;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
   gap: 10px 20px;
 
-  @media (max-width: 1280px) {
+  @media (max-width: $tab) {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+
+  @media (max-width: 1120px) {
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (max-width: $sp) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -67,14 +71,23 @@ $sp: 768px;
   font-size: 1rem;
   text-decoration: underline;
   line-height: 1.3;
+
+  @media (max-width: $sp) {
+    margin-top: 5px;
+  }
 }
 
 .image {
-  width: 100%;
-  height: auto;
+  width: 80px;
+  height: 80px;
   aspect-ratio: 1 / 1;
   margin-right: 10px;
   border: 1px solid #444;
+
+  @media (max-width: $sp) {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .itemArrow {
@@ -93,7 +106,8 @@ $sp: 768px;
 .itemContainer {
   width: inherit;
   height: inherit;
-  padding: 10px;
+  margin: 10px;
+  padding: 5px 0;
   border: none;
   border-bottom: 3px solid #3114a3;
   // box-shadow: 2px 2px 2px #aaa;
@@ -109,6 +123,7 @@ $sp: 768px;
   @media (max-width: $sp) {
     width: 100%;
     height: auto;
+    padding: 0;
     aspect-ratio: 1 / 1.1;
     flex-direction: column;
   }

@@ -7,6 +7,14 @@
   & p {
     padding: .5rem;
   }
+
+  @media (max-width: 1280px) {
+    height: 340px;
+  }
+
+  @media (max-width: 768px) {
+    height: fit-content;
+  }
 }
 
 .h1, .h2 {
@@ -38,11 +46,27 @@
   width: 60%;
   margin: 0 auto 100px;
   padding: 0 10%;
+
+  @media (max-width: 1280px) {
+    width: calc(100% - 40px);
+    margin: 0 20px 100px;
+    padding: 0;
+  }
+
+  @media (max-width: 768px) {
+    width: calc(100% - 40px);
+    margin: 0 20px 100px;
+    padding: 0;
+  }
 }
 
 .informationWrapper {
   margin-top: 40px;
   padding: 20px;
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
+  }
 }
 
 .links {
@@ -102,6 +126,12 @@
   &::after {
     clear: both;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
 }
 
 .rightNow {
@@ -130,42 +160,6 @@
 
   & td {
     padding-left: 1rem;
-  }
-}
-
-
-@media (max-width: 1280px) {
-  .greet {
-    height: 340px;
-  }
-
-  .informationContainer {
-    width: calc(100% - 40px);
-    margin: 0 20px 100px;
-    padding: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .greet {
-    height: fit-content;
-  }
-
-  .informationContainer {
-    width: calc(100% - 40px);
-    margin: 0 20px 100px;
-    padding: 0;
-  }
-
-  .informationWrapper {
-    padding: 20px 0;
-  }
-
-  .presidentPhoto {
-    width: 100%;
-    height: auto;
-    float: none;
-
   }
 }
 

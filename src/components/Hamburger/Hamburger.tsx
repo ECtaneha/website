@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import styles from './hamburger.module.scss'
 import Link from 'next/link'
+import { SiteMap } from '../SiteMap/SiteMap'
 
 export const Hamburger = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -14,31 +15,37 @@ export const Hamburger = () => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className={`${styles.top} ${isOpen && styles.Open}`}></span>
-        <span className={`${styles.navIcon} ${isOpen && styles.Open}`}></span>
+        <span className={`${styles.navIcon} ${isOpen && styles.navIconOpen}`}></span>
         <span className={`${styles.bottom} ${isOpen && styles.Open}`}></span>
       </label>
-      <ul className={`
-        ${styles.menu}
-        ${isOpen && styles.menuOpen}
-      `}>
-        {data.map((value, key) => (
-          <li
-            key={key}
-            className={`${isOpen && styles.liOpen}`}
-          >
-            <Link
-              className={`
-                ${styles.link}
-                ${isOpen && styles.liOpen}
-              `}
-              href={value.url}
-              onClick={() => setIsOpen(!isOpen)}
+      <div className={`
+          ${styles.menuWrapper}
+          ${isOpen && styles.menuOpen}
+        `}>
+        <ul className={`
+          ${styles.menu}
+          ${isOpen && styles.menuOpen}
+        `}>
+          {data.map((value, key) => (
+            <li
+              key={key}
+              className={`${isOpen && styles.liOpen}`}
             >
-              {value.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+              <Link
+                className={`
+                  ${styles.link}
+                  ${isOpen && styles.liOpen}
+                `}
+                href={value.url}
+                onClick={() => setIsOpen(!isOpen)}
+              >
+                {value.title}
+              </Link>
+            </li>
+          ))}
+          </ul>
+        <SiteMap />
+      </div>
     </div>
   )
 }

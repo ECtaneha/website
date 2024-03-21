@@ -157,7 +157,7 @@ $sp: 768px;
   text-align: center;
 }
 
-.informationContainer {
+.recruitHeaderContainer {
   width: 60%;
   margin: 0 auto 100px;
   @media (max-width: 768px) {
@@ -185,6 +185,10 @@ $sp: 768px;
     -1px -1px 5px #eee;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $sp) {
+    width: 90%;
+  }
 }
 
 .interviewWrapper {
