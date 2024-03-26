@@ -28,7 +28,7 @@
   background-color: #fff;
   position: fixed;
   left: 0;
-  bottom: -205px;
+  bottom: -181px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,7 +37,7 @@
   z-index: 25;
 
   @media (max-width: 1000px) {
-    bottom: -290px;
+    // bottom: -180px;
   }
 
   @media (max-width: 768px) {

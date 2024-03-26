@@ -1,8 +1,17 @@
+$tab: 1280px;
+$sp: 768px;
+
 .allClass {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 20px;
+
+  @media (max-width: $sp) {
+    width: 90%;
+    margin: 40px auto 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .button {
@@ -14,6 +23,7 @@
 
 .companyLi {
   width: fit-content;
+  margin-top: 5px;
   padding-left: .5rem;
 
 }
@@ -75,20 +85,43 @@
   width: 60%;
   margin: 0 auto;
   height: auto;
-  margin-top: 60px;
+
+  @media (max-width: $sp) {
+    width: 90%;
+  }
+}
+
+.h1, .h2 {
+  margin: 120px auto 20px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: bold;
+  text-align: center;
 }
 
 .h1 {
-  text-align: center;
-  margin: 40px 0;
+  width: fit-content;
+  margin-bottom: 60px;
+  padding: 10px 30px;
+  border-bottom: 2px solid #b5c3ff;
+}
+
+.h1Container {
+  width: 100%;
+  height: fit-content;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 8px 8px 0 #a5a5a5;
 }
 
 .h2 {
   margin-top: 20px;
-  padding-left: 1rem;
+  padding-inline: 1rem;
   border-bottom: none;
   border-left: 5px solid blue;
   font-weight: 400;
+
+  @media (max-width: $sp) {
+    border: none;
+  }
 }
 
 .itemArrow {
@@ -113,9 +146,13 @@
 }
 
 .linksContainer {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  column-gap: 20px;
+  // display: grid;
+  // grid-template-columns: 1fr 3fr;
+  // column-gap: 20px;
+
+  // @media (max-width: $sp) {
+  //   display: block;
+  // }
 }
 
 .linksHeader {

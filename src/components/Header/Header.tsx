@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import styles from './header.module.scss'
 import Link from 'next/link'
 import { SNS } from "../SNS/SNS"
@@ -9,14 +10,21 @@ import logo from '/public/images/logo-taishin.png'
 import { Hamburger } from '../Hamburger/Hamburger'
 
 export const Header = () => {
+  const [isOpenState, setIsOpenState] = useState<boolean>(false);
+
   const d = new Date();
   const now = d.getFullYear();
   const year = now - 1978;
-
+  console.log(isOpenState);
+  useEffect(() => {
+    setIsOpenState(isOpenState);
+  }, [isOpenState]);
   return (
     <header
       id='header'
-      className={styles.header}>
+      className={styles.header}
+      onClick={() => setIsOpenState(false)}
+    >
       <Link
         className={styles.logo}
         href='/'>
@@ -39,7 +47,13 @@ export const Header = () => {
           className={styles.iconContact}
         />
       </Link>
-      <Hamburger />
+      <Link
+        className={styles.toTopSP}
+        href='#header'
+      ></Link>
+      <Hamburger
+        isOpenState={isOpenState}
+      />
     </header>
   )
 }

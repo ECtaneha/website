@@ -18,25 +18,25 @@ const groupA = [
     id: 'radioCommodity',
     value: 'a',
     inputProps: 'A',
-    userName: '商品について',
+    userAttribute: '商品について',
   },
   {
     id: 'radioTrade',
     value: 'b',
     inputProps: 'B',
-    userName: 'お取引について',
+    userAttribute: 'お取引について',
   },
   {
     id: 'radioRecruit',
     value: 'c',
     inputProps: 'C',
-    userName: '採用について',
+    userAttribute: '採用について',
   },
   {
     id: 'radioOther',
     value: 'd',
     inputProps: 'D',
-    userName: 'その他',
+    userAttribute: 'その他',
   },
 ]
 
@@ -45,44 +45,31 @@ const groupB = [
     id: 'radioCompany',
     value: 'x',
     inputProps: 'X',
-    userName: '法人/個人事業主',
+    userAttribute: '法人/個人事業主',
   },
   {
     id: 'radioIndividual',
     value: 'y',
     inputProps: 'Y',
-    userName: '個人',
+    userAttribute: '個人',
   },
 ]
 
 
 export default function Page() {
-  const [company, setCompany] = useState<string>("");
-  const [userName, setUserName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [tel, setTel] = useState<string>("");
-  const [content, setContent] = useState<string>("");
-  const [subject, setSubject] = useState<string>("");
-  const [attribute, setAttribute] = useState<string>("");
+  const [subject, setSubject] = useState<string>('');
+  const [attribute, setAttribute] = useState<string>('');
   const [isConfirm, setIsConfirm] = useState<boolean>(false);
   const { register, handleSubmit, reset } = useForm();
 
-  const sendData = {
-    subject,
-    company,
-    userName,
-    email,
-    tel,
-    content,
-  }
-
-
   const onSubmit = async (data: any) => {
-    const response = await fetch("/api/sendMail", {
-      method: "POST",
+    console.log(data);
+
+    const response = await fetch('/api/sendMail', {
+      method: 'POST',
       headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(data),
     }).then((res) => {
@@ -93,7 +80,7 @@ export default function Page() {
 
   return (
     <div className={globalStyles.contentsContainer}>
-      <div className={globalStyles.container}>
+      <div className={styles.confirmContainer}>
         <h1 className={styles.h1}>お問い合わせ</h1>
 
         <div className={styles.attention1}>
@@ -119,7 +106,7 @@ export default function Page() {
                 id={data.id}
                 value={data.value}
                 inputProps={data.inputProps}
-                userName={data.userName}
+                userAttribute={data.userAttribute}
                 setFunction={setSubject}
               />
             )}
@@ -133,7 +120,7 @@ export default function Page() {
                 id={data.id}
                 value={data.value}
                 inputProps={data.inputProps}
-                userName={data.userName}
+                userAttribute={data.userAttribute}
                 setFunction={setAttribute}
               />
             )}
@@ -145,7 +132,9 @@ export default function Page() {
               fullWidth={true}
               id='company'
               placeholder='会社名/屋号を入力してください'
-              onChange={(e) => {setCompany(e.target.value)}}
+              {...register('company',{
+                maxLength: 50,
+              })}
               sx={{marginTop: 2}}
             />
             : <></>
@@ -160,7 +149,6 @@ export default function Page() {
               required: true,
               maxLength: 50,
             })}
-            // onChange={(e) => {setUserName(e.target.value)}}
             required
             sx={{marginTop: 2}}
           />
@@ -180,7 +168,6 @@ export default function Page() {
                 message: 'メールアドレスの形式が不正です',
               },
             })}
-            // onChange={(e) => {setEmail(e.target.value)}}
             required
             sx={{marginTop: 2}}
           />
@@ -190,7 +177,7 @@ export default function Page() {
             id='tel'
             fullWidth={true}
             placeholder='メールアドレスを入力してください'
-            onChange={(e) => {setTel(e.target.value)}}
+            {...register('tel')}
             sx={{marginTop: 2}}
           />
 
@@ -202,8 +189,10 @@ export default function Page() {
             maxRows={30}
             id='content'
             placeholder='お問い合わせ内容を入力してください'
-            // onChange={(e) => {setContent(e.target.value)}}
-            required
+            {...register('message',{
+              required: true,
+              maxLength: 50,
+            })}
             size='medium'
             sx={{marginTop: 2}}
           />
@@ -211,7 +200,6 @@ export default function Page() {
           <button
             type='submit'
             className={styles.submit}
-            // onClick={sendEmail(sendData)}
           >
             送信
           </button>

@@ -6,8 +6,8 @@ import { Item } from './Item'
 import Link from 'next/link'
 import datas from '../../static/links.json'
 
-const width = 150;
-const height = 30;
+const width = 80;
+const height = 80;
 
 type Link = {
   name: string;
@@ -15,6 +15,7 @@ type Link = {
 };
 
 type ElementData = {
+  id: string;
   name: string;
   class: string[];
   description: string;
@@ -39,16 +40,7 @@ export const HandleItems = () => {
             <Link
               key={key}
               className={styles.link}
-              as={`/handle/${data.name}`}
-              href={{
-                pathname: `/handle/${data.name}`,
-                query: {
-                  name: data.name,
-                  class: data.class,
-                  description: data.description,
-                  src:  data.src
-                },
-              }}
+              href={`handle/${data.id}`}
             >
               <Item
                 name={data.name}
@@ -62,13 +54,7 @@ export const HandleItems = () => {
           )}
         </div>
         <button className={styles.list}>
-          <Link
-            as='/src/app/handle/list'
-            href={{
-              pathname: '/src/app/handle/list',
-              query: 'query',
-            }}
-          >
+          <Link href='handle/allClass'>
             一覧はこちら
           </Link>
         </button>

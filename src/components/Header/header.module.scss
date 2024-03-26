@@ -88,6 +88,15 @@ $sp: 768px;
   }
 }
 
+.toTopSP {
+  @media (max-width: $sp) {
+    width: 100%;
+    height: 58px;
+    display: block;
+    flex: 1;
+  }
+}
+
 .year {
   font-size: 1rem;
   font-weight: bold;

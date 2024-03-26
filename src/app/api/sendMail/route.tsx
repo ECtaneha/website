@@ -1,37 +1,47 @@
-import { InquiryEmailTemplate } from '@/components/Email/InquiryTemplate';
-import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
-import * as React from 'react';
+import React from 'react'
+import { NextResponse } from 'next/server'
+import nodeMailer from 'nodemailer'
 
-// 環境変数からResendのAPIキーを取得
-const resend = new Resend('re_q7YLtKCN_6YYQce81s3wZe2FWm4B9CeWE');
+export async function POST(request: { json: () => any; }) {
+  const reqBody = await request.json();
+  const { name, email, message, company } = reqBody;
+  console.log(reqBody);
 
-// 環境変数から送信元に指定するメールアドレスを取得
-const fromEmail = process.env.RESEND_FROM_EMAIL;
-
-export async function POST(request: Request) {
-  // お問い合わせフォームからのデータを取得
-  // name, email, message
-  const req = await request.json();
+  const user = process.env.NEXT_PUBLIC_GMAIL_ADDRESS;
+  const pass = process.env.NEXT_PUBLIC_GMAIL_PASSWORD;
 
   try {
-    const { data, error } = await resend.emails.send({
-      from: fromEmail ?? 'Acme <onboarding@resends.dev>',
-      to: 'hirose@taishin1977.jp',
-      subject: 'お問い合わせありがとうございます',
-      // InquiryTemplate.tsxで作成したテンプレートを使用
-      react: InquiryEmailTemplate({
-        senderName: req.name,
-        content: req.message,
-      }) as React.ReactElement,
-    });
+    const transporter = nodeMailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false,
+      auth: {
+        user: user,
+        pass: pass
+      },
+      tls: {
+        rejectUnauthorized: false
+      },
+      authMethod: 'PLAIN'
+    })
 
-    if (error) {
-      return NextResponse.json({ error });
-    }
+    const mailOptions = {
+      from: 'portfolio site',
+      to: user,
+      subject: 'コンタクトページ',
+      text: `
+        名前：${name}\n\n
+        会社名：${company}\n\n
+        メールアドレス：${email}\n\n
+        メッセージ：${message}
+      `
+    };
 
-    return NextResponse.json({ data });
+    const info = await transporter.sendMail(mailOptions);
+    console.log('成功しました');
+    return NextResponse.json({message: '成功しました'})
   } catch (error) {
-    return NextResponse.json({ error });
+    console.log(error);
+    return NextResponse.json({message: '失敗しました'})
   }
 }

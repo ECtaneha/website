@@ -1,3 +1,5 @@
+$tab: 1280px;
+$sp: 768px;
 
 .attention1 {
   width: fit-content;
@@ -19,6 +21,19 @@
 .confirmAttribute {
   margin-bottom: 20px;
   align-self: flex-start;
+}
+
+.confirmContainer {
+  width: 60%;
+  margin-inline: auto;
+
+  @media (max-width: $tab) {
+    width: 75%;
+  }
+
+  @media (max-width: $sp) {
+    width: 90%;
+  }
 }
 
 .form {

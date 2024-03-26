@@ -16,6 +16,10 @@
   &:hover {
     border-radius: 50%;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .upArrow {

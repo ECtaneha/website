@@ -157,14 +157,6 @@ $sp: 768px;
   text-align: center;
 }
 
-.recruitHeaderContainer {
-  width: 60%;
-  margin: 0 auto 100px;
-  @media (max-width: 768px) {
-    margin-bottom: 60px;
-  }
-}
-
 .interview {
   width: calc(100% - 340px);
   overflow-wrap: break-word;
@@ -231,9 +223,6 @@ $sp: 768px;
   font-weight: bold;
 
   @media (max-width: 768px) {
-    width: fit-content;
-
-    flex-direction: column;
   }
 }
 
@@ -356,6 +345,16 @@ $sp: 768px;
     width: 100%;
     height: auto;
     margin-right: 0;
+  }
+}
+
+.recruitHeaderContainer {
+  width: 60%;
+  margin: 0 auto 100px;
+
+  @media (max-width: 768px) {
+    width: calc(100% - 40px);
+    margin-bottom: 60px;
   }
 }
 

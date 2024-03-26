@@ -1,11 +1,17 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './hamburger.module.scss'
 import Link from 'next/link'
 import { SiteMap } from '../SiteMap/SiteMap'
 
-export const Hamburger = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+export const Hamburger = (props) => {
+  const [isOpen, setIsOpen] = useState<boolean>(props.isOpenState);
+  console.log('isOpenState:'+ props.isOpenState);
+
+  useEffect(() => {
+    setIsOpen(props.isOpenState);
+  }, [props.isOpenState]);
+
   return (
     <div className={styles.hamburgerContainer}>
       <input type="checkbox" className={styles.menuBtn} id="menu-btn" />
