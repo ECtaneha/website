@@ -19,12 +19,17 @@ export default function Page() {
                     key={key}
                     className={styles.companyUl}
                   >
-                    <li id={data.name}>
+                    <h2
+                      id={data.name}
+                      className={`
+                        ${styles.h2}
+                        ${styles.listTitle}
+                      `}
+                    >
                       {data.class.map((prevClass, key) => (
                         <span key={key}>{prevClass}　</span>
                       ))}
-                    </li>
-                    <hr />
+                    </h2>
                     {data.links.map((company, subKey) => (
                       <li
                         key={subKey}

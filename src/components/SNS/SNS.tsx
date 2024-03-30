@@ -1,4 +1,4 @@
-import TwitterIcon from '@mui/icons-material/Twitter';
+import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const snsIconsList = [
   {
-    'sns': 'TwitterIcon',
+    'sns': 'XIcon',
     'url': '',
   },
   {
@@ -44,8 +44,8 @@ export const SNS = () => {
 
 function getSnsIcon(sns: string) {
   switch (sns) {
-    case 'TwitterIcon':
-      return <TwitterIcon className={`${styles.snsIcons} ${styles.twitter}`} />;
+    case 'XIcon':
+      return <XIcon className={`${styles.snsIcons} ${styles.X}`} />;
     case 'FacebookIcon':
       return <FacebookIcon className={`${styles.snsIcons} ${styles.facebook}`} />;
     case 'YouTubeIcon':

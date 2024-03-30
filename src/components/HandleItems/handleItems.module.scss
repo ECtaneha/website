@@ -2,22 +2,19 @@ $tab: 1280px;
 $sp: 768px;
 
 .articleContainer {
-  width: 55%;
-  margin: 80px auto 0;
+  width: 100%;
   padding: 40px;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   @media (max-width: $tab) {
-    width: 90%;
-
+    // width: 90%;
   }
 
   @media (max-width: $sp) {
-    width: 90%;
-    padding: 40px 0;
+    // width: 90%;
+    // padding: 40px 0;
   }
 }
 
@@ -54,20 +51,26 @@ $sp: 768px;
 }
 
 .handleItemsContainer {
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 40px;
+  background-color: #fff;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
   gap: 10px 20px;
 
   @media (max-width: $tab) {
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
-  }
-
-  @media (max-width: 1120px) {
+    width: 80%;
+    margin: 0 auto;
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
 
   @media (max-width: $sp) {
+    width: 100%;
+    margin: 0;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -100,29 +103,24 @@ $sp: 768px;
   height: 14px;
   font-size: 14px;
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   right: 0;
-
-  @media (max-width: $sp) {
-    bottom: 25px;
-  }
 }
 
 .itemContainer {
   width: inherit;
   height: inherit;
   margin: 10px;
-  padding: 5px 0;
+  padding: 5px;
   border: none;
   border-bottom: 3px solid #3114a3;
-  // box-shadow: 2px 2px 2px #aaa;
   display: flex;
-  transition: .1s ease-in;
+  transition: .2s ease-in;
   position: relative;
 
   &:hover {
-    translate: 2px 2px;
-    box-shadow: 0px 0px 0px #999;
+    background-color: rgba(113, 205, 255, .5);
+    // color: #8f8f8f;
   }
 
   @media (max-width: $sp) {

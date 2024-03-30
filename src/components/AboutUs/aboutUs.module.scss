@@ -1,7 +1,7 @@
 $tab: 1280px;
 $sp: 768px;
 
-.aboutAs {
+.aboutAsButton {
   width: 150px;
   height: 40px;
   margin: 30px auto;
@@ -9,6 +9,9 @@ $sp: 768px;
   box-shadow: 3px 3px 3px #999;
   border: 1px solid #ccc;
   transition: .1s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     translate: 2px 2px;
@@ -26,7 +29,7 @@ $sp: 768px;
   width: 100%;
   min-width: 150px;
   height: auto;
-  aspect-ratio: 1 / 1.42;
+  aspect-ratio: 1 / 1;
   margin-right: 20px;
   padding: 20px;
   border: 1px solid #ccc;
@@ -42,12 +45,12 @@ $sp: 768px;
 
   @media (max-width: $sp) {
     height: auto;
-    aspect-ratio: 2 / 3;
+    aspect-ratio: 2 / 2.5;
   }
 }
 
 .cardWrapper {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   justify-content: center;

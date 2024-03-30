@@ -29,7 +29,10 @@ export const HandleItems = () => {
   return (
     <article className={globalStyles.contentsWrapper}>
       <div className={styles.articleContainer}>
-        <h2 className={globalStyles.h2}>
+        <h2 className={`
+          ${globalStyles.h2}
+          ${styles.h2}
+        `}>
           <div className={globalStyles.h2Wrapper}>
             <p>取扱品目</p>
             <span>handle items</span>

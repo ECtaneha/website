@@ -4,13 +4,12 @@ import styles from './hamburger.module.scss'
 import Link from 'next/link'
 import { SiteMap } from '../SiteMap/SiteMap'
 
-export const Hamburger = (props) => {
-  const [isOpen, setIsOpen] = useState<boolean>(props.isOpenState);
-  console.log('isOpenState:'+ props.isOpenState);
+type IsOpenState = {
+  isOpenState: any;
+  setIsOpenState: (arg0: boolean) => void;
+}
 
-  useEffect(() => {
-    setIsOpen(props.isOpenState);
-  }, [props.isOpenState]);
+export const Hamburger = (props: IsOpenState) => {
 
   return (
     <div className={styles.hamburgerContainer}>
@@ -18,32 +17,32 @@ export const Hamburger = (props) => {
       <label
         className={styles.menuIcon}
         htmlFor="menu-btn"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => props.setIsOpenState(!props.isOpenState)}
       >
-        <span className={`${styles.top} ${isOpen && styles.Open}`}></span>
-        <span className={`${styles.navIcon} ${isOpen && styles.navIconOpen}`}></span>
-        <span className={`${styles.bottom} ${isOpen && styles.Open}`}></span>
+        <span className={`${styles.top} ${props.isOpenState && styles.Open}`}></span>
+        <span className={`${styles.navIcon} ${props.isOpenState && styles.navIconOpen}`}></span>
+        <span className={`${styles.bottom} ${props.isOpenState && styles.Open}`}></span>
       </label>
       <div className={`
           ${styles.menuWrapper}
-          ${isOpen && styles.menuOpen}
+          ${props.isOpenState && styles.menuOpen}
         `}>
         <ul className={`
           ${styles.menu}
-          ${isOpen && styles.menuOpen}
+          ${props.isOpenState && styles.menuOpen}
         `}>
           {data.map((value, key) => (
             <li
               key={key}
-              className={`${isOpen && styles.liOpen}`}
+              className={`${props.isOpenState && styles.liOpen}`}
             >
               <Link
                 className={`
                   ${styles.link}
-                  ${isOpen && styles.liOpen}
+                  ${props.isOpenState && styles.liOpen}
                 `}
                 href={value.url}
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => props.setIsOpenState(!props.isOpenState)}
               >
                 {value.title}
               </Link>

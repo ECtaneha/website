@@ -15,21 +15,24 @@ export const Header = () => {
   const d = new Date();
   const now = d.getFullYear();
   const year = now - 1978;
-  console.log(isOpenState);
-  useEffect(() => {
-    setIsOpenState(isOpenState);
-  }, [isOpenState]);
+
   return (
     <header
       id='header'
       className={styles.header}
-      onClick={() => setIsOpenState(false)}
     >
       <Link
         className={styles.logo}
-        href='/'>
+        href='/'
+      >
         <h1 id="logo" className={styles.h1}>
-            <Image src={logo} width={256} height={31} alt='logo' />
+            <Image
+              src={logo}
+              width={256}
+              height={31}
+              alt='logo'
+              onClick={() => setIsOpenState(false)}
+            />
         </h1>
         <p className={styles.catch}>人々の生活を支え続けて
           <span className={styles.year}>{year}</span>年
@@ -53,6 +56,7 @@ export const Header = () => {
       ></Link>
       <Hamburger
         isOpenState={isOpenState}
+        setIsOpenState={setIsOpenState}
       />
     </header>
   )

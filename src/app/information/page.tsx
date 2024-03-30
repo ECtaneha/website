@@ -68,32 +68,27 @@ export default function Page() {
 
         <div
           id='president'
-          className={`
-          ${styles.presidentGreetContainer}
-          ${styles.informationWrapper}
-        `}>
-          <h2 className={`
-            ${styles.h2}
-            ${styles.greetWrapper}
-          `}>
+          className={styles.informationWrapper}>
+          <h2 className={styles.h2}>
             社長あいさつ
           </h2>
-          <br />
           <div className={styles.greet}>
             <Image
-            className={styles.presidentPhoto}
+              className={styles.presidentPhoto}
               src={presidentPhoto}
               width={200}
               height={200}
               alt='presidentPhoto'
             />
-            <p>
-              創業者・山根良彦の一念により興った弊社も今年で{now}期を迎えました。お客様やお取引先様にご愛顧いただき、お陰様で創業以来黒字経営を続けられています。人々の困難の為に奔走した先人達の理念を継承しつつ、今後も新たなことに挑戦し続け、人々の生活を支えられるよう邁進していく所存です。
-            </p>
-            <div className={styles.presidentNameContainer}>
-              株式会社タイシン<br />
-              代表取締役社長
-              <span className={styles.presidentName}>廣田敬司</span>
+            <div className={styles.greetWrapper}>
+              <p>
+                創業者・山根良彦の一念により興った弊社も今年で{now}期を迎えました。お客様やお取引先様にご愛顧いただき、お陰様で創業以来黒字経営を続けられています。人々の困難の為に奔走した先人達の理念を継承しつつ、今後も新たなことに挑戦し続け、人々の生活を支えられるよう邁進していく所存です。
+              </p>
+              <div className={styles.presidentNameContainer}>
+                株式会社タイシン<br />
+                代表取締役社長
+                <span className={styles.presidentName}>廣田敬司</span>
+              </div>
             </div>
           </div>
         </div>

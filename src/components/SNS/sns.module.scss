@@ -1,6 +1,15 @@
 $tab: 1280px;
 $sp: 768px;
 
+.facebook{
+  color: #1178f2;
+}
+
+.instagram,
+.X {
+  color: #000 !important;
+}
+
 .sns{
   width: fit-content;
   height: 30px;
@@ -23,14 +32,7 @@ $sp: 768px;
   color: #30b3ff;
 }
 
-.facebook{
-  color: #1178f2;
-}
-
 .youtube {
   color: #ff0000;
 }
 
-.instagram {
-  color: #000;
-}

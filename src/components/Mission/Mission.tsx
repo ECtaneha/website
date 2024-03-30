@@ -9,16 +9,16 @@ export const Mission = () => {
   const width = 800;
   const height = 600;
   return (
-    <div className={`
-      ${globalStyles.contentsWrapper}
-      ${styles.missionContainer}
-    `}>
-      <h2 className={globalStyles.h2}>
-        <div className={globalStyles.h2Wrapper}>
-          <p>タイシン　３つの使命</p>
-          <span>mission</span>
-        </div>
-      </h2>
+    <div className={globalStyles.contentsWrapper}>
+      <div className={styles.missionContainer}>
+        <h2 className={globalStyles.h2}>
+          <div className={globalStyles.h2Wrapper}>
+            <p>タイシン　３つの使命</p>
+            <span>mission</span>
+          </div>
+        </h2>
+
+      </div>
       <Image
         className={styles.missionImage}
         src={missionImage}
@@ -26,16 +26,6 @@ export const Mission = () => {
         height={height}
         alt='タイシン３つの使命'
       />
-      {/* <div className={styles.missionWrapper}>
-        {datas.map((data, key) =>
-          <Hexagon
-            key={key}
-            index={key}
-            title={data.title}
-            description={data.description}
-          />
-        )}
-      </div> */}
     </div>
   )
 }

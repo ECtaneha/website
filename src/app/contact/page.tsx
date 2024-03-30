@@ -79,10 +79,11 @@ export default function Page() {
   }
 
   return (
-    <div className={globalStyles.contentsContainer}>
+    <div className={globalStyles.contentsWrapper}>
+        <div className={styles.h1Container}>
+          <h1 className={styles.h1}>お問い合わせ</h1>
+        </div>
       <div className={styles.confirmContainer}>
-        <h1 className={styles.h1}>お問い合わせ</h1>
-
         <div className={styles.attention1}>
           <Link href=''>ご質問前にお読みください</Link>
         </div>

@@ -2,7 +2,6 @@
 import globalStyles from '../page.module.scss'
 import styles from './page.module.scss'
 import Link from 'next/link'
-import links from '../../static/links.json'
 import { useState } from 'react';
 import Image from 'next/image'
 import datas from '../../static/links.json'
@@ -26,9 +25,9 @@ export default function Page() {
             <div>
               <h2 className={styles.h2}>{activeClass}</h2>
               <div className={styles.groupDescriptionWrapper}>
-                <h3>小分類</h3>
+                {/* <h3>小分類</h3> */}
                 <div className={styles.groupDescription}>
-                  <p className={styles.groupDesc}>説明文</p>
+                  {/* <p className={styles.groupDesc}>説明文</p> */}
                   <Image
                     className={styles.groupImage}
                     width={300}
@@ -36,13 +35,27 @@ export default function Page() {
                     src=''
                     alt=''
                   />
-                </div>
-              </div>
-              <div className={styles.groupDescriptionWrapper}>
-                <h3>小分類</h3>
-                <div className={styles.groupDescription}>
-                  <p className={styles.groupDesc}>説明文</p>
-                  <p className={styles.groupImage}>画像</p>
+                  <Image
+                    className={styles.groupImage}
+                    width={300}
+                    height={200}
+                    src=''
+                    alt=''
+                  />
+                  <Image
+                    className={styles.groupImage}
+                    width={300}
+                    height={200}
+                    src=''
+                    alt=''
+                  />
+                  <Image
+                    className={styles.groupImage}
+                    width={300}
+                    height={200}
+                    src=''
+                    alt=''
+                  />
                 </div>
               </div>
               <h2

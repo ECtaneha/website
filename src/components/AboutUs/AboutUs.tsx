@@ -2,6 +2,7 @@ import React from 'react'
 import globalStyles from '/src/app/page.module.scss'
 import styles from './aboutUs.module.scss'
 import { Card } from './Card'
+import Link from 'next/link'
 
 export const AboutUs = () => {
   return (
@@ -28,7 +29,12 @@ export const AboutUs = () => {
           )}
           <div className={styles.space}></div>
         </div>
-        <button className={styles.aboutAs}>会社概要</button>
+        <Link
+          className={styles.aboutAsButton}
+          href='/information'
+        >
+          会社概要
+        </Link>
       </div>
     </article>
   )

@@ -8,6 +8,5 @@ export const BreadCrumb = (props: { parentPath: string, childPath: string }) => 
       <Link className={styles.breadCrumbParent} href='/'>{props.parentPath}</Link>
       <span className={styles.breadCrumb}>{`　>　${props.childPath}`}</span>
     </p>
-
   )
-}
+};

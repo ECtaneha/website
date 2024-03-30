@@ -25,7 +25,7 @@ $sp: 768px;
 
 .confirmContainer {
   width: 60%;
-  margin-inline: auto;
+  margin: 60px auto 0;
 
   @media (max-width: $tab) {
     width: 75%;
@@ -42,10 +42,25 @@ $sp: 768px;
   align-items: center;
 }
 
-.h1 {
+.h1, .h2 {
+  margin: 120px auto 20px;
+  font-weight: bold;
   text-align: center;
 }
 
+.h1 {
+  width: fit-content;
+  margin-bottom: 60px;
+  padding: 10px 30px;
+  border-bottom: 2px solid #d0d3ffcb;
+}
+
+.h1Container {
+  width: 100%;
+  height: fit-content;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 8px 8px 0 #a5a5a5;
+}
 .icon {
   width: 30px;
   height: 30px;

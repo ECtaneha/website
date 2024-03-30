@@ -3,7 +3,8 @@
   height: 60px;
   background-color: #fff;
   border: 2px solid #c1c1c1;
-  border-radius: 5px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px #bbb;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +15,15 @@
   z-index: 100;
 
   &:hover {
-    border-radius: 50%;
+    animation: toTopHover .3s ease-in-out;
+  }
+
+  @keyframes toTopHover {
+    0% {scale: 1;}
+    25% {scale: .5;}
+    50% {scale: 1;}
+    75% {scale: 1.2;}
+    100% {scale: 1;}
   }
 
   @media (max-width: 768px) {
