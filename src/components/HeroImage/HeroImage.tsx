@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../HeroImage/heroImage.module.css'
 import Image from 'next/image'
-import desktopImage from '/public/images/hero-image1.jpg'
-import mobileImage from '/public/images/hero-image1-android.jpg'
+import desktopImage from '/public/images/heroImage/hero-image1.jpg'
+import mobileImage from '/public/images/heroImage/hero-image1-android.jpg'
 
 export const HeroImage = () => {
   const [viewport, setViewport] = useState(0);

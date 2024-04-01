@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './siteMap.module.scss'
-import nintei from '/public/images/nintei_logo.jpg'
-import logo from '/public/images/logo-taishin.png'
+import nintei from '/public/images/footer/nintei_logo.jpg'
+import logo from '/public/images/header/logo-taishin.png'
 import Image from 'next/image';
 import Link from 'next/link';
 import { SNS } from '../SNS/SNS';

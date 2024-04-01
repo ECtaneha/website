@@ -1,9 +1,8 @@
 import React from 'react'
-import { Hexagon } from '../Hexagon/Hexagon'
 import globalStyles from '../../app/page.module.scss'
 import styles from './mission.module.scss'
 import Image from 'next/image'
-import missionImage from '/public/images//mission.png'
+import missionImage from '/public/images/mission/mission.png'
 
 export const Mission = () => {
   const width = 800;

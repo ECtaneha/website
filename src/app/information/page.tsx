@@ -5,7 +5,7 @@ import styles from './page.module.scss'
 import Image from 'next/image'
 import history from './history.json'
 import information from './information.json'
-import presidentPhoto from '/public/images/presidentPhoto.jpg'
+import presidentPhoto from '/public/images/information/presidentPhoto.jpg'
 import Link from 'next/link'
 import { BreadCrumb } from '../../components/BreadCrumb/BreadCrumb'
 import { usePathname } from 'next/navigation';
