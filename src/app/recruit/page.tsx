@@ -5,7 +5,7 @@ import styles from './page.module.scss'
 import { BreadCrumb } from '@/components/BreadCrumb/BreadCrumb'
 import { useState } from 'react';
 import Image from 'next/image'
-import presidentPhoto from '/public/images/presidentPhoto.jpg'
+import presidentPhoto from '/public/images/information/presidentPhoto.jpg'
 
 
 export default function Page() {
