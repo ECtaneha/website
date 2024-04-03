@@ -74,9 +74,10 @@ export default function PostForm() {
             required
           />
           <textarea
-            className={styles.inputDescription}
+            className={styles.inputContent}
             placeholder="本文"
             value={content}
+            aria-multiline
             onChange={(e) => setContent(e.target.value)}
             required
           />
@@ -97,10 +98,10 @@ export default function PostForm() {
       ) : (
         <div className={styles.postFormContainer}>
           <h3>確認画面</h3>
-          <p>タイトル: {title}</p>
-          <p>本文: {content}</p>
-          <p>タグ: {tag}</p>
-          <p>公開可否: {publication === 'true' ? '公開' : '非公開'}</p>
+          <p>タグ： {tag}</p>
+          <p>タイトル：<br /> {title}</p>
+          <p>本文：<br /> {content}</p>
+          <p>公開可否： {publication === 'true' ? '公開' : '非公開'}</p>
           <div className={styles.buttonWrapper}>
             <button
               className={styles.submit}

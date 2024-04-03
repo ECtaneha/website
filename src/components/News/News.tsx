@@ -23,7 +23,7 @@ export const News = () => {
         <h2 className={globalStyles.h2}>
           <div className={globalStyles.h2Wrapper}>
             <p>お知らせ</p>
-            <span>notification</span>
+            <span>announcement</span>
           </div>
         </h2>
         <div className={styles.contents}>

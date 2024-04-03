@@ -1,13 +1,12 @@
 'use client'
 import globalStyles from '../page.module.scss'
 import styles from './page.module.scss'
-import { TextField, Button, Container, Typography } from '@mui/material';
+import { TextField } from '@mui/material';
 import WarningIcon from '@mui/icons-material/Warning';
 import { useState } from 'react';
 import Link from 'next/link'
 import { CheckBoxContainer } from '../../components/CheckBoxContainer/CheckBoxContainer';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
 
 type FormProps = {
   company: string;

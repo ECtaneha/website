@@ -1,9 +1,9 @@
 import styles from "./page.module.scss";
 import { HeroImage } from "../components/HeroImage/HeroImage";
-import { News } from "../components/News/News";
 import { Mission } from '../components/Mission/Mission'
 import { AboutUs } from "@/components/AboutUs/AboutUs";
 import { HandleItems } from "@/components/HandleItems/HandleItems";
+import AnnouncementList from "@/components/Announcement/AnnouncementList";
 
 export default function Home() {
 
@@ -14,7 +14,7 @@ export default function Home() {
         <AboutUs />
         <Mission />
         <HandleItems />
-        <News />
+        <AnnouncementList />
       </div>
     </main>
   );

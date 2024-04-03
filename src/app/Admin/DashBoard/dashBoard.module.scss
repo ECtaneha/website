@@ -10,7 +10,7 @@
   transition: .3s all;
   position: relative;
 
-  &:first-child:after {
+  &.active:after {
     content: '';
     width: 100%;
     border-bottom: 1px solid #444;

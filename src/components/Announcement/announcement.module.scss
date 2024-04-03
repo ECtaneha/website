@@ -1,0 +1,210 @@
+.announcementContainer {
+  padding-inline: 40px;
+}
+
+.announcementContent {
+  width: 100%;
+  font-size: 0.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.announcementContentWrapper {
+  width: 85%;
+  padding-right: 1rem;
+}
+
+.announcementDate {
+  width: 30%;
+}
+
+.announcementHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.announcementLi {
+  width: 100%;
+  margin: 20px 0;
+  padding: 5px 10px;
+  border-bottom: 1px solid #444;
+  display: flex;
+  flex-direction: column;
+}
+
+.announcementSelectTag {
+  width: 70px;
+  height: 24px;
+  margin-left: 5px;
+  padding: 2px 0;
+  background-color: #fff;
+  border: 1px solid;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.announcementTag {
+  width: 80px;
+  padding: 2px;
+  border: 1px solid;
+  border-radius: 0px;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.announcementTitle {
+  font-weight: bold;
+}
+
+.announcementWrapper {
+  width: 80%;
+  height: 800px;
+  margin-inline: auto;
+  padding: 40px;
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.confirm {
+  @extend .submit;
+  width: 50%;
+  margin-inline: auto;
+  padding: 10px 20px;
+  background-color: #71cdff;
+  border: 2px solid #2986ff;
+  transition: .2s all;
+
+  &:hover {
+    background-color: #2986ff;
+    color: #fff;
+  }
+}
+
+.h2 {
+  width: fit-content;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.loginFormContainer {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputContent {
+  width: 100%;
+  height: 5rem;
+  padding: 5px;
+  border: 1px solid #7c7c7c;
+  border-radius: 5px;
+}
+
+.inputTag,
+.inputTitle,
+.selectBox {
+  height: 2rem;
+  padding: 5px;
+  border: 1px solid #7c7c7c;
+  border-radius: 5px;
+}
+
+.inputTag {
+  width: 50%;
+}
+
+.inputTitle {
+  width: 100%;
+}
+
+.loginFormContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.message,
+.select,
+.tag,
+.title {
+  height: 3rem;
+  padding: 10px;
+}
+
+.message {
+  width: 100%;
+  height: 10rem;
+}
+
+.modify {
+  @extend .submit;
+  margin-left: 20px;
+  background-color: #a7a7a7 !important;
+
+  &:hover {
+    background-color: #bdbdbd !important;
+    color: #fff;
+  }
+}
+
+.postFormContainer {
+  width: 50%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.return {
+  width: 200px;
+  margin-inline: auto;
+  padding: 10px 20px;
+  background-color: #a5a5a5;
+  border: 2px solid #696969;
+  color: #fff;
+  transition: .2s all;
+
+  &:hover {
+    background-color: #daeaff;
+    color: #000;
+  }
+}
+
+.selectBox {
+  width: 8rem;
+  height: 2rem;
+}
+
+.submit {
+  width: 100%;
+  height: calc(2rem + 20px);
+  margin-inline: auto;
+  background-color: #76b6ff;
+  border: none;
+  border-radius: 5px;
+  color: #444;
+  cursor: pointer;
+  transition: .2s all;
+
+  &:hover {
+    background-color: #2949ff;
+    color: #fff;
+  }
+}
+
+.tagWrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+

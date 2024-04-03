@@ -16,7 +16,7 @@ const snsIconsList = [
   },
   {
     'sns': 'YouTubeIcon',
-    'url': '',
+    'url': '/Admin/DashBoard',
   },
   {
     'sns': 'InstagramIcon',

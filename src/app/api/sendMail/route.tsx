@@ -1,11 +1,10 @@
 import React from 'react'
-import { NextResponse } from 'next/server'
+import { NextResponse, NextRequest } from 'next/server'
 import nodeMailer from 'nodemailer'
 
-export async function POST(request: { json: () => any; }) {
-  const reqBody = await request.json();
+export async function POST(req: NextRequest) {
+  const reqBody = await req.json();
   const { name, email, message, company } = reqBody;
-  console.log(reqBody);
 
   const user = process.env.NEXT_PUBLIC_GMAIL_ADDRESS;
   const pass = process.env.NEXT_PUBLIC_GMAIL_PASSWORD;
@@ -26,7 +25,7 @@ export async function POST(request: { json: () => any; }) {
     })
 
     const mailOptions = {
-      from: 'portfolio site',
+      from: 'タイシンHP',
       to: user,
       subject: 'コンタクトページ',
       text: `

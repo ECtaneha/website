@@ -23,8 +23,6 @@ type ElementData = {
   links: Link[];
 };
 
-const query: ElementData[] = datas;
-
 export const HandleItems = () => {
   return (
     <article className={globalStyles.contentsWrapper}>
