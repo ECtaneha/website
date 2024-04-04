@@ -5,6 +5,7 @@ import styles from './handleItems.module.scss'
 import { Item } from './Item'
 import Link from 'next/link'
 import datas from '../../static/links.json'
+import router from 'next/router'
 
 const width = 80;
 const height = 80;
@@ -19,9 +20,16 @@ type ElementData = {
   name: string;
   class: string[];
   description: string;
-  src: string;
+  src: string[];
   links: Link[];
 };
+
+const handlePushQuery = (id: string, name: string) => {
+  router.push({
+    pathname: name,
+    query: { id: id, name: name }
+  })
+}
 
 export const HandleItems = () => {
   return (
@@ -41,12 +49,15 @@ export const HandleItems = () => {
             <Link
               key={key}
               className={styles.link}
-              href={`handle/${data.id}`}
+              href={{
+                pathname: `handle/`,
+                query: { id: data.id, name: data.name }
+              }}
             >
               <Item
                 name={data.name}
                 class={data.class}
-                src={data.src}
+                src={data.src[0]}
                 width={width}
                 height={height}
                 alt={data.name}

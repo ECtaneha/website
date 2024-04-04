@@ -12,7 +12,7 @@ model Announcement {
   creator      String
   createdDate  DateTime @default(now())
   lastUpdated  DateTime @updatedAt
-  tag          String?
+  tag          String
   title        String
   content      String
   publication  String

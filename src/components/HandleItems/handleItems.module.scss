@@ -55,9 +55,6 @@ $sp: 768px;
   margin: 0 auto;
   padding: 0 40px;
   background-color: #fff;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 1fr));
   gap: 10px 20px;
@@ -72,6 +69,10 @@ $sp: 768px;
     width: 100%;
     margin: 0;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 740px) {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -92,10 +93,6 @@ $sp: 768px;
   aspect-ratio: 1 / 1;
   margin-right: 10px;
   border: 1px solid #444;
-
-  @media (max-width: $sp) {
-    display: none;
-  }
 }
 
 .itemArrow {
@@ -105,6 +102,11 @@ $sp: 768px;
   position: absolute;
   bottom: 5px;
   right: 0;
+
+  @media (max-width: $sp) {
+    bottom: 50%;
+    translate: 0 50%;
+  }
 }
 
 .itemContainer {
@@ -127,8 +129,6 @@ $sp: 768px;
     width: calc(100% - 20px);
     height: auto;
     margin: 10px;
-    padding: 0;
-    flex-direction: column;
   }
 }
 

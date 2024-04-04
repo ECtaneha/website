@@ -11,8 +11,6 @@ type RadioProps = {
 }
 
 export const CheckBoxContainer = (props: RadioProps) => {
-  const value = props.value;
-
   return (
     <div className={styles.checkBoxContainer}>
       <Radio

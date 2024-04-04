@@ -17,7 +17,7 @@ export default function Page() {
                 {datas.map((data, key) => (
                   <ul
                     key={key}
-                    className={styles.companyUl}
+                    className={styles.companyUlAllClass}
                   >
                     <h2
                       id={data.name}

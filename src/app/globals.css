@@ -8,6 +8,7 @@ html {
 body {
   /* height: 4400px; */
   position: relative;
+  background-color: #fff;
 }
 
 :root {

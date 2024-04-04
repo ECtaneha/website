@@ -18,12 +18,44 @@ $sp: 768px;
   align-items: center;
 }
 
+.buttonWrapper {
+  width: 60%;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+}
+
 .confirmAttribute {
   margin-bottom: 20px;
   align-self: flex-start;
 }
 
+.confirmButton,
+.modifyButton {
+  width: 200px;
+  height: 40px;
+  margin: 20px 0;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  transition: .2s ease-in-out;
+}
+
+.confirmButton {
+  background-color: rgb(197, 197, 255);
+
+  &:hover {
+    background-color: rgb(97, 97, 255);
+  }
+}
+
 .confirmContainer {
+  width: 60%;
+  margin: 100px auto 0;
+}
+
+.contactContainer {
   width: 60%;
   margin: 60px auto 0;
 
@@ -61,9 +93,46 @@ $sp: 768px;
   border-bottom: 1px solid transparent;
   box-shadow: 0 8px 8px 0 #a5a5a5;
 }
+
+.h2 {
+  margin: 40px auto;
+  padding: .5rem 1rem;
+  background-color: #dfe5ff;
+  font-weight: 400;
+  text-align: left;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 5px;
+    height: 52px;
+    background-color: rgb(118, 118, 255);
+    position: absolute;
+    top: 0;
+    left: -8px;
+  }
+}
+
 .icon {
   width: 30px;
   height: 30px;
+}
+
+.modifyButton {
+  background-color: rgb(232, 232, 232);
+
+  &:hover {
+    background-color: rgb(126, 126, 126);
+  }
+}
+
+.radioButtonWrapper {
+
+
+  @media (max-width: $sp) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .section {
@@ -77,6 +146,7 @@ $sp: 768px;
   line-height: 1.5;
 }
 
+
 .submit {
   width: 200px;
   height: 40px;
@@ -86,4 +156,14 @@ $sp: 768px;
   background-color: rgb(195, 195, 255);
   color: #fff;
   font-size: 20px;
+}
+
+.td,
+.th {
+  padding: 5px 10px;
+}
+
+.th {
+  background-color: #dfe5ff;
+  text-align: left;
 }

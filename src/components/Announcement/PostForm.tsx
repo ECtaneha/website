@@ -14,9 +14,10 @@ export default function PostForm() {
 
     const currentDate = new Date();
     const createdDate = currentDate.toISOString();
+    const url = '/api/announcement';
 
     try {
-      const response = await fetch('/api/announcement', {
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -30,7 +31,6 @@ export default function PostForm() {
           publication
         })
       });
-      console.log(response);
 
       if (response.ok) {
         console.log('お知らせの投稿に成功しました');
