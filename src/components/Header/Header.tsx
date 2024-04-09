@@ -34,7 +34,7 @@ export const Header = () => {
             />
         </h1>
         <p className={styles.catch}>人々の生活を支え続けて
-          <span className={styles.year}>{year}</span>年
+          <span className={styles.year}>{year}年</span>
         </p>
       </Link>
       <div className={styles.space}></div>

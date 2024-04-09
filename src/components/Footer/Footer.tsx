@@ -25,7 +25,7 @@ const links =[
   },
   {
     title: 'プライバシーポリシー',
-    url: '',
+    url: '/policy',
   },
 ]
 
