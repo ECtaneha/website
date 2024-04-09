@@ -22,12 +22,9 @@ export const AboutUs = () => {
               title={data.title}
               description={data.description}
               src={data.src}
-              width={data.width}
-              height={data.height}
               alt={data.alt}
             />
           )}
-          <div className={styles.space}></div>
         </div>
         <Link
           className={styles.aboutAsButton}
@@ -40,40 +37,31 @@ export const AboutUs = () => {
   )
 }
 
-const width = 200;
-const height = 200;
+
 
 const datas = [
   {
     'title': '設立',
     'description': '昭和53年2月17日',
     'src': '/images/aboutUs/founding.png',
-    'width': width,
-    'height': height,
     'alt': '設立'
   },
   {
     'title': '売上高',
     'description': '26億5千万円\n（令和3年度）',
     'src': '/images/aboutUs/sales.png',
-    'width': width,
-    'height': height,
     'alt': '売上高'
   },
   {
     'title': '従業員数',
     'description': '35名',
     'src': '/images/aboutUs/employees.png',
-    'width': width,
-    'height': height,
     'alt': '従業員数'
   },
   {
     'title': '取引社数',
     'description': 'description',
     'src': '/images/aboutUs/tradingCompanies.png',
-    'width': width,
-    'height': height,
     'alt': '取引社数'
   },
 ]

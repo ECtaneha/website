@@ -17,7 +17,7 @@ const links =[
   },
   {
     title: '取扱品目',
-    url: '/handle',
+    url: '/handle/allClass',
   },
   {
     title: 'お問い合わせ',

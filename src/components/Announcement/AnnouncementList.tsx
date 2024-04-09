@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { Announcement } from '@prisma/client';
 import globalStyles from '../../app/page.module.scss'
 import styles from './announcement.module.scss'
+import { Announce } from './Announce';
 
 export default function AnnouncementList() {
   const [announce, setAnnounce] = useState<Announcement[]>([]);
@@ -37,13 +38,13 @@ export default function AnnouncementList() {
       ${globalStyles.contentsWrapper}
       ${styles.announcementContainer}
     `}>
+      <h2 className={globalStyles.h2}>
+        <div className={globalStyles.h2Wrapper}>
+          <p>お知らせ</p>
+          <span>announcement</span>
+        </div>
+      </h2>
       <div className={styles.announcementWrapper}>
-        <h2 className={globalStyles.h2}>
-          <div className={globalStyles.h2Wrapper}>
-            <p>お知らせ</p>
-            <span>announcement</span>
-          </div>
-        </h2>
         <div className={styles.tagWrapper}>
           {tags.map((tag) => (
             <button
@@ -63,23 +64,10 @@ export default function AnnouncementList() {
           {filteredAnnounce &&
             filteredAnnounce.map((item: any) =>
               item.publication === 'true'
-                ? (
-                  <li
+                ? <Announce
                     key={item.id}
-                    className={styles.announcementLi}
-                  >
-                    <div className={styles.announcementHeader}>
-                      <p className={styles.announcementDate}>
-                        {new Date(item.createdDate).toISOString().split('T')[0]}
-                      </p>
-                      <p className={styles.announcementTag}>{item.tag || 'No tag'}</p>
-                    </div>
-                    <div className={styles.announcementContentWrapper}>
-                      <p className={styles.announcementTitle}>{item.title}</p>
-                      <p className={styles.announcementContent}>{item.content}</p>
-                    </div>
-                  </li>
-                )
+                    item={item}
+                  />
                 : null
             )}
         </ul>

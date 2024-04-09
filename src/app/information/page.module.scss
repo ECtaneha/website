@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akebono&display=swap');
+
 .greet {
   padding: 40px;
   height: auto;
@@ -119,6 +121,9 @@
 .presidentName {
   padding-left: 1rem;
   font-size: 20px;
+  font-family: "Yuji Hentaigana Akebono", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .presidentPhoto {

@@ -8,7 +8,7 @@ import AnnouncementList from '@/components/Announcement/AnnouncementList';
 export default function Page() {
   const [mode, setMode] = useState<string>('postForm');
   return (
-    <div>
+    <div className={styles.adminContainer}>
       <h1 className={styles.h1}>お知らせ管理画面</h1>
       <div className={styles.selectMenu}>
       <span

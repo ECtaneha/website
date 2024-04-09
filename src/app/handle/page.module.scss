@@ -2,7 +2,8 @@ $tab: 1280px;
 $sp: 768px;
 
 .allClass {
-  width: 100%;
+  width: 70%;
+  margin-inline: auto;
   padding: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
@@ -16,11 +17,27 @@ $sp: 768px;
   }
 }
 
+.arrow {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  translate: 0 -50%;
+  z-index: 2;
+}
+
 .button {
   padding: 2px 0 2px .5rem;
   background-color: #fff;
   border: none;
   text-align: left;
+}
+
+.classNameWrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
 .companyLi {
@@ -47,7 +64,8 @@ $sp: 768px;
     transition: .2s ease-in-out;
     position: absolute;
     translate: -5% 0;
-    scale: 0;
+    transform-origin: 0 0;
+    scale: 0 1;
   }
 
   &:hover::after {
@@ -59,50 +77,10 @@ $sp: 768px;
   }
 }
 
-.companyUl,
 .companyUlAllClass {
   width: 100%;
   padding: 10px;
   list-style: none;
-}
-.companyUl {
-  margin-bottom: 100px;
-  display: grid;
-  gap: 5px 20px;
-  grid-template-columns: repeat(3, 1fr);
-
-  @media (max-width: $tab) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: $sp) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.groupDesc {
-  width: 65%;
-  height: inherit;
-  border: 1px solid #444;
-}
-
-.groupDescription {
-  height: 150px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.groupDescriptionWrapper {
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.groupImage {
-  width: calc(90% / 4);
-  height: auto;
-  border: 1px solid #c9c9c9;
 }
 
 .handleContainer {
@@ -181,6 +159,7 @@ $sp: 768px;
   font-weight: bold;
 }
 
+
 .listTitle {
   width: 100%;
   height: auto;
@@ -189,6 +168,14 @@ $sp: 768px;
   font-size: 16px;
   font-weight: bold;
   display: block;
+  position: relative;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+
+  & span {
+    position: relative;
+    z-index: 2;
+  }
 
   &::before {
     content: '';
@@ -198,6 +185,33 @@ $sp: 768px;
     position: absolute;
     top: 0;
     left: -8px;
+  }
+
+  &::after {
+    content: '';
+    width: inherit;
+    height: 40px;
+    background-color: rgb(118, 118, 255);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    scale: 0 1;
+    transition: .2s ease-out;
+    transform-origin: 0 0;
+    z-index: 1;
+  }
+
+  &:hover .arrow{
+    color: #fff;
+  }
+
+  &:hover span{
+    color: #fff;
+  }
+
+  &:hover::after{
+    scale: 1 1;
   }
 }
 

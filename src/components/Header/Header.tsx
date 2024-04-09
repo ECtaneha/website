@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import styles from './header.module.scss'
 import Link from 'next/link'
 import { SNS } from "../SNS/SNS"
-import { Language } from '../Language/Language'
 import EmailIcon from '@mui/icons-material/Email';
 import Image from 'next/image';
 import logo from '/public/images/header/logo-taishin.png'
@@ -40,7 +39,6 @@ export const Header = () => {
       </Link>
       <div className={styles.space}></div>
       <SNS />
-      <Language />
       <Link
         className={styles.linkContact}
         href='/contact'

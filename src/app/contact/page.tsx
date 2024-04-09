@@ -4,7 +4,6 @@ import styles from './page.module.scss'
 import { TextField } from '@mui/material';
 import WarningIcon from '@mui/icons-material/Warning';
 import { useState } from 'react';
-import Link from 'next/link'
 import { useForm } from 'react-hook-form';
 
 export default function Page() {
@@ -77,12 +76,6 @@ export default function Page() {
                 </tr>
               </tbody>
             </table>
-            {/* <div>件名： {title}</div>
-            <div>会社名： {company}</div>
-            <div>お名前： {name}</div>
-            <div>メールアドレス： {email}</div>
-            <div>電話番号： {tel}</div>
-            <div>お問い合わせ内容： {content}</div> */}
             <div className={styles.buttonWrapper}>
               <button
                 className={styles.confirmButton}
@@ -97,7 +90,6 @@ export default function Page() {
                 修正
               </button>
             </div>
-
           </div>
         : (
           <div className={globalStyles.contentsWrapper}>
@@ -105,10 +97,6 @@ export default function Page() {
               <h1 className={styles.h1}>お問い合わせ</h1>
             </div>
             <div className={styles.contactContainer}>
-              <div className={styles.attention1}>
-                <Link href=''>ご質問前にお読みください</Link>
-              </div>
-
               <br />
               <div className={styles.attention2}>
                 <WarningIcon color='warning' className={styles.icon}/>

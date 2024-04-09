@@ -6,6 +6,7 @@ import { Header } from "../components//Header/Header";
 import { Footer } from "../components/Footer/Footer";
 import { CssBaseline } from "@mui/material";
 import { ToTopButton } from "@/components/ToTopButton/ToTopButton";
+import { Suspense } from "react";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,7 +29,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <CssBaseline />
         <Header />
-        {children}
+        <Suspense fallback={<div>Loading...</div>}>
+          {children}
+        </Suspense>
         <ToTopButton />
         <Footer />
       </body>

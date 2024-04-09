@@ -1,18 +1,38 @@
+$tab: 1280px;
+$sp: 768px;
+
 .announcementContainer {
   padding: 40px;
+
+  @media (max-width: $tab) {
+    padding: 40px 0;
+  }
 }
 
 .announcementContent {
   width: 100%;
   font-size: 0.8rem;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  // text-overflow: ellipsis;
+  // overflow: hidden;
+  // white-space: nowrap;
+  transition: .2s ease-in-out;
+  transform-origin: 0 0;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: .2s grid-template-rows ease;
+
+  & div {
+    overflow: hidden;
+  }
+
+  &.open {
+    grid-template-rows: 1fr;
+  }
 }
 
 .announcementContentWrapper {
-  width: 85%;
-  padding-right: 1rem;
+  width: 100%;
+  height: fit-content;
 }
 
 .announcementDate {
@@ -20,6 +40,7 @@
 }
 
 .announcementHeader {
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -31,13 +52,15 @@
   border-bottom: 1px solid #444;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .announcementSelectTag {
-  width: 70px;
+  width: fit-content;
+  min-width: 70px;
   height: 24px;
   margin-left: 5px;
-  padding: 2px 0;
+  padding: 2px 5px;
   background-color: #fff;
   border: 1px solid;
   font-size: 0.75rem;
@@ -58,7 +81,26 @@
 }
 
 .announcementWrapper {
+  width: 60%;
   height: 730px;
+  margin: 0 auto;
+  margin-inline: auto;
+
+  @media (max-width: $sp) {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.arrow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: .2s ease-in-out;
+
+  &.open {
+    transform: rotateX(180deg);
+  }
 }
 
 .buttonWrapper {

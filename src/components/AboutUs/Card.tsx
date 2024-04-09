@@ -5,8 +5,6 @@ type item = {
   title: string,
   description: string,
   src: string,
-  width: number,
-  height: number,
   alt: string,
 }
 
@@ -19,8 +17,8 @@ export const Card = (props: item) => {
       <Image
         className={styles.image}
         src={props.src}
-        width={props.width}
-        height={props.height}
+        width={200}
+        height={200}
         alt={props.alt}
       />
     </div>

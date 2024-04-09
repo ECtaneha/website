@@ -1,10 +1,9 @@
-import React from 'react'
 import { NextResponse, NextRequest } from 'next/server'
 import nodeMailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
   const reqBody = await req.json();
-  const { title, name, email, message, company } = reqBody;
+  const { title, name, email, tel, message, company } = reqBody;
 
   const user = process.env.NEXT_PUBLIC_GMAIL_ADDRESS;
   const pass = process.env.NEXT_PUBLIC_GMAIL_PASSWORD;
@@ -33,6 +32,7 @@ export async function POST(req: NextRequest) {
         名前：${name}\n\n
         会社名：${company}\n\n
         メールアドレス：${email}\n\n
+        電話番号：${tel}\n\n
         メッセージ：${message}
       `
     };

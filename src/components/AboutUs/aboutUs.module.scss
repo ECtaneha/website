@@ -30,13 +30,16 @@ $sp: 768px;
   min-width: 150px;
   height: auto;
   aspect-ratio: 1 / 1;
-  margin-right: 20px;
   padding: 20px;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 2px #aaa;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
 
   @media (max-width: $tab) {
     max-width: 200px;
