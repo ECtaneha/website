@@ -2,7 +2,7 @@ import React from 'react'
 import globalStyles from '../../app/page.module.scss'
 import styles from './mission.module.scss'
 import Image from 'next/image'
-import missionImage from '/public/images/mission/mission.png'
+import missionImage from '/public/images/mission/mission3.png'
 
 export const Mission = () => {
   const width = 800;

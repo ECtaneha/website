@@ -9,7 +9,7 @@ export default function Page() {
       <div className={styles.policyContainer}>
         <BreadCrumb
           parentPath='トップ'
-          childPath='会社概要'
+          childPath='個人情報保護方針'
         />
         <h1 className={styles.h1}>個人情報保護方針</h1>
         <h2>個人情報保護方針</h2>
