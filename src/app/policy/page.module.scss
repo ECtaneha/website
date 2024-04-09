@@ -1,6 +1,10 @@
+$tab: 1280px;
+$sp: 768px;
+
 .description {
   padding-left: 2rem;
 }
+
 
 .h1 {
   width: fit-content;
@@ -11,6 +15,25 @@
   font-weight: bold;
 }
 
+.h2 {
+  margin: 20px auto;
+  padding: .5rem 1rem;
+  background-color: #dfe5ff;
+  font-weight: 400;
+  text-align: left;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 5px;
+    height: 52px;
+    background-color: rgb(118, 118, 255);
+    position: absolute;
+    top: 0;
+    left: -8px;
+  }
+}
+
 .link {
   color: blue;
   text-decoration: underline;
@@ -18,8 +41,16 @@
 
 .policyContainer {
   width: 60%;
-  height: 2100px;
+  height: 2400px;
   margin-inline: auto;
+
+  @media (max-width: $tab) {
+    width: 80%;
+  }
+
+  @media (max-width: $sp) {
+    width: 90%;
+  }
 }
 
 .scope {

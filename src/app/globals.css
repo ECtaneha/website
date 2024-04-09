@@ -104,6 +104,12 @@ a {
   text-decoration: none;
 }
 
+button {
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
