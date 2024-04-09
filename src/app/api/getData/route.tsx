@@ -4,7 +4,6 @@ import { NextResponse } from 'next/server'
 import { config } from "@/lib/config";
 
 export async function GET(request: Request) {
-  const url = config.apiPrefix + config.apiHost + "/api/user";
   const data: Announcement[] = await prisma.announcement.findMany()
   return NextResponse.json(data)
 }

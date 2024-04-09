@@ -9,7 +9,7 @@ datasource db {
   shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model announcement {
+model Announcement {
   id           Int      @id @default(autoincrement())
   creator      String
   createddate  DateTime @default(now())

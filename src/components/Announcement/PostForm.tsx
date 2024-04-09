@@ -13,7 +13,7 @@ export default function PostForm() {
     e.preventDefault();
 
     const currentDate = new Date();
-    const createdDate = currentDate.toISOString();
+    const createddate = currentDate.toISOString();
     const url = '/api/createData';
 
     try {
@@ -24,7 +24,7 @@ export default function PostForm() {
         },
         body: JSON.stringify({
           creator: 'Your Name',
-          createdDate,
+          createddate,
           tag,
           title,
           content,

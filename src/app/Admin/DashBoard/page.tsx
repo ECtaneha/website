@@ -5,6 +5,8 @@ import styles from './dashBoard.module.scss'
 import Link from 'next/link';
 import AnnouncementList from '@/components/Announcement/AnnouncementList';
 
+const url = 'https://vercel.com/ectanehas-projects/website/stores/postgres/store_Zsp9bNRFnpZ9Ns95/data';
+
 export default function Page() {
   const [mode, setMode] = useState<string>('postForm');
   return (
@@ -30,7 +32,7 @@ export default function Page() {
           Preview
         </span>
         <span className={styles.label}>
-          <Link href={'http://localhost:5555/'}>searchForm</Link>
+          <Link href={url}>searchForm</Link>
         </span>
       </div>
       {mode === 'postForm'

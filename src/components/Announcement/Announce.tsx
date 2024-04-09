@@ -7,7 +7,7 @@ export const Announce = (props: any) => {
   const [isOpenAnnounce, setIsOpenAnnounce] = useState<boolean>(false);
 
   const renderParagraphs = (str: string) => {
-    const lines = str.split('<br>');
+    const lines = str.split('\n');
 
     return lines.map((line, index) => (
       <p key={index}>{line}</p>
@@ -23,7 +23,7 @@ export const Announce = (props: any) => {
     >
       <div className={styles.announcementHeader}>
         <p className={styles.announcementDate}>
-          {new Date(props.item.createdDate).toISOString().split('T')[0]}
+          {new Date(props.item.createddate).toISOString().split('T')[0]}
         </p>
         <p className={styles.announcementTag}>{props.item.tag || 'No tag'}</p>
       </div>
