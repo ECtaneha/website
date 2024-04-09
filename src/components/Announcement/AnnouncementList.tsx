@@ -1,12 +1,12 @@
 'use client'
 import { useEffect, useState } from 'react';
-import { Announcement } from '@prisma/client';
+import { announcement } from '@prisma/client';
 import globalStyles from '../../app/page.module.scss'
 import styles from './announcement.module.scss'
 import { Announce } from './Announce';
 
 export default function AnnouncementList() {
-  const [announce, setAnnounce] = useState<Announcement[]>([]);
+  const [announce, setAnnounce] = useState<announcement[]>([]);
   const [tags, setTags] = useState<string[]>([]);
   const [selectedTag, setSelectedTag] = useState('すべて');
 
@@ -17,7 +17,7 @@ export default function AnnouncementList() {
         if (!res.ok) {
           throw new Error('Network response was not ok');
         }
-        const data: Announcement[] = await res.json();
+        const data: announcement[] = await res.json();
         setAnnounce(data);
 
         const uniqueTags = [...new Set(data.map(item => item.tag || ''))];
