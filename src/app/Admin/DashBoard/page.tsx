@@ -32,7 +32,7 @@ export default function Page() {
           Preview
         </span>
         <span className={styles.label}>
-          <Link href={url}>searchForm</Link>
+          <Link href={url}>DataBase</Link>
         </span>
       </div>
       {mode === 'postForm'
