@@ -194,7 +194,9 @@ $sp: 768px;
   height: 80px;
   aspect-ratio: 1 / 1;
   margin-right: 10px;
+  background-color: #fff;
   border: 1px solid #444;
+  position: relative;
 }
 
 .itemArrow {
@@ -219,11 +221,12 @@ $sp: 768px;
   border: none;
   border-bottom: 3px solid #3114a3;
   display: flex;
-  transition: .2s ease-in;
+  transition: .1s ease-in;
   position: relative;
 
   &:hover {
     background-color: rgba(113, 205, 255, .5);
+    scale: 1.1;
   }
 
   @media (max-width: $sp) {

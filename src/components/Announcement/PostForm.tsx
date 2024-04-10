@@ -73,17 +73,14 @@ export default function PostForm() {
             onChange={(e) => setTitle(e.target.value)}
             required
           />
-          <div>
-            <textarea
-              className={styles.inputContent}
-              placeholder="本文"
-              value={content}
-              aria-multiline
-              onChange={(e) => setContent(e.target.value)}
-              required
-            />
-            <small>{`※改行は、改行したい個所に'<br>'と打ち込んでください。`}</small>
-          </div>
+          <textarea
+            className={styles.inputContent}
+            placeholder="本文"
+            value={content}
+            aria-multiline
+            onChange={(e) => setContent(e.target.value)}
+            required
+          />
           <select
             className={styles.selectBox}
             name='publication'
