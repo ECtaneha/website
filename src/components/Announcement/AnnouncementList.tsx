@@ -33,6 +33,16 @@ export default function AnnouncementList() {
     ? announce
     : announce?.filter((item: any) => item.tag === selectedTag || item.tag === null);
 
+  const sortedAnnounce = filteredAnnounce.slice().sort((a, b) => {
+    if (a.createddate < b.createddate) {
+      return 1;
+    }
+    if (a.createddate > b.createddate) {
+      return -1;
+    }
+    return 0;
+  });
+
   return (
     <div className={`
       ${globalStyles.contentsWrapper}
@@ -61,8 +71,8 @@ export default function AnnouncementList() {
           ))}
         </div>
         <ul>
-          {filteredAnnounce &&
-            filteredAnnounce.map((item: any) =>
+          {sortedAnnounce &&
+            sortedAnnounce.map((item: any) =>
               item.publication === 'true'
                 ? <Announce
                     key={item.id}
