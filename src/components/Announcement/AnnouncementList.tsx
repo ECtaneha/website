@@ -19,8 +19,6 @@ export default function AnnouncementList() {
         }
         const data: announcement[] = await res.json();
         setAnnounce(data);
-        console.log(data);
-
 
         const uniqueTags = [...new Set(data.map(item => item.tag || ''))];
         setTags(['すべて', ...uniqueTags]);
