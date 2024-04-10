@@ -41,8 +41,9 @@ $sp: 768px;
 
 .policyContainer {
   width: 60%;
-  height: 2400px;
+  height: fit-content;
   margin-inline: auto;
+  margin-bottom: 100px;
 
   @media (max-width: $tab) {
     width: 80%;
