@@ -5,6 +5,7 @@ import styles from './page.module.scss'
 import datas from '../../static/links.json'
 import { BreadCrumb } from '@/components/BreadCrumb/BreadCrumb'
 import { HandleItem } from '@/components/HandleItems/HandleItem'
+import Link from 'next/link'
 
 export default function Page() {
   const searchParams = useSearchParams();
@@ -34,6 +35,23 @@ export default function Page() {
                 </div>
               }
             </div>
+          </div>
+
+          <hr />
+
+          <div className={styles.linksWrapper}>
+            {datas.map((data) => (
+              <Link
+                key={data.id}
+                className={styles.link}
+                href={{
+                  pathname: '/handle',
+                  query: { id: data.id, name: data.name }
+                }}
+              >
+                {data.class}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

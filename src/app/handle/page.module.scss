@@ -85,7 +85,7 @@ $sp: 768px;
 
 .handleContainer {
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   height: auto;
 
   @media (max-width: $sp) {
@@ -159,6 +159,19 @@ $sp: 768px;
   font-weight: bold;
 }
 
+.link {
+  width: fit-content;
+  font-size: .75rem;
+  text-decoration: underline;
+}
+
+.linksWrapper {
+  width: 100%;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px 10px;
+}
 
 .listTitle {
   width: 100%;
@@ -213,16 +226,6 @@ $sp: 768px;
   &:hover::after{
     scale: 1 1;
   }
-}
-
-.linksWrapper {
-  width: 100%;
-  height: fit-content;
-  margin-top: 20px;
-  padding: 5px 0 0 10px;
-  background-color: #cae5ff;
-  display: flex;
-  flex-direction: column;
 }
 
 .tradingCompany {
