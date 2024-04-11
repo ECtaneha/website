@@ -178,6 +178,10 @@ $sp: 768px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 5px 10px;
+
+  @media (max-width: $sp) {
+    grid-template-columns: repeat(auto-fit, minmax(fit-content, 1fr));
+  }
 }
 
 .listTitle {

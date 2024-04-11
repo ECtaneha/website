@@ -116,21 +116,20 @@ $sp: 768px;
 }
 
 .groupImagesWrapper {
-  height: 150px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
 }
 
 .groupImagesContainer {
   width: 100%;
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
 }
 
 .groupImage {
-  width: calc(90% / 4);
+  width: 100%;
   height: auto;
+  aspect-ratio: 1 / 1;
   border: 1px solid #c9c9c9;
 }
 

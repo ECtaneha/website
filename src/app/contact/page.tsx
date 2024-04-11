@@ -5,6 +5,7 @@ import { TextField } from '@mui/material';
 import WarningIcon from '@mui/icons-material/Warning';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { BreadCrumb } from '@/components/BreadCrumb/BreadCrumb';
 
 export default function Page() {
   const [title, setTitle] = useState<string>('');
@@ -97,6 +98,10 @@ export default function Page() {
               <h1 className={styles.h1}>お問い合わせ</h1>
             </div>
             <div className={styles.contactContainer}>
+              <BreadCrumb
+                parentPath='トップ'
+                childPath='お問い合わせ'
+              />
               <br />
               <div className={styles.attention2}>
                 <WarningIcon color='warning' className={styles.icon}/>
