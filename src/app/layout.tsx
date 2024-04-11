@@ -26,7 +26,8 @@ export default function RootLayout({
 
   return (
     <html lang="jp">
-      <body className={inter.className}>
+      {/* <body className={inter.className}> */}
+      <body>
         <CssBaseline />
         <Header />
         <Suspense fallback={<div>Loading...</div>}>

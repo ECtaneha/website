@@ -4,11 +4,15 @@ import { announcement } from '@prisma/client';
 import globalStyles from '../../app/page.module.scss'
 import styles from './announcement.module.scss'
 import { Announce } from './Announce';
+import PageNation from '../PageNation/PageNation';
 
 export default function AnnouncementList() {
   const [announce, setAnnounce] = useState<announcement[]>([]);
   const [tags, setTags] = useState<string[]>([]);
-  const [selectedTag, setSelectedTag] = useState('すべて');
+  const [selectedTag, setSelectedTag] = useState<string>('すべて');
+  const [page, setPage] = useState<number>(1);
+  const [maxPage, setMaxPage] = useState<number>(1);
+  const [pageSize] = useState<number>(5);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,12 +26,13 @@ export default function AnnouncementList() {
 
         const uniqueTags = [...new Set(data.map(item => item.tag || ''))];
         setTags(['すべて', ...uniqueTags]);
+        setMaxPage(Math.ceil(data.length / pageSize));
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     }
     fetchData();
-  }, []);
+  }, [pageSize]);
 
   const filteredAnnounce = selectedTag === 'すべて'
     ? announce
@@ -42,6 +47,10 @@ export default function AnnouncementList() {
     }
     return 0;
   });
+
+  const startIndex = (page - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+  const displayedAnnounce = sortedAnnounce.slice(startIndex, endIndex);
 
   return (
     <div className={`
@@ -70,17 +79,20 @@ export default function AnnouncementList() {
             </button>
           ))}
         </div>
-        <ul>
-          {sortedAnnounce &&
-            sortedAnnounce.map((item: any) =>
-              item.publication === 'true'
-                ? <Announce
-                    key={item.id}
-                    item={item}
-                  />
-                : null
-            )}
+        <ul className={styles.announcementUl}>
+          {displayedAnnounce.map((item: any) =>
+            item.publication === 'true' &&
+              <Announce
+                key={item.id}
+                item={item}
+              />
+          )}
         </ul>
+        <PageNation
+          page={page}
+          setPage={setPage}
+          maxPage={sortedAnnounce.length}
+        />
       </div>
     </div>
   );

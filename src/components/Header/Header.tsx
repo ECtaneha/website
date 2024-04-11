@@ -7,6 +7,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import Image from 'next/image';
 import logo from '/public/images/header/logo-taishin.png'
 import { Hamburger } from '../Hamburger/Hamburger'
+import { Language } from '../Language/Language'
 
 export const Header = () => {
   const [isOpenState, setIsOpenState] = useState<boolean>(false);
@@ -39,6 +40,7 @@ export const Header = () => {
       </Link>
       <div className={styles.space}></div>
       <SNS />
+      <Language />
       <Link
         className={styles.linkContact}
         href='/contact'

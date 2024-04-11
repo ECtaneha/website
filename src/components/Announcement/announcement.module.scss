@@ -47,7 +47,7 @@ $sp: 768px;
 
 .announcementLi {
   width: 100%;
-  margin: 20px 0;
+  margin-bottom: 20px;
   padding: 5px 10px;
   border-bottom: 1px solid #444;
   display: flex;
@@ -80,10 +80,14 @@ $sp: 768px;
   font-weight: bold;
 }
 
+.announcementUl {
+  height: 445px;
+}
+
 .announcementWrapper {
   width: 60%;
-  height: 730px;
-  margin: 0 auto;
+  height: auto;
+  margin: 0 auto 100px;
   margin-inline: auto;
 
   @media (max-width: $sp) {
@@ -241,6 +245,7 @@ $sp: 768px;
 }
 
 .tagWrapper {
+  margin-bottom: 20px;
   display: flex;
   justify-content: flex-end;
   gap: 10px;
