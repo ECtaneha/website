@@ -34,6 +34,12 @@ $sp: 768px;
   text-align: left;
 }
 
+.classArray {
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
 .classNameWrapper {
   display: flex;
   justify-content: space-between;
@@ -161,8 +167,9 @@ $sp: 768px;
 
 .link {
   width: fit-content;
+  border-bottom: 1px solid #000;
   font-size: .75rem;
-  text-decoration: underline;
+  white-space: nowrap;
 }
 
 .linksWrapper {

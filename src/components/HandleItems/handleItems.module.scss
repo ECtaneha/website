@@ -23,6 +23,12 @@ $sp: 768px;
   border-bottom: 1px solid #444;
 }
 
+.classArray {
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
 .companyLi {
   width: fit-content;
   margin-top: 5px;
@@ -78,12 +84,6 @@ $sp: 768px;
 
   @media (max-width: $sp) {
     grid-template-columns: 1fr;
-  }
-}
-
-.classArray {
-  &:not(:last-child) {
-    margin-right: 1rem;
   }
 }
 

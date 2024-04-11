@@ -49,7 +49,13 @@ export default function Page() {
                   query: { id: data.id, name: data.name }
                 }}
               >
-                {data.class}
+                {data.class.map((array, key)=> (
+                  <span
+                    key={key}
+                    className={styles.classArray}>
+                    {array}
+                  </span>
+                ))}
               </Link>
             ))}
           </div>
