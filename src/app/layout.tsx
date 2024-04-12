@@ -35,8 +35,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [language, setLanguage] = useState<string>(() => {
-    const savedLanguage = localStorage.getItem('selectedLanguage');
-    return savedLanguage || '日本語';
+    if (typeof window !== 'undefined') {
+      const savedLanguage = localStorage.getItem('selectedLanguage');
+      return savedLanguage || '日本語';
+    } else {
+      return '日本語'; // サーバーサイドで実行される場合はデフォルト値を設定する
+    }
   });
 
   useEffect(() => {
