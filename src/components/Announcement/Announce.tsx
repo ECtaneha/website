@@ -2,19 +2,11 @@
 import React, { useState } from 'react'
 import styles from './announcement.module.scss'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { RenderParagraphs } from '../RenderParagraphs/RenderParagraphs';
 
 export const Announce = (props: any) => {
   const [isOpenAnnounce, setIsOpenAnnounce] = useState<boolean>(false);
-
-  const renderParagraphs = (str: string) => {
-    const lines = str.split('\n');
-
-    return lines.map((line, index) => (
-      <p key={index}>{line}</p>
-    ));
-  };
-
-  const paragraphs = renderParagraphs(props.item.content);
+  const paragraphs = RenderParagraphs(props.item.content, '\n');
 
   return (
     <li

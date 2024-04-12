@@ -29,6 +29,8 @@ const links =[
   },
 ]
 
+
+
 export const Footer = () => {
   const [arrowSwitch, setArrowSwitch] = useState<boolean>(false);
 

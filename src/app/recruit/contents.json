@@ -1,0 +1,218 @@
+[
+  {
+    "language": "日本語",
+    "linkMenu": [
+      {
+        "title": "社長あいさつ",
+        "url": "#president"
+      },
+      {
+        "title": "インタビュー",
+        "url": "#interview"
+      },
+      {
+        "title": "募集要項",
+        "url": "#Recruitment"
+      }
+    ],
+    "h1Greet": "採用情報",
+    "h2Greet": "社長あいさつ",
+    "greet": "人生は河の流れに例えられます。\n川の源流では急な流れも、海に近づくほど穏やかになります。流れが穏やかな場所では、それだけ進む力が必要となります。人生も同様で、始めは人の助けに背を押され進むことが出来たとしても、いずれは自分の力で泳いでいかなければなりません。仕事もまた然り。皆に支えられている間に、泳ぐ力を身に付けていかなければなりません。\nその力に必要なもののひとつに「忍耐力」があると私は思います。成長というのは失敗と成功の繰り返しです。成長できる人間というのは、失敗のくやしさと成功の喜びを知っています。そしてそれらは、人生や仕事を充実させる原動力になると思っています。失敗しても腐らず成功を目指せる忍耐力を持ち、また、境遇を同じくするチームメイトのくやしさに共感し、支え、成功を共に喜び合えることができる。私はそんな人間を志し、生きてきました。そして幸運なことに、私は志を同じくする先輩、同僚、後輩に囲まれ、充実した日々を経て今日に至ります。\nそんな私たちの情熱に共感を抱ける方々共に成長しながら一緒に仕事ができることを、願ってやみません。",
+    "company": "株式会社タイシン",
+    "post": "代表取締役社長",
+    "name": "廣田敬司",
+    "h2Interview": "インタビュー",
+    "employees": {
+      "employee1": {
+        "join": "営業職　2015年入社",
+        "name": "中山 竜介",
+        "photo": "/images/recruit/employee1.jpg",
+        "q1": "Q1-- なぜタイシンに入社したのですか？",
+        "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q2": "Q2-- 仕事内容を教えてください。",
+        "a2": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q3": "Q3-- 成長したと感じるところは？",
+        "a3": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q4": "Q4-- 入ってよかったと思うところは？",
+        "a4": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "messageTitle": "就活中の皆様へのメッセージ",
+        "message": "texttexttexttexttexttexttexttexttexttexttexttexttexttext"
+      },
+      "employee2": {
+        "join": "営業職　2015年入社",
+        "name": "中山 竜介",
+        "photo": "/images/recruit/employee2.jpg",
+        "q1": "Q1-- なぜタイシンに入社したのですか？",
+        "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q2": "Q2-- 仕事内容を教えてください。",
+        "a2": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q3": "Q3-- 成長したと感じるところは？",
+        "a3": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q4": "Q4-- 入ってよかったと思うところは？",
+        "a4": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "messageTitle": "就活中の皆様へのメッセージ",
+        "message": "texttexttexttexttexttexttexttexttexttexttexttexttexttext"
+      },
+      "employee3": {
+        "join": "営業職　2015年入社",
+        "name": "中山 竜介",
+        "photo": "/images/recruit/employee3.jpg",
+        "q1": "Q1-- なぜタイシンに入社したのですか？",
+        "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q2": "Q2-- 仕事内容を教えてください。",
+        "a2": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q3": "Q3-- 成長したと感じるところは？",
+        "a3": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q4": "Q4-- 入ってよかったと思うところは？",
+        "a4": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "messageTitle": "就活中の皆様へのメッセージ",
+        "message": "texttexttexttexttexttexttexttexttexttexttexttexttexttext"
+      }
+    },
+    "h2Recruitment": "募集要項"
+  },
+  {
+    "language": "English",
+    "linkMenu": [
+      {
+        "title": "president's greet",
+        "url": "#president"
+      },
+      {
+        "title": "interview",
+        "url": "#interview"
+      },
+      {
+        "title": "Requirements",
+        "url": "#Requirements"
+      }
+    ],
+    "h1Greet": "Recruitment Information",
+    "h2Greet": "Message from the President",
+    "greet": "Life can be likened to the flow of a river.\n At the source, the current is swift, but as it approaches the sea, it becomes calm. In tranquil waters, more effort is required to move forward. Similarly, in life, while one may initially be propelled by the help of others, eventually, one must swim on their own strength. This applies to work as well. While supported by others, one must develop the ability to swim.\n One of the essential qualities for this is 'perseverance,' in my opinion. Growth entails a cycle of failure and success. Those who can grow understand the frustration of failure and the joy of success. I believe these serve as driving forces that enrich life and work. Having the perseverance to aim for success even in the face of failure, and being able to empathize, support, and celebrate success with teammates facing similar circumstances, is what I aspire to be. Fortunately, I have been surrounded by seniors, colleagues, and juniors who share this aspiration, leading to fulfilling days until today.\n I sincerely hope to work with those who resonate with our passion, growing together.",
+    "company": "Taishin Co., Ltd.",
+    "post": "President & CEO",
+    "name": "Keiji Hirota",
+    "h2Interview": "Interview",
+    "employees": {
+      "employee1": {
+        "join": "Sales Department, Joined in 2015",
+        "name": "Ryusuke Nakayama",
+        "photo": "/images/recruit/employee1.jpg",
+        "q1": "Q1-- Why did you join Taishin?",
+        "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q2": "Q2-- Please tell us about your job.",
+        "a2": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q3": "Q3-- Where do you feel you have grown?",
+        "a3": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q4": "Q4-- What do you think was good about joining?",
+        "a4": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "messageTitle": "Message to Those in Job Hunting",
+        "message": "texttexttexttexttexttexttexttexttexttexttexttexttexttext"
+      },
+      "employee2": {
+        "join": "Sales Department, Joined in 2015",
+        "name": "Ryusuke Nakayama",
+        "photo": "/images/recruit/employee2.jpg",
+        "q1": "Q1-- Why did you join Taishin?",
+        "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q2": "Q2-- Please tell us about your job.",
+        "a2": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q3": "Q3-- Where do you feel you have grown?",
+        "a3": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q4": "Q4-- What do you think was good about joining?",
+        "a4": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "messageTitle": "Message to Those in Job Hunting",
+        "message": "texttexttexttexttexttexttexttexttexttexttexttexttexttext"
+      },
+      "employee3": {
+        "join": "Sales Department, Joined in 2015",
+        "name": "Ryusuke Nakayama",
+        "photo": "/images/recruit/employee3.jpg",
+        "q1": "Q1-- Why did you join Taishin?",
+        "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q2": "Q2-- Please tell us about your job.",
+        "a2": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q3": "Q3-- Where do you feel you have grown?",
+        "a3": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q4": "Q4-- What do you think was good about joining?",
+        "a4": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "messageTitle": "Message to Those in Job Hunting",
+        "message": "texttexttexttexttexttexttexttexttexttexttexttexttexttext"
+      }
+    },
+    "h2Recruitment": "guidelines for applicants"
+  },
+  {
+    "language": "中國語",
+    "linkMenu": [
+      {
+        "title": "招聘信息",
+        "url": "#president"
+      },
+      {
+        "title": "面试",
+        "url": "#interview"
+      },
+      {
+        "title": "申请要求",
+        "url": "#Requirements"
+      }
+    ],
+    "h1Greet": "招聘信息",
+    "h2Greet": "总裁致辞",
+    "greet": "生活如大河般流淌。\n源头时、水流湍急。而临近海口时、则变得平静。在平静的水域中。前行需要更多的努力。同样地、生活也是如此、虽然最初可能是在他人的帮助下前进、但最终、一个必须依靠自己的力量前行。这同样适用于工作。在得到他人支持的同时、一个必须培养自己的游泳能力。\n在我看来、其中一个必要的品质就是'毅力'。成长意味着失败和成功的循环。能够成长的人理解失败的沮丧和成功的喜悦。我相信这些是丰富生活和工作的动力。即使面对失败、也有毅力追求成功、并能够与面临相似境遇的队友共情、支持和庆祝成功。我渴望成为这样的人。幸运的是，我周围有志同道合的前辈、同事和后辈，直至今日过上了充实的生活。\n我真诚地希望能与那些与我们的热情产生共鸣的人一起成长。",
+    "company": "泰信有限公司",
+    "post": "总裁兼CEO",
+    "name": "广田　敬二",
+    "h2Interview": "面试",
+    "employees":{
+      "employee1": {
+        "join": "销售部，2015年入职",
+        "name": "中山　龙介",
+        "photo": "/images/recruit/employee1.jpg",
+        "q1": "Q1-- 你为什么加入泰信？",
+        "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q2": "Q2-- 请告诉我们你的工作内容。",
+        "a2": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q3": "Q3-- 你觉得自己在哪些方面有所成长？",
+        "a3": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q4": "Q4-- 你认为加入泰信有何好处？",
+        "a4": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "messageTitle": "给正在求职的同学的留言",
+        "message": "texttexttexttexttexttexttexttexttexttexttexttexttexttext"
+      },
+      "employee2": {
+        "join": "销售部，2015年入职",
+        "name": "中山　龙介",
+        "photo": "/images/recruit/employee2.jpg",
+        "q1": "Q1-- 你为什么加入泰信？",
+        "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q2": "Q2-- 请告诉我们你的工作内容。",
+        "a2": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q3": "Q3-- 你觉得自己在哪些方面有所成长？",
+        "a3": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q4": "Q4-- 你认为加入泰信有何好处？",
+        "a4": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "messageTitle": "给正在求职的同学的留言",
+        "message": "texttexttexttexttexttexttexttexttexttexttexttexttexttext"
+      },
+      "employee3": {
+        "join": "销售部，2015年入职",
+        "name": "中山　龙介",
+        "photo": "/images/recruit/employee3.jpg",
+        "q1": "Q1-- 你为什么加入泰信？",
+        "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q2": "Q2-- 请告诉我们你的工作内容。",
+        "a2": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q3": "Q3-- 你觉得自己在哪些方面有所成长？",
+        "a3": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "q4": "Q4-- 你认为加入泰信有何好处？",
+        "a4": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "messageTitle": "给正在求职的同学的留言",
+        "message": "texttexttexttexttexttexttexttexttexttexttexttexttexttext"
+      }
+    },
+    "h2Recruitment": "申请要求"
+  }
+]

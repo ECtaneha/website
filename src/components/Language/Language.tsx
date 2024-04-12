@@ -1,7 +1,8 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from './language.module.scss'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import { CurrentLanguage } from '@/app/layout';
 
 const languages = [
   '日本語',
@@ -10,8 +11,13 @@ const languages = [
 ];
 
 export const Language = () => {
-  const [language, setLanguage] = useState<string>('日本語');
+  const {language, setLanguage} = useContext(CurrentLanguage);
+  const [selectedLanguage, setSelectedLanguage] = useState(language);
   const [isActive, setIsActive] = useState<boolean>(false);
+
+  useEffect(() => {
+    setSelectedLanguage(language);
+  }, [language, setSelectedLanguage]);
 
   return (
     <div className={styles.languageContainer}>
@@ -36,7 +42,7 @@ export const Language = () => {
         ${isActive && styles.open}
       `}>
         {languages
-          .filter((languages: string) => languages !== language)
+          .filter((languages: string) => languages !== selectedLanguage)
           .map((language: string, key: number) => (
             <button
               key={key}

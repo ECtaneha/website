@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import styles from './toTopButton.module.scss'
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';

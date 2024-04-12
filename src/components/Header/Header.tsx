@@ -40,7 +40,7 @@ export const Header = () => {
       </Link>
       <div className={styles.space}></div>
       <SNS />
-      {/* <Language /> */}
+      <Language />
       <Link
         className={styles.linkContact}
         href='/contact'
