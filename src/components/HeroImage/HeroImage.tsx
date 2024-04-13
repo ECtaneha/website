@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../HeroImage/heroImage.module.css'
 import Image from 'next/image'
-import desktopImage from '/public/images/heroImage/hero-image1.jpg'
+import desktopImage from '/public/images/heroImage/heroImage4k.jpg'
 import mobileImage from '/public/images/heroImage/hero-image1-android.jpg'
 
 export const HeroImage = () => {
@@ -33,7 +33,7 @@ export const HeroImage = () => {
     <div className={styles.container}>
       <Image
         className={styles.image}
-        width={1920}
+        width={1900}
         height={1000}
         src={getImagePath()}
         alt={'heroimage'}

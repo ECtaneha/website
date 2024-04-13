@@ -69,7 +69,10 @@ export default function AnnouncementList() {
             <button
               key={tag}
               className={styles.announcementSelectTag}
-              onClick={() => setSelectedTag(tag)}
+              onClick={() => (
+                setSelectedTag(tag),
+                setPage(1)
+              )}
               style={{
                 backgroundColor: selectedTag === tag ? '#71cdff' : '',
                 color: selectedTag === tag ? 'white' : '',

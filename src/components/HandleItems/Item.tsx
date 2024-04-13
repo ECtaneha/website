@@ -6,7 +6,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 type item = {
   name: string,
   class: string[],
-  mainImage: string,
+  thumbnail: string,
   width: number,
   height: number,
   alt: string,
@@ -18,7 +18,7 @@ export const Item = (props: item) => {
     <div className={styles.itemContainer}>
       <Image
         className={styles.image}
-        src={props.mainImage}
+        src={props.thumbnail}
         width={props.width}
         height={props.height}
         alt={props.alt}

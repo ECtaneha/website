@@ -32,7 +32,7 @@ export const HandleItems = () => {
               <Item
                 name={data.name}
                 class={data.class}
-                mainImage={data.mainImage}
+                thumbnail={data.thumbnail}
                 width={width}
                 height={height}
                 alt={data.name}

@@ -4,7 +4,7 @@
     "name": "農業 / 土木",
     "class": ["農業", "土木", "緑化", "工業ゴム"],
     "description": "",
-    "mainImage": "/images/handleImages/class1/3.png",
+    "thumbnail": "/images/handleImages/class1/3.png",
     "src": [
       "/images/handleImages/class1/1.png",
       "/images/handleImages/class1/2.png",
@@ -118,7 +118,7 @@
     "name": "水処理系",
     "class": ["上水系水処理", "ポンプ", "水位制御"],
     "description": "",
-    "mainImage": "/images/handleImages/class2/7.png",
+    "thumbnail": "/images/handleImages/class2/7.png",
     "src": [
       "/images/handleImages/class2/5.png",
       "/images/handleImages/class2/6.png",
@@ -196,7 +196,7 @@
     "name": "水道管",
     "class": ["上水道本管", "給水装置"],
     "description": "",
-    "mainImage": "/images/handleImages/class3/10.png",
+    "thumbnail": "/images/handleImages/class3/10.png",
     "src": [
       "/images/handleImages/class3/9.png",
       "/images/handleImages/class3/10.png",
@@ -270,7 +270,7 @@
     "name": "塩ビ管",
     "class": ["塩ビ管"],
     "description": "",
-    "mainImage": "/images/handleImages/class4/13.png",
+    "thumbnail": "/images/handleImages/class4/13.png",
     "src": [
       "/images/handleImages/class4/13.png",
       "/images/handleImages/class4/14.png",
@@ -324,7 +324,7 @@
     "name": "鋼・ステンレス鋼管",
     "class": ["鋼管", "ステンレス鋼管"],
     "description": "",
-    "mainImage": "/images/handleImages/class5/17.png",
+    "thumbnail": "/images/handleImages/class5/17.png",
     "src": [
       "/images/handleImages/class5/17.png",
       "/images/handleImages/class5/18.png",
@@ -402,7 +402,7 @@
     "name": "銅・鉛・樹脂管 / 断熱材",
     "class": ["銅管", "鉛管", "樹脂管", "断熱材"],
     "description": "",
-    "mainImage": "/images/handleImages/class6/21.png",
+    "thumbnail": "/images/handleImages/class6/21.png",
     "src": [
       "/images/handleImages/class6/21.png",
       "/images/handleImages/class6/22.png",
@@ -484,7 +484,7 @@
     "name": "空調",
     "class": ["空調", "換気", "電機"],
     "description": "",
-    "mainImage": "/images/handleImages/class7/26.png",
+    "thumbnail": "/images/handleImages/class7/26.png",
     "src": [
       "/images/handleImages/class7/25.png",
       "/images/handleImages/class7/26.png",
@@ -586,7 +586,7 @@
     "name": "ガス計器類",
     "class": ["ガス", "計器", "標示"],
     "description": "",
-    "mainImage": "/images/handleImages/class8/31.png",
+    "thumbnail": "/images/handleImages/class8/31.png",
     "src": [
       "/images/handleImages/class8/29.png",
       "/images/handleImages/class8/30.png",
@@ -692,7 +692,7 @@
     "name": "消火",
     "class": ["消火", "フレキ"],
     "description": "",
-    "mainImage": "/images/handleImages/class9/34.png",
+    "thumbnail": "/images/handleImages/class9/34.png",
     "src": [
       "/images/handleImages/class9/33.png",
       "/images/handleImages/class9/34.png",
@@ -758,7 +758,7 @@
     "name": "水栓",
     "class": ["バルブ", "水栓"],
     "description": "",
-    "mainImage": "/images/handleImages/class10/37.png",
+    "thumbnail": "/images/handleImages/class10/37.png",
     "src": [
       "/images/handleImages/class10/37.png",
       "/images/handleImages/class10/38.png",
@@ -840,7 +840,7 @@
     "name": "排水金物 / 枡 / 蓋",
     "class": ["排水金物", "枡", "蓋"],
     "description": "",
-    "mainImage": "/images/handleImages/class11/43.png",
+    "thumbnail": "/images/handleImages/class11/43.png",
     "src": [
       "/images/handleImages/class11/41.png",
       "/images/handleImages/class11/42.png",
@@ -918,7 +918,7 @@
     "name": "排水処理系",
     "class": ["排水系水処理", "浄化槽 便槽", "ブロワー"],
     "description": "",
-    "mainImage": "/images/handleImages/class12/46.png",
+    "thumbnail": "/images/handleImages/class12/46.png",
    "src": [
       "/images/handleImages/class12/45.png",
       "/images/handleImages/class12/46.png",
@@ -984,7 +984,7 @@
     "name": "機器",
     "class": ["機器"],
     "description": "",
-    "mainImage": "/images/handleImages/class13/50.png",
+    "thumbnail": "/images/handleImages/class13/50.png",
     "src": [
       "/images/handleImages/class13/49.png",
       "/images/handleImages/class13/50.png",
@@ -1150,7 +1150,7 @@
     "name": "工具類",
     "class": ["工具"],
     "description": "",
-    "mainImage": "/images/handleImages/class14/54.png",
+    "thumbnail": "/images/handleImages/class14/54.png",
     "src": [
       "/images/handleImages/class14/53.png",
       "/images/handleImages/class14/54.png",
@@ -1296,7 +1296,7 @@
     "name": "支持金物類",
     "class": ["支持金物", "ファスニング", "溶剤"],
     "description": "",
-    "mainImage": "/images/handleImages/class15/60.png",
+    "thumbnail": "/images/handleImages/class15/60.png",
     "src": [
       "/images/handleImages/class15/57.png",
       "/images/handleImages/class15/58.png",
