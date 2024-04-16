@@ -388,6 +388,16 @@ $sp: 768px;
   @extend .recruitWrapper;
   width: 60%;
   margin: 0 auto 100px;
+
+  @media (max-width: $tab) {
+    width: 80%;
+
+  }
+
+  @media (max-width: $sp) {
+    width: 90%;
+
+  }
 }
 
 .requirementsHeader1 {
@@ -409,7 +419,11 @@ $sp: 768px;
 }
 
 .requirementsTable {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
   border: 1px solid #444;
+}
+
+.welfare {
+  color: blue;
+  text-decoration: underline;
 }

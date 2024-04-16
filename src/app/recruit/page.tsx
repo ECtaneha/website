@@ -141,31 +141,102 @@ export default function Page() {
 				<table className={styles.requirementsTable}>
 					<tbody>
 						<tr>
-							<th className={styles.requirementsHeader1} colSpan={2}>営業職</th>
+							<th className={styles.requirementsHeader1} colSpan={2}>配送職</th>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>勤務地</th>
+							<td>徳島県 徳島市 鮎喰町</td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>仕事内容</th>
+							<td></td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>必要な資格やスキル</th>
+							<td>要普通免許、未経験者OK、学歴不問、基本的なPCスキル</td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>勤務時間・曜日</th>
+							<td>
+								【アルバイト・パート】<br/>　週休2日制、8時30分～17時30分<br/>
+								【正社員】<br/>　日・祝休み、土曜日は隔週休<br />
+								　8時30分～17時30分<br />
+								<br />
+								※繁忙期は多少の残業有
+							</td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>勤務形態</th>
+							<td>固定時間制</td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>休暇・休日</th>
+							<td>
+								・年間休日：98日<br />
+								・土曜日隔週、日祝休み<br />
+								・年末年始、GW、お盆休暇
+							</td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>勤務地所在地</th>
+							<td>
+								〒770-0051 徳島県徳島市北島田町3丁目2-4<br />
+								徳島線鮎喰駅より車で3分<br />
+								・無料駐車場完備<br />
+								・マイカー通勤可
+							</td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>代表電話番号</th>
+							<td>
+								0886326565<br />
+								国際電話番号：+81886326565</td>
+						</tr>
+						<tr className={styles.requirementsHeader2}>
+							<th>代表者名</th>
+							<td>廣田 敬司</td>
 						</tr>
 						<tr className={styles.requirementsHeader2}>
 							<th>給与</th>
-							<td>200,000</td>
+							<td>
+								【正社員】<br />
+								　月給／165,000円～235,000円<br />
+								【パート・アルバイト】<br />
+								　時給／1,000円～<br />
+								<br />
+								・年１回昇給査定あり
+							</td>
 						</tr>
 						<tr className={styles.requirementsHeader2}>
-							<th>給与</th>
-							<td>200,000</td>
+							<th>試用期間</th>
+							<td>
+								試用期間：3か月<br />
+								試用期間中の労働条件：同条件
+							</td>
 						</tr>
 						<tr className={styles.requirementsHeader2}>
-							<th>給与</th>
-							<td>200,000</td>
+							<th>待遇・福利厚生</th>
+							<td>
+								各種社会保険完備（社会保険、雇用保険、労災保険、健康保険、厚生年金）<br />
+								交通費支給（上限月15000円迄）<br />
+								昇給査定年1回有、制服貸与<br />
+								マイカー通勤可、無料駐車場完備<br />
+								<br />
+								正社員登用有<br />
+								正社員は上記のほかに、賞与年3回有（夏・冬・業績により決算賞与）<br />
+								エクシブスーパースイートルーム全国27か所宿泊などの福利厚生あり（詳細は下記
+								<Link
+								className={styles.welfare}
+									href='#Welfare'
+								>
+									福利厚生
+								</Link>
+								をご覧ください）
+							</td>
 						</tr>
 						<tr className={styles.requirementsHeader2}>
-							<th>給与</th>
-							<td>200,000</td>
-						</tr>
-						<tr className={styles.requirementsHeader2}>
-							<th>給与</th>
-							<td>200,000</td>
-						</tr>
-						<tr className={styles.requirementsHeader2}>
-							<th>給与</th>
-							<td>200,000</td>
+							<th>平均所定労働時間</th>
+							<td>178時間/月</td>
 						</tr>
 					</tbody>
 				</table>

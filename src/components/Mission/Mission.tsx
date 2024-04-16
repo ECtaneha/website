@@ -18,13 +18,15 @@ export const Mission = () => {
         </h2>
 
       </div>
-      <Image
+      {/* <Image
         className={styles.missionImage}
         src={missionImage}
         width={width}
         height={height}
         alt='タイシン３つの使命'
-      />
+      /> */}
+      <div className={styles.missionImage}>
+    </div>
     </div>
   )
 }
