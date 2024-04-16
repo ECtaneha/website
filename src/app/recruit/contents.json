@@ -1,6 +1,7 @@
 [
   {
     "language": "日本語",
+    "parentAddress": "トップ",
     "linkMenu": [
       {
         "title": "社長あいさつ",
@@ -26,22 +27,28 @@
       "employee1": {
         "join": "営業職　2015年入社",
         "name": "中山 竜介",
-        "photo": "/images/recruit/employee1.jpg",
+        "photo": {
+          "photo1": "/images/recruit/employee1_1.jpg",
+          "photo2": "/images/recruit/employee1_2.jpg"
+        },
         "q1": "Q1-- なぜタイシンに入社したのですか？",
-        "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "a1": "バイト先の店長にタイシンを教えていただき、ホームページを見てとても興味深かったので入社することに決めました。",
         "q2": "Q2-- 仕事内容を教えてください。",
-        "a2": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "a2": "管材などの営業です。具体的には、お客様のニーズをお伺いし、必要な商品を選定してお手元にお届けする仕事です。",
         "q3": "Q3-- 成長したと感じるところは？",
-        "a3": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "a3": "コミュニケーション能力が上がりました。昔は人見知りだったのですが、少しずつ改善してきています。",
         "q4": "Q4-- 入ってよかったと思うところは？",
-        "a4": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
+        "a4": "アットホーム感があり、とても居心地がいいところです。有休がとりやすく、福利厚生が充実している点も入社して良かったと感じています。",
         "messageTitle": "就活中の皆様へのメッセージ",
-        "message": "texttexttexttexttexttexttexttexttexttexttexttexttexttext"
+        "message": "入社に際して、おそらく多くの方が人間関係に不安を抱かれると思います。私も人見知り故当初は大変不安でしたが、気さくな先輩たちに恵まれて今もまだ続けることができています。見学も歓迎しているので、一度見に来て社内の空気を感じてください。お会いできることを楽しみにしております。"
       },
       "employee2": {
         "join": "営業職　2015年入社",
         "name": "中山 竜介",
-        "photo": "/images/recruit/employee2.jpg",
+        "photo": {
+          "photo1": "/images/recruit/employee2_1.jpg",
+          "photo2": "/images/recruit/employee2_2.jpg"
+        },
         "q1": "Q1-- なぜタイシンに入社したのですか？",
         "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
         "q2": "Q2-- 仕事内容を教えてください。",
@@ -56,7 +63,10 @@
       "employee3": {
         "join": "営業職　2015年入社",
         "name": "中山 竜介",
-        "photo": "/images/recruit/employee3.jpg",
+        "photo": {
+          "photo1": "/images/recruit/employee3_1.jpg",
+          "photo2": "/images/recruit/employee3_2.jpg"
+        },
         "q1": "Q1-- なぜタイシンに入社したのですか？",
         "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
         "q2": "Q2-- 仕事内容を教えてください。",
@@ -73,6 +83,7 @@
   },
   {
     "language": "English",
+    "parentAddress": "top",
     "linkMenu": [
       {
         "title": "president's greet",
@@ -98,7 +109,10 @@
       "employee1": {
         "join": "Sales Department, Joined in 2015",
         "name": "Ryusuke Nakayama",
-        "photo": "/images/recruit/employee1.jpg",
+        "photo": {
+          "photo1": "/images/recruit/employee1_1.jpg",
+          "photo2": "/images/recruit/employee1_2.jpg"
+        },
         "q1": "Q1-- Why did you join Taishin?",
         "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
         "q2": "Q2-- Please tell us about your job.",
@@ -113,7 +127,10 @@
       "employee2": {
         "join": "Sales Department, Joined in 2015",
         "name": "Ryusuke Nakayama",
-        "photo": "/images/recruit/employee2.jpg",
+        "photo": {
+          "photo1": "/images/recruit/employee2_1.jpg",
+          "photo2": "/images/recruit/employee2_2.jpg"
+        },
         "q1": "Q1-- Why did you join Taishin?",
         "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
         "q2": "Q2-- Please tell us about your job.",
@@ -128,7 +145,10 @@
       "employee3": {
         "join": "Sales Department, Joined in 2015",
         "name": "Ryusuke Nakayama",
-        "photo": "/images/recruit/employee3.jpg",
+        "photo": {
+          "photo1": "/images/recruit/employee3_1.jpg",
+          "photo2": "/images/recruit/employee3_2.jpg"
+        },
         "q1": "Q1-- Why did you join Taishin?",
         "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
         "q2": "Q2-- Please tell us about your job.",
@@ -145,6 +165,7 @@
   },
   {
     "language": "中國語",
+    "parentAddress": "首页",
     "linkMenu": [
       {
         "title": "招聘信息",
@@ -170,7 +191,10 @@
       "employee1": {
         "join": "销售部，2015年入职",
         "name": "中山　龙介",
-        "photo": "/images/recruit/employee1.jpg",
+        "photo": {
+          "photo1": "/images/recruit/employee1_2.jpg",
+          "photo2": "/images/recruit/employee1_2.jpg"
+        },
         "q1": "Q1-- 你为什么加入泰信？",
         "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
         "q2": "Q2-- 请告诉我们你的工作内容。",
@@ -185,7 +209,10 @@
       "employee2": {
         "join": "销售部，2015年入职",
         "name": "中山　龙介",
-        "photo": "/images/recruit/employee2.jpg",
+        "photo": {
+          "photo1": "/images/recruit/employee2_1.jpg",
+          "photo2": "/images/recruit/employee2_2.jpg"
+        },
         "q1": "Q1-- 你为什么加入泰信？",
         "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
         "q2": "Q2-- 请告诉我们你的工作内容。",
@@ -200,7 +227,10 @@
       "employee3": {
         "join": "销售部，2015年入职",
         "name": "中山　龙介",
-        "photo": "/images/recruit/employee3.jpg",
+        "photo": {
+          "photo1": "/images/recruit/employee3_1.jpg",
+          "photo2": "/images/recruit/employee3_2.jpg"
+        },
         "q1": "Q1-- 你为什么加入泰信？",
         "a1": "texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext",
         "q2": "Q2-- 请告诉我们你的工作内容。",

@@ -1,5 +1,5 @@
 'use client'
-import globalStyles from '../page.module.scss'
+import globalStyles from '@/app/page.module.scss'
 import styles from './page.module.scss'
 import { TextField } from '@mui/material';
 import WarningIcon from '@mui/icons-material/Warning';

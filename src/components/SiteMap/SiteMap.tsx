@@ -4,7 +4,7 @@ import nintei from '/public/images/footer/nintei_logo.jpg'
 import logo from '/public/images/header/logo-taishin.png'
 import Image from 'next/image';
 import Link from 'next/link';
-import { SNS } from '../SNS/SNS';
+import { SNS } from '@/components/SNS/SNS';
 
 export const SiteMap = () => {
   return (
@@ -19,8 +19,10 @@ export const SiteMap = () => {
                 <SNS />
                 <Link
                   className={styles.mediaPolicy}
-                  href=''
-                ><small>メディアポリシー</small></Link>
+                  href='/policy/site'
+                >
+                  <small>サイトポリシー</small>
+                </Link>
               </div>
             </div>
         </div>

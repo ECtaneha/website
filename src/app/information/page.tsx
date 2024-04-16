@@ -1,31 +1,21 @@
 'use client'
-import React, { useState } from 'react'
-import globalStyles from '../page.module.scss'
+import React, { useContext, useEffect, useState } from 'react'
+import globalStyles from '@/app/page.module.scss'
 import styles from './page.module.scss'
 import Image from 'next/image'
-import history from './history.json'
-import information from './information.json'
 import presidentPhoto from '/public/images/information/presidentPhoto.jpg'
 import Link from 'next/link'
-import { BreadCrumb } from '../../components/BreadCrumb/BreadCrumb'
+import { BreadCrumb } from '@/components/BreadCrumb/BreadCrumb'
 import { usePathname } from 'next/navigation';
+import { RenderParagraphs } from '@/lib/RenderParagraphs'
+import { CurrentLanguage } from '@/app/layout'
+import datas from './information.json'
 
 function toFullWidth(str: string) {
   str = str.replace(/[A-Za-z0-9]/g, function(s) {
     return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
   });
   return str;
-}
-
-const texts = (target: string) => {
-  const text = target.split(/(\n)/).map((item: string, key: React.Key | null | undefined) => {
-    return (
-      <React.Fragment key={key}>
-        {item.match(/\n/) ? <br /> : item}
-      </React.Fragment>
-    )
-  })
-  return <>{text}</>
 }
 
 export default function Page() {
@@ -38,30 +28,61 @@ export default function Page() {
   const now = year - 1978;
   const _pathname = usePathname()
   const pathName = _pathname.replace(`/`, '');
+  const { language = 'Japanese', setLanguage } = useContext(CurrentLanguage);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [information, setInformation] = useState<InfoData>({
+    language: '',
+    date: '',
+    parentAddress: '',
+    information: [],
+    history: [],
+    linkMenu: { h1: '', menu: [] },
+    greet: {
+      content: '',
+      company: '',
+      post: '',
+      name: ''
+    },
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const informationData = datas.find(item => item.language === language);
+      if (informationData) {
+        setInformation(informationData);
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, [language]);
+
+  if (loading || !information) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className={globalStyles.contentsWrapper}>
       <div className={styles.h1Container}>
-        <h1 className={styles.h1}>会社概要</h1>
+        <h1 className={styles.h1}>{information.linkMenu.h1}</h1>
       </div>
 
       <div className={styles.informationContainer}>
         <BreadCrumb
-          parentPath='トップ'
-          childPath='会社概要'
+          parentPath={information.parentAddress}
+          childPath={information.linkMenu.h1}
         />
 
-
         <div className={styles.links}>
-          {linkMenu.map((menu, key) => (
+          {information.linkMenu.menu.map((menu, key) => (
             <Link
               key={key}
               className={`
                 ${styles.link}
                 ${isActiveLink && styles.isActiveLink}
               `}
-              href={menu.url}>
-                {menu.title}
+              href={menu.url}
+            >
+              {menu.title}
             </Link>
           ))}
         </div>
@@ -70,7 +91,7 @@ export default function Page() {
           id='president'
           className={styles.informationWrapper}>
           <h2 className={styles.h2}>
-            社長あいさつ
+            {information.linkMenu.menu[0].title}
           </h2>
           <div className={styles.greet}>
             <Image
@@ -82,12 +103,15 @@ export default function Page() {
             />
             <div className={styles.greetWrapper}>
               <p>
-                創業者・山根良彦の一念により興った弊社も今年で{now}期を迎えました。お客様やお取引先様にご愛顧いただき、お陰様で創業以来黒字経営を続けられています。人々の困難の為に奔走した先人達の理念を継承しつつ、今後も新たなことに挑戦し続け、人々の生活を支えられるよう邁進していく所存です。
+                {RenderParagraphs(information.greet.content.replace('{now}', `${now}`), '\n')}
               </p>
               <div className={styles.presidentNameContainer}>
-                株式会社タイシン<br />
-                代表取締役社長
-                <span className={styles.presidentName}>廣田敬司</span>
+                {information.greet.company}
+                <br />
+                {information.greet.post}
+                <span className={styles.presidentName}>
+                  {information.greet.name}
+                </span>
               </div>
             </div>
           </div>
@@ -100,14 +124,14 @@ export default function Page() {
             ${styles.h2}
             ${styles.history}
           `}>
-            会社沿革
+            {information.linkMenu.menu[1].title}
           </h2>
           <p className={styles.rightNow}>
-          {`（${YEAR}年${MONTH}月末現在）`}
+            {information.date}
           </p>
           <table  className={styles.table01}>
             <tbody>
-              {history.map((res: any, key: React.Key) => (
+              {information.history.map((res: any, key: React.Key) => (
                 <tr key={key}>
                   <th>{res.title}</th>
                   <td>{res.description}</td>
@@ -124,17 +148,17 @@ export default function Page() {
             ${styles.h2}
             ${styles.information}
           `}>
-            会社情報
+            {information.linkMenu.menu[2].title}
           </h2>
           <p className={styles.rightNow}>
-            {`（${YEAR}年${MONTH}月末現在）`}
+            {information.date}
           </p>
           <table className={styles.table01}>
           <tbody>
-              {information.map((res: any, key: React.Key) => (
+              {information.information.map((res: any, key: React.Key) => (
                 <tr key={key}>
                   <th>{res.title}</th>
-                  <td>{texts(res.description)}</td>
+                  <td>{RenderParagraphs(res.description, '\n')}</td>
                 </tr>
               ))}
             </tbody>
@@ -145,18 +169,37 @@ export default function Page() {
   )
 }
 
-const linkMenu = [
-  {
-    'title': '社長あいさつ',
-    'url': '#president'
-  },
-  {
-    'title': '会社沿革',
-    'url': '#history'
-  },
-  {
-    'title': '会社情報',
-    'url': '#information'
-  },
-]
+type InfoData = {
+  language: string;
+  date: string;
+  parentAddress: string;
+	information: infoData;
+	history: histData;
+  linkMenu: linkData;
+  greet: greet;
+};
 
+type infoData = {
+	title: string;
+	description: string;
+}[];
+
+type histData = {
+	title: string;
+	description: string;
+}[];
+
+type linkData = {
+  h1: string;
+  menu: {
+    title: string;
+    url: string;
+  }[];
+};
+
+type greet = {
+  content: string;
+  company: string;
+  post: string;
+  name: string;
+}

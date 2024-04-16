@@ -1,6 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import styles from '../HeroImage/heroImage.module.css'
+import styles from '@/components/HeroImage/heroImage.module.css'
 import Image from 'next/image'
 import desktopImage from '/public/images/heroImage/heroImage4k.jpg'
 import mobileImage from '/public/images/heroImage/hero-image1-android.jpg'

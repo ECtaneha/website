@@ -1,15 +1,19 @@
 'use client'
 import Link from 'next/link'
-import globalStyles from '../page.module.scss'
+import globalStyles from '@/app/page.module.scss'
 import styles from './page.module.scss'
 import { BreadCrumb } from '@/components/BreadCrumb/BreadCrumb'
 import { useContext, useEffect, useState } from 'react';
 import Image from 'next/image'
-import presidentPhoto from '/public/images/information/presidentPhoto.jpg'
+import presidentPhoto from '/public/images/recruit/hirota600-600.jpg'
+import photo1 from '/public/images/recruit/recruit-hirota-sakurai-nakayama300-450-1.jpg'
+import photo2 from '/public/images/recruit/recruit-nakayama-2-300-450.jpg'
+import photo3 from '/public/images/recruit/recruit-nakayama300-450.jpg'
+import photo4 from '/public/images/recruit/recruit-sakurai300-450.jpg'
 import datas from './contents.json'
 import { Employee } from './Employee'
 import { CurrentLanguage  }from '@/app/layout'
-import { RenderParagraphs } from '@/components/RenderParagraphs/RenderParagraphs'
+import { RenderParagraphs } from '@/lib/RenderParagraphs'
 
 export default function Page() {
 	const { language, setLanguage } = useContext(CurrentLanguage);
@@ -34,7 +38,7 @@ export default function Page() {
 
       <div className={styles.recruitHeaderContainer}>
         <BreadCrumb
-          parentPath='top'
+          parentPath={info.parentAddress}
           childPath={info.h1Greet}
         />
 
@@ -57,28 +61,28 @@ export default function Page() {
 				<div className={styles.allMembersPhotoWrapper}>
 					<Image
 						className={styles.allMembersPhoto}
-						src={presidentPhoto}
+						src={photo1}
 						width={200}
 						height={200}
 						alt='member1'
 					/>
 					<Image
 						className={styles.allMembersPhoto}
-						src={presidentPhoto}
+						src={photo1}
 						width={200}
 						height={200}
 						alt='member2'
 					/>
 					<Image
 						className={styles.allMembersPhoto}
-						src={presidentPhoto}
+						src={photo1}
 						width={200}
 						height={200}
 						alt='member3'
 					/>
 					<Image
 						className={styles.allMembersPhoto}
-						src={presidentPhoto}
+						src={photo1}
 						width={200}
 						height={200}
 						alt='member4'
@@ -172,6 +176,7 @@ export default function Page() {
 
 type InfoData = {
   language: string;
+	parentAddress: string;
 	linkMenu: linksData;
   h1Greet: string;
   h2Greet: string;
@@ -198,6 +203,7 @@ type Employees = {
 type EmployeeData = {
   join: string;
   name: string;
+	photo: Photo;
   q1: string;
   a1: string;
   q2: string;
@@ -209,3 +215,8 @@ type EmployeeData = {
 	messageTitle: string;
   message: string;
 };
+
+type Photo = {
+	photo1: string;
+	photo2: string;
+}

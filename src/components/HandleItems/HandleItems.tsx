@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import globalStyles from '../../app/page.module.scss'
+import globalStyles from '@/app/page.module.scss'
 import styles from './handleItems.module.scss'
 import { Item } from './Item'
 import Link from 'next/link'
-import datas from '../../static/links.json'
+import datas from '@/static/links.json'
 
 const width = 80;
 const height = 80;

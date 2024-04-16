@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './hamburger.module.scss'
 import Link from 'next/link'
-import { SiteMap } from '../SiteMap/SiteMap'
+import { SiteMap } from '@/components/SiteMap/SiteMap'
 
 type IsOpenState = {
   isOpenState: any;

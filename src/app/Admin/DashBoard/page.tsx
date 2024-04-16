@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import PostForm from '../../../components/Announcement/PostForm';
+import PostForm from '@/components/Announcement/PostForm';
 import styles from './dashBoard.module.scss'
 import Link from 'next/link';
 import AnnouncementList from '@/components/Announcement/AnnouncementList';

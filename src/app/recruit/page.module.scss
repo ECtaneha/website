@@ -5,7 +5,7 @@ $sp: 768px;
 
 .allMembersPhoto {
   width: calc(100% / 4);
-  height: auto;
+  height: fit-content;
   position: relative;
   z-index: 10;
 
@@ -16,17 +16,14 @@ $sp: 768px;
 
 .allMembersPhotoWrapper {
   width: 100%;
-  height: 330px;
+  height: fit-content;
   box-shadow: 7px 7px 5px #999999;
   position: relative;
   z-index: 10;
 
   @media (max-width: $tab) {
-    width: 200%;
-    height: auto;
-    aspect-ratio: 2 / 3;
     display: grid;
-    grid-template-columns: repeat(2, minmax(110px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -40,7 +37,7 @@ $sp: 768px;
   &::before,
   &::after {
     content: '';
-    width: 880px;
+    width: 100%;
     height: 100px;
     position: absolute;
     z-index: 1;
@@ -58,16 +55,15 @@ $sp: 768px;
   }
 
   @media (max-width: $tab) {
-    width: 440px;
-    height: auto;
-    aspect-ratio: 2 / 3;
+    width: 80%;
+    height: fit-content;
     display: grid;
-    grid-template-columns: repeat(2, 220px);
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
 
     &::before,
     &::after {
       content: '';
-      width: 440px;
+      width: 100%;
       height: 100px;
       position: absolute;
       z-index: 1;
@@ -76,8 +72,6 @@ $sp: 768px;
 
   @media (max-width: $sp) {
     width: 90%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(50%, 1fr));
 
     &::before,
     &::after {
@@ -242,9 +236,8 @@ $sp: 768px;
 }
 
 .memberPhoto {
-  width: 260px;
+  width: 100%;
   height: auto;
-  aspect-ratio: 2 / 3;
   position: relative;
   z-index: 10;
 
@@ -263,7 +256,7 @@ $sp: 768px;
   &::before,
   &::after {
     content: '';
-    width: 280px;
+    width: 100%;
     height: 100px;
     position: absolute;
     z-index: 1;
@@ -271,13 +264,18 @@ $sp: 768px;
 
   &::before {
     top: -10px;
-    left: 0;
+    left: -10px;
     background-color: #f8ff2a;
   }
   &::after {
     bottom: -10px;
-    right: 0px;
+    right: -10px;
     background-color: #99a0ff;
+  }
+
+  @media (max-width:$sp) {
+    width: 100%;
+
   }
 }
 
@@ -351,11 +349,10 @@ $sp: 768px;
 }
 
 .presidentPhoto {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: auto;
   margin-right: 40px;
   box-shadow: 5px 5px 5px #c2c2c2;
-  transform: rotateY(180deg);
 
   @media (max-width: $sp) {
     width: 100%;

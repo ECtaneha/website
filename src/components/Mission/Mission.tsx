@@ -1,5 +1,5 @@
 import React from 'react'
-import globalStyles from '../../app/page.module.scss'
+import globalStyles from '@/app/page.module.scss'
 import styles from './mission.module.scss'
 import Image from 'next/image'
 import missionImage from '/public/images/mission/mission-1900-600.png'

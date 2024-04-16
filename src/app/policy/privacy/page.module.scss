@@ -39,10 +39,10 @@ $sp: 768px;
   text-decoration: underline;
 }
 
-.policyContainer {
+.privacyPolicyContainer {
   width: 60%;
   height: fit-content;
-  margin-inline: auto;
+  margin: 100px auto 0;
   margin-bottom: 100px;
 
   @media (max-width: $tab) {
@@ -52,6 +52,10 @@ $sp: 768px;
   @media (max-width: $sp) {
     width: 90%;
   }
+}
+
+.privacyPolicyUl {
+  list-style: none;
 }
 
 .scope {

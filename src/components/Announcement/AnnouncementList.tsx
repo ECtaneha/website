@@ -1,10 +1,10 @@
 'use client'
 import { useEffect, useState } from 'react';
 import { announcement } from '@prisma/client';
-import globalStyles from '../../app/page.module.scss'
+import globalStyles from '@/app/page.module.scss'
 import styles from './announcement.module.scss'
 import { Announce } from './Announce';
-import PageNation from '../PageNation/PageNation';
+import PageNation from '@/components/PageNation/PageNation';
 
 export default function AnnouncementList() {
   const [announce, setAnnounce] = useState<announcement[]>([]);

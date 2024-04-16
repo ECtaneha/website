@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import styles from './announcement.module.scss'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { RenderParagraphs } from '../RenderParagraphs/RenderParagraphs';
+import { RenderParagraphs } from '@/lib/RenderParagraphs';
 
 export const Announce = (props: any) => {
   const [isOpenAnnounce, setIsOpenAnnounce] = useState<boolean>(false);

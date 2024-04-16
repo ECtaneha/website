@@ -110,6 +110,10 @@ button {
   -webkit-user-select: none;
 }
 
+img {
+  vertical-align: top;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

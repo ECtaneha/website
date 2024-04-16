@@ -1,86 +1,774 @@
 [
   {
-    "title": "会社名",
-    "description": "株式会社タイシン"
+    "language": "日本語",
+    "date": "２０２４年３末現在",
+    "parentAddress": "トップ",
+    "linkMenu": {
+      "h1": "会社概要",
+      "menu": [
+        {
+          "title": "社長あいさつ",
+          "url": "#president"
+        },
+        {
+          "title": "会社沿革",
+          "url": "#history"
+        },
+        {
+          "title": "会社情報",
+          "url": "#information"
+        }
+      ]
+    },
+    "greet": {
+      "content": "創業者・山根良彦の一念により興った弊社も今年で{now}期目を迎えました。\nお客様やお取引先様にご愛顧いただき、お陰様で創業以来黒字経営を続けられています。\n人々の困難の為に奔走した先人達の理念を継承しつつ、今後も新たなことに挑戦し続け、人々の生活を支えられるよう邁進していく所存です。",
+      "company": "株式会社タイシン",
+      "post": "代表取締役社長",
+      "name": "廣田敬司"
+    },
+    "information": [
+      {
+        "title": "会社名",
+        "description": "株式会社タイシン"
+      },
+      {
+        "title": "所在地",
+        "description": "〒770-0051\n徳島県徳島市北島田町3丁目2-4"
+      },
+      {
+        "title": "適格請求書発行事業者 登録番号",
+        "description": "T5480001001300"
+      },
+      {
+        "title": "電話番号",
+        "description": "088-632-6565"
+      },
+      {
+        "title": "FAX番号",
+        "description": "088-632-7737"
+      },
+      {
+        "title": "代表者",
+        "description": "廣田 敬司\n吉田 康聖"
+      },
+      {
+        "title": "創業年月日",
+        "description": "昭和52年5月"
+      },
+      {
+        "title": "設立年月日",
+        "description": "昭和53年2月17日"
+      },
+      {
+        "title": "資本金",
+        "description": "30,000,000円"
+      },
+      {
+        "title": "授権資本",
+        "description": "40,000,000円"
+      },
+      {
+        "title": "敷地面積",
+        "description": "8953.17㎡"
+      },
+      {
+        "title": "取引銀行",
+        "description": "阿波銀行　佐古支店\n徳島銀行　加茂名支店\n四国銀行　徳島西支店"
+      },
+      {
+        "title": "団体加入",
+        "description": "徳島商工会議所　会員\n徳島県LPガス協会　賛助会員\n徳島県設備設計事務所協会　賛助会員\n徳島県浄化槽協会　会員"
+      },
+      {
+        "title": "業務内容",
+        "description": "1.卸売販売業務\n工業用、農業用ゴム及びプラスチック製品、高圧ホース製作、上水道、下水道、農業潅水、簡易水道、設備用水道機材及び機器、液化石油ガス供給機器及び配管資材、燃焼機器、住宅設備機器、空調機器、住宅設備家電、消防機器、消火機器、防災機器、衛生機器、石油及びガス給湯機器、合併処理浄化槽販売及び設計施工、農業防除用機器及び資材、設備、農業用、工業用、家庭用ポンプ、伝導機器及び機械工具、土木資材及び機器、小規模ゴミ焼却炉\n\n2.環境設備、建設工事、設備工事、空調工事、液化石油ガス供給設備工事及び設計、浄化槽設備設計施工（大規模合併処理槽）、管工事事業、土木建設工事事業"
+      },
+      {
+        "title": "許可",
+        "description": "液化石油ガス設備工事業　知事届出済（昭和55年）\n建設業許可　徳島県知事許可（搬-28）第7307号\n土木工事業　管工事業　鋼構造物工事業　舗装工事業\nしゅんせつ工事業　水道施設工事業\n特例浄化槽工事業　知事（届13）第338号"
+      },
+      {
+        "title": "資格",
+        "description": "LPガス販売主任者　1名　第1733号\n液化石油ガス設備士　3名　第44号\n液化石油ガスPE管技術管理者　1名　四国監第48号\n液化石油ガスPE管配管管理者　1名　四国監第47号\nガスフレキ管施工技術者　3名　第16号\n浄化槽設備士　1名　第970053477号\n浄化槽管理士　1名　第31391号\n浄化槽技術管理者　1名　第5681号\n2級土木施工管理技士　2名　第99865991号　98864424号\n2級管工事施工管理技士　2名　1級配管技能士　78-1-046-36-0008\n給水装置工事主任技術者　1名　2級配管技能士 76-2-046-36-0026\nブリジストンフローテック高圧ホース製作技術資格者　2名"
+      },
+      {
+        "title": "26億5千万円（令和3年度）",
+        "description": "26億5千万円（令和3年度）"
+      },
+      {
+        "title": "役員",
+        "description": "７名"
+      },
+      {
+        "title": "従業員",
+        "description": "35名"
+      },
+      {
+        "title": "販売得意先",
+        "description": "官公庁・自治体役場・JA全農徳島\nJA農業協同組合・ガスメーターメーカー\nLPガス販売会社・水道工事会社\nガス工事会社・金物販売会社・建材販売会社\n住宅設備工事会社・住宅建築工事会社\n建設機械修理工場・建設機械リース会社\n農業機械販売会社・鉄工所\n石油販売会社・LPガス容器再検査工場"
+      },
+      {
+        "title": "製造・施工関連",
+        "description": "ガスメーター用クロスユニット製造発売元\nマグネシウム擬制陽性Mgデンボー発売元\n油圧用高圧ホース製作販売\n液化石油ガス集合発生装置設計施工\n自然放流用水道水濾過装置製作販売\n浄化槽設備施工工事\n土木建設工事\n水道設備工事"
+      }
+    ],
+    "history": [
+      {
+        "title": "1977年5月",
+        "description": "工業用ゴム製品、水道資材、LPガス資材及び機器、住設機器などの卸及び附帯工事を目的に徳島市富田橋通り8丁目にて創業"
+      },
+      {
+        "title": "1978年2月",
+        "description": "商号　株式会社タイシンとして資本金1000万円で設立"
+      },
+      {
+        "title": "1979月5月",
+        "description": "徳島市北島田3-2-4に社屋建設のため500m²用地取得"
+      },
+      {
+        "title": "1979年12月",
+        "description": "徳島市北島田3-2-4に社屋落成３階建延べ693m²"
+      },
+      {
+        "title": "1981年6月",
+        "description": "徳島市北島田3-2-7に社有地取得200m²"
+      },
+      {
+        "title": "1982年5月",
+        "description": "創業5周年記念事業として北海道研修旅行実施"
+      },
+      {
+        "title": "1982年10月",
+        "description": "徳島市北島田3-2-9に社有地取得133m²"
+      },
+      {
+        "title": "1983年12月",
+        "description": "資本金1700万円となる"
+      },
+      {
+        "title": "1985年4月",
+        "description": "徳島市北島田3-2-8に社有地取得100m²"
+      },
+      {
+        "title": "1986年10月",
+        "description": "資本金2240万円となる"
+      },
+      {
+        "title": "1987年3月",
+        "description": "埋設管の電触防止剤マグネシュームMgデンボー開発製造発売元となる"
+      },
+      {
+        "title": "1987年5月",
+        "description": "創業10周年記念見本市実施"
+      },
+      {
+        "title": "1987年6月",
+        "description": "創業10周年記念行事として中国研修工場見学"
+      },
+      {
+        "title": "1987年7月",
+        "description": "得意先発案のもとにタイシン共栄会が発足（会員44社）"
+      },
+      {
+        "title": "1988年8月",
+        "description": "昭和63年～平成3年仕入先メーカー工場見学及び共栄会総会を実施"
+      },
+      {
+        "title": "1992年10月",
+        "description": "創業15周年記念及びタイシン共栄会研修工場見学"
+      },
+      {
+        "title": "1992年10月",
+        "description": "タイシン共栄会第5回総会開催"
+      },
+      {
+        "title": "1993年5月",
+        "description": "ガスメーター用クロスユニット考案開発により製造全国発売元となる"
+      },
+      {
+        "title": "1995年7月",
+        "description": "徳島市北島田3-2-3に社有地取得106m²"
+      },
+      {
+        "title": "1995年7月",
+        "description": "徳島市北島田2-30-9に社有地取得1071m²"
+      },
+      {
+        "title": "1996年2月",
+        "description": "徳島市北島田3-2-3に倉庫増築330m² 2階建"
+      },
+      {
+        "title": "1997年6月",
+        "description": "資本金増資2700万円となる"
+      },
+      {
+        "title": "1997年6月",
+        "description": "創業20周年記念及びタイシン共栄会研修工場見学（第1班）"
+      },
+      {
+        "title": "1997年7月",
+        "description": "タイシン共栄会第10回総会開催"
+      },
+      {
+        "title": "1997年9月",
+        "description": "創業20周年記念及びタイシン共栄会研修工場見学（第2班）"
+      },
+      {
+        "title": "1999年10月",
+        "description": "徳島県第38回発明工夫展において徳島市長賞を受賞"
+      },
+      {
+        "title": "2001年10月",
+        "description": "平成13年度四国地方発明表彰式において（社）全国発明協会賞を受賞"
+      },
+      {
+        "title": "2002年4月",
+        "description": "創業25周年記念及びタイシン共栄会研修工場見学（第1班）"
+      },
+      {
+        "title": "2002年4月",
+        "description": "新生タイシン共栄会第1回総会開催"
+      },
+      {
+        "title": "2002年9月",
+        "description": "創業25周年記念及びタイシン共栄会研修工場見学（第2班）"
+      },
+      {
+        "title": "2006年5月",
+        "description": "徳島市北島田町に社有地取得568m²"
+      },
+      {
+        "title": "2007年4月",
+        "description": "創業30周年記念及びタイシン共栄会研修工場見学（第1班）"
+      },
+      {
+        "title": "2007年10月",
+        "description": "創業30周年記念及びタイシン共栄会研修工場見学（第2班）"
+      },
+      {
+        "title": "2014年9月",
+        "description": "創業35周年記念及びタイシン共栄会研修工場見学（第1班）"
+      },
+      {
+        "title": "2014年10月",
+        "description": "創業35周年記念及びタイシン共栄会研修工場見学（第2班）"
+      },
+      {
+        "title": "2015年８月",
+        "description": "資本金増資3000万円となる"
+      }
+    ]
   },
   {
-    "title": "所在地",
-    "description": "〒770-0051\n徳島県徳島市北島田町3丁目2-4"
+    "language": "English",
+    "date": "as of the end of March 2024",
+    "parentAddress": "top",
+    "linkMenu": {
+      "h1": "Company Profile",
+      "menu":[
+        {
+          "title": "president's greet",
+          "url": "#president"
+        },
+        {
+          "title": "history",
+          "url": "#history"
+        },
+        {
+          "title": "information",
+          "url": "#information"
+        }
+      ]
+    },
+    "greet": {
+      "content": "Founded by the determination of our founder, Yoshihiko Yamane,\n our company is celebrating it's {now}th anniversary this year.\n We are grateful for the support of our customers and business partners, and thanks to everyone,\n we have been profitable management since our establishment.\n We will inherit the ideals of our predecessors who tirelessly worked to alleviate the difficulties of people, continue to venture into new endeavors, and strive to support people's lives.",
+      "company": "Taishin Co., Ltd.",
+      "post": "President & CEO",
+      "name": "Keiji Hirota"
+    },
+    "information": [
+      {
+        "title": "Company Name",
+        "description": "Kaisha Taishin Co., Ltd."
+      },
+      {
+        "title": "Address",
+        "description": "3-2-4, Kitashimada-cho, Tokushima-shi, Tokushima 770-0051, Japan"
+      },
+      {
+        "title": "Qualified Invoice Issuer Registration Number",
+        "description": "T5480001001300"
+      },
+      {
+        "title": "Phone Number",
+        "description": "088-632-6565"
+      },
+      {
+        "title": "FAX Number",
+        "description": "088-632-7737"
+      },
+      {
+        "title": "Representatives",
+        "description": "Keiji Hirota\nYasukiyo Yoshida"
+      },
+      {
+        "title": "Founding Date",
+        "description": "May, Showa 52"
+      },
+      {
+        "title": "Establishment Date",
+        "description": "February 17, Showa 53"
+      },
+      {
+        "title": "Capital",
+        "description": "30,000,000 yen"
+      },
+      {
+        "title": "Authorized Capital",
+        "description": "40,000,000 yen"
+      },
+      {
+        "title": "Site Area",
+        "description": "8953.17 square meters"
+      },
+      {
+        "title": "Banking",
+        "description": "Awa Bank, Sako Branch\nTokushima Bank, Kamona Branch\nShikoku Bank, Tokushima Nishi Branch"
+      },
+      {
+        "title": "Memberships",
+        "description": "Tokushima Chamber of Commerce and Industry - Member\nTokushima Prefecture LP Gas Association - Supporting Member\nTokushima Prefecture Facility Design Office Association - Supporting Member\nTokushima Prefecture Septic Tank Association - Member"
+      },
+      {
+        "title": "Business Activities",
+        "description": "1. Wholesale sales business\nIndustrial and agricultural rubber and plastic products, high-pressure hose production, water supply, sewerage, agricultural irrigation, simple water supply, equipment water supply equipment and machinery, liquefied petroleum gas supply equipment and piping materials, combustion equipment, residential equipment equipment, air conditioning equipment, residential equipment appliances, fire equipment, fire extinguishing equipment, disaster prevention equipment, sanitary equipment, oil and gas water heating equipment, combined processing septic tank sales and design construction, agricultural pest control equipment and materials, facilities, agricultural, industrial, household pumps, transmission equipment and mechanical tools, civil engineering materials and equipment, small-scale garbage incinerators\n\n2. Environmental facilities, construction work, equipment work, air conditioning work, liquefied petroleum gas supply equipment work and design, septic tank equipment design and construction (large-scale combined processing tank), pipe work business, civil engineering construction work business"
+      },
+      {
+        "title": "Licenses",
+        "description": "Liquefied Petroleum Gas Equipment Construction Business - Governor Notification (Showa 55)\nConstruction Industry License - Tokushima Prefectural Governor Permit (Transportation-28) No. 7307\nCivil Engineering Works - Pipe Work - Steel Structure Works - Paving Works\nConstruction Work - Water Supply Facility Work\nSpecial Septic Tank Construction Business - Governor (Notification 13) No. 338"
+      },
+      {
+        "title": "Qualifications",
+        "description": "LP Gas Sales Manager - 1 person - No. 1733\nLiquefied Petroleum Gas Equipment Engineer - 3 people - No. 44\nLiquefied Petroleum Gas PE Pipe Technical Manager - 1 person - Shikoku Supervision No. 48\nLiquefied Petroleum Gas PE Pipe Piping Manager - 1 person - Shikoku Supervision No. 47\nGas Flex Hose Construction Technician - 3 people - No. 16\nSeptic Tank Equipment Engineer - 1 person - No. 970053477\nSeptic Tank Manager - 1 person - No. 31391\nSeptic Tank Technical Manager - 1 person - No. 5681\n2nd Class Civil Engineering Construction Management Engineer - 2 people - No. 99865991 No. 98864424\n2nd Class Pipe Construction Management Engineer - 2 people - 1st Class Piping Technician - 78-1-046-36-0008\nWater Supply Equipment Work Chief Technical Officer - 1 person - 2nd Class Piping Technician 76-2-046-36-0026\nBridgestone Flowtech High Pressure Hose Production Technician - 2 people"
+      },
+      {
+        "title": "Annual Sales",
+        "description": "2,650,000,000 yen (Fiscal Year 3 of Reiwa)"
+      },
+      {
+        "title": "Officers",
+        "description": "7"
+      },
+      {
+        "title": "Employees",
+        "description": "35"
+      },
+      {
+        "title": "Main Customers",
+        "description": "Government offices, municipal offices, JA Zenno Tokushima\nJA Agricultural Cooperative Association, Gas Meter Manufacturers\nLP Gas Sales Companies, Waterworks Construction Companies\nGas Construction Companies, Hardware Sales Companies, Building Material Sales Companies\nHousing Equipment Construction Companies, Housing Construction Companies\nConstruction Machinery Repair Shops, Construction Machinery Leasing Companies\nAgricultural Machinery Sales Companies, Ironworks\nPetroleum Sales Companies, LP Gas Cylinder Reinspection Plants"
+      },
+      {
+        "title": "Manufacturing/Construction Related",
+        "description": "Gas Meter Cross Unit Manufacturing and Sales\nMagnesium Simulated Positive Mg Denbo Manufacturing and Sales\nHydraulic High Pressure Hose Production and Sales\nLiquefied Petroleum Gas Aggregate Generation Equipment Design and Construction\nNatural Drainage Water Filtration Equipment Manufacturing and Sales\nSeptic Tank Equipment Construction Work\nCivil Engineering Construction Work\nWaterworks Construction"
+      }
+    ],
+    "history": [
+      {
+        "title": "May 1977",
+        "description": "Established in Tokushima City, Tomitabashi-dori 8-chome with the purpose of wholesale and incidental construction of industrial rubber products, water supply materials, LP gas materials and equipment, housing equipment, etc."
+      },
+      {
+        "title": "February 1978",
+        "description": "Incorporated as Kabushiki Kaisha Taishin with a capital of 10 million yen."
+      },
+      {
+        "title": "May 1979",
+        "description": "Acquired a 500m² site for the construction of the company building at 3-2-4 Kitajimada, Tokushima City."
+      },
+      {
+        "title": "December 1979",
+        "description": "Completion of the company building at 3-2-4 Kitajimada, Tokushima City, with 693m² of floor space over 3 floors."
+      },
+      {
+        "title": "June 1981",
+        "description": "Acquired a 200m² company-owned site at 3-2-7 Kitajimada, Tokushima City."
+      },
+      {
+        "title": "May 1982",
+        "description": "Conducted a study trip to Hokkaido to commemorate the 5th anniversary of the founding."
+      },
+      {
+        "title": "October 1982",
+        "description": "Acquired a 133m² company-owned site at 3-2-9 Kitajimada, Tokushima City."
+      },
+      {
+        "title": "December 1983",
+        "description": "Capital increased to 17 million yen."
+      },
+      {
+        "title": "April 1985",
+        "description": "Acquired a 100m² company-owned site at 3-2-8 Kitajimada, Tokushima City."
+      },
+      {
+        "title": "October 1986",
+        "description": "Capital increased to 22.4 million yen."
+      },
+      {
+        "title": "March 1987",
+        "description": "Became the manufacturer and sales agent for Magnesium Simulated Positive Mg Denbo, an electric contact preventive agent for buried pipes."
+      },
+      {
+        "title": "May 1987",
+        "description": "Held a commemorative trade fair for the 10th anniversary of the founding."
+      },
+      {
+        "title": "June 1987",
+        "description": "Visited a training facility in China as part of the 10th anniversary events."
+      },
+      {
+        "title": "July 1987",
+        "description": "Established Taishin Kyoeikai (Taishin Mutual Prosperity Association) with 44 member companies based on proposals from customers."
+      },
+      {
+        "title": "August 1988",
+        "description": "Conducted factory visits to suppliers from 1988 to 1991 and held annual meetings of the mutual prosperity association."
+      },
+      {
+        "title": "October 1992",
+        "description": "Visited a training facility as part of the 15th anniversary commemoration and Taishin Kyoeikai held its 5th annual meeting."
+      },
+      {
+        "title": "May 1993",
+        "description": "Became the nationwide manufacturer and distributor for Gas Meter Cross Units developed through original invention and development."
+      },
+      {
+        "title": "July 1995",
+        "description": "Acquired a 106m² company-owned site at 3-2-3 Kitajimada, Tokushima City."
+      },
+      {
+        "title": "July 1995",
+        "description": "Acquired a 1071m² company-owned site at 2-30-9 Kitajimada, Tokushima City."
+      },
+      {
+        "title": "February 1996",
+        "description": "Expanded warehouse with a 330m², 2-story extension at 3-2-3 Kitajimada, Tokushima City."
+      },
+      {
+        "title": "June 1997",
+        "description": "Capital increased to 27 million yen."
+      },
+      {
+        "title": "June 1997",
+        "description": "Visited a training facility as part of the 20th anniversary commemoration (1st group) and Taishin Kyoeikai held its 10th annual meeting."
+      },
+      {
+        "title": "July 1997",
+        "description": "Taishin Kyoeikai held its 10th annual meeting."
+      },
+      {
+        "title": "September 1997",
+        "description": "Visited a training facility as part of the 20th anniversary commemoration (2nd group)."
+      },
+      {
+        "title": "October 1999",
+        "description": "Received the Tokushima City Mayor's Award at the 38th Tokushima Invention and Improvement Exhibition."
+      },
+      {
+        "title": "October 2001",
+        "description": "Received the National Invention Association Award at the 13th Shikoku Regional Invention Awards Ceremony."
+      },
+      {
+        "title": "April 2002",
+        "description": "Visited a training facility as part of the 25th anniversary commemoration (1st group) and held the inaugural meeting of the new Taishin Kyoeikai."
+      },
+      {
+        "title": "April 2002",
+        "description": "Held the inaugural meeting of the new Taishin Kyoeikai."
+      },
+      {
+        "title": "September 2002",
+        "description": "Visited a training facility as part of the 25th anniversary commemoration (2nd group)."
+      },
+      {
+        "title": "May 2006",
+        "description": "Acquired a 568m² company-owned site in Kitajimada-cho, Tokushima City."
+      },
+      {
+        "title": "April 2007",
+        "description": "Visited a training facility as part of the 30th anniversary commemoration (1st group)."
+      },
+      {
+        "title": "October 2007",
+        "description": "Visited a training facility as part of the 30th anniversary commemoration (2nd group)."
+      },
+      {
+        "title": "September 2014",
+        "description": "Visited a training facility as part of the 35th anniversary commemoration (1st group)."
+      },
+      {
+        "title": "October 2014",
+        "description": "Visited a training facility as part of the 35th anniversary commemoration (2nd group)."
+      },
+      {
+        "title": "August 2015",
+        "description": "Capital increased to 30 million yen."
+      }
+    ]
   },
   {
-    "title": "適格請求書発行事業者 登録番号",
-    "description": "T5480001001300"
-  },
-  {
-    "title": "電話番号",
-    "description": "088-632-6565"
-  },
-  {
-    "title": "FAX番号",
-    "description": "088-632-7737"
-  },
-  {
-    "title": "代表者",
-    "description": "廣田 敬司\n吉田 康聖"
-  },
-  {
-    "title": "創業年月日",
-    "description": "昭和52年5月"
-  },
-  {
-    "title": "設立年月日",
-    "description": "昭和53年2月17日"
-  },
-  {
-    "title": "資本金",
-    "description": "30,000,000円"
-  },
-  {
-    "title": "授権資本",
-    "description": "40,000,000円"
-  },
-  {
-    "title": "敷地面積",
-    "description": "8953.17㎡"
-  },
-  {
-    "title": "取引銀行",
-    "description": "阿波銀行　佐古支店\n徳島銀行　加茂名支店\n四国銀行　徳島西支店"
-  },
-  {
-    "title": "団体加入",
-    "description": "徳島商工会議所　会員\n徳島県LPガス協会　賛助会員\n徳島県設備設計事務所協会　賛助会員\n徳島県浄化槽協会　会員"
-  },
-  {
-    "title": "業務内容",
-    "description": "1.卸売販売業務\n工業用、農業用ゴム及びプラスチック製品、高圧ホース製作、上水道、下水道、農業潅水、簡易水道、設備用水道機材及び機器、液化石油ガス供給機器及び配管資材、燃焼機器、住宅設備機器、空調機器、住宅設備家電、消防機器、消火機器、防災機器、衛生機器、石油及びガス給湯機器、合併処理浄化槽販売及び設計施工、農業防除用機器及び資材、設備、農業用、工業用、家庭用ポンプ、伝導機器及び機械工具、土木資材及び機器、小規模ゴミ焼却炉\n\n2.環境設備、建設工事、設備工事、空調工事、液化石油ガス供給設備工事及び設計、浄化槽設備設計施工（大規模合併処理槽）、管工事事業、土木建設工事事業"
-  },
-  {
-    "title": "許可",
-    "description": "液化石油ガス設備工事業　知事届出済（昭和55年）\n建設業許可　徳島県知事許可（搬-28）第7307号\n土木工事業　管工事業　鋼構造物工事業　舗装工事業\nしゅんせつ工事業　水道施設工事業\n特例浄化槽工事業　知事（届13）第338号"
-  },
-  {
-    "title": "資格",
-    "description": "LPガス販売主任者　1名　第1733号\n液化石油ガス設備士　3名　第44号\n液化石油ガスPE管技術管理者　1名　四国監第48号\n液化石油ガスPE管配管管理者　1名　四国監第47号\nガスフレキ管施工技術者　3名　第16号\n浄化槽設備士　1名　第970053477号\n浄化槽管理士　1名　第31391号\n浄化槽技術管理者　1名　第5681号\n2級土木施工管理技士　2名　第99865991号　98864424号\n2級管工事施工管理技士　2名　1級配管技能士　78-1-046-36-0008\n給水装置工事主任技術者　1名　2級配管技能士 76-2-046-36-0026\nブリジストンフローテック高圧ホース製作技術資格者　2名"
-  },
-  {
-    "title": "26億5千万円（令和3年度）",
-    "description": "26億5千万円（令和3年度）"
-  },
-  {
-    "title": "役員",
-    "description": "７名"
-  },
-  {
-    "title": "従業員",
-    "description": "35名"
-  },
-  {
-    "title": "販売得意先",
-    "description": "官公庁・自治体役場・JA全農徳島\nJA農業協同組合・ガスメーターメーカー\nLPガス販売会社・水道工事会社\nガス工事会社・金物販売会社・建材販売会社\n住宅設備工事会社・住宅建築工事会社\n建設機械修理工場・建設機械リース会社\n農業機械販売会社・鉄工所\n石油販売会社・LPガス容器再検査工場"
-  },
-  {
-    "title": "製造・施工関連",
-    "description": "ガスメーター用クロスユニット製造発売元\nマグネシウム擬制陽性Mgデンボー発売元\n油圧用高圧ホース製作販売\n液化石油ガス集合発生装置設計施工\n自然放流用水道水濾過装置製作販売\n浄化槽設備施工工事\n土木建設工事\n水道設備工事"
+    "language": "中國語",
+    "date" : "截至２０２４年３月底",
+    "parentAddress": "首页",
+    "linkMenu": {
+      "h1": "公司简介",
+      "menu": [
+        {
+          "title": "总裁致辞",
+          "url": "#president"
+        },
+        {
+          "title": "公司历史",
+          "url": "#history"
+        },
+        {
+          "title": "公司信息",
+          "url": "#information"
+        }
+      ]
+    },
+    "greet": {
+      "content": "创始人山根良彦的一念之下，我们公司今年迎来了{now}周年纪念。\n 感谢客户和合作伙伴的支持，多亏了大家，我们自创立以来一直保持盈利。\n我们将继承先辈们为了解决人们的困境而不懈努力的理念，继续挑战新事物，\n 并不断努力支持人们的生活。",
+      "company": "株式会社泰辰",
+      "post": "董事长兼总经理",
+      "name": "广田敬司"
+    },
+    "information": [
+      {
+        "title": "公司名称",
+        "description": "株式会社泰信"
+      },
+      {
+        "title": "地址",
+        "description": "日本徳岛县徳岛市北岛田町3丁目2-4，邮编770-0051"
+      },
+      {
+        "title": "合格发票发行者注册号",
+        "description": "T5480001001300"
+      },
+      {
+        "title": "电话号码",
+        "description": "088-632-6565"
+      },
+      {
+        "title": "传真号码",
+        "description": "088-632-7737"
+      },
+      {
+        "title": "代表",
+        "description": "广田 敬司\n吉田 康圣"
+      },
+      {
+        "title": "创业年月日",
+        "description": "昭和52年5月"
+      },
+      {
+        "title": "成立年月日",
+        "description": "昭和53年2月17日"
+      },
+      {
+        "title": "资本金",
+        "description": "30,000,000日元"
+      },
+      {
+        "title": "授权资本",
+        "description": "40,000,000日元"
+      },
+      {
+        "title": "占地面积",
+        "description": "8953.17平方米"
+      },
+      {
+        "title": "交易银行",
+        "description": "阿波银行　佐古支店\n德岛银行　加茂名支店\n四国银行　德岛西支店"
+      },
+      {
+        "title": "团体加入",
+        "description": "德岛商工会议所　会员\n德岛县LP气体协会　赞助会员\n德岛县设备设计事务所协会　赞助会员\n德岛县净化池协会　会员"
+      },
+      {
+        "title": "业务内容",
+        "description": "1. 批发销售业务\n工业和农业橡胶和塑料制品、高压软管生产、给水、排水、农业灌溉、简易给水、设备用给水设备和机械、液化石油气供应设备和管材、燃烧设备、住宅设备设备、空调设备、住宅设备家电、消防设备、灭火设备、防灾设备、卫生设备、石油和天然气热水设备、合并处理污水处理槽销售和设计施工、农业防治用机械和材料、设备、农业用、工业用、家庭用泵、传输设备和机械工具、土木材料和设备、小型垃圾焚烧炉\n\n2. 环境设施、建筑工程、设备工程、空调工程、液化石油气供应设备工程及设计、净化池设备设计施工（大型合并处理槽）、管道工程业务、土木建设工程业务"
+      },
+      {
+        "title": "许可",
+        "description": "液化石油气设备工程业　知事报备済（昭和55年）\n建筑业许可　德岛县知事许可（搬-28）第7307号\n土木工程业　管道工程业　钢构造物工程业　铺装工程业\n瞬设工程业　给水设施工程业\n特例净化池工程业　知事（报13）第338号"
+      },
+      {
+        "title": "资格",
+        "description": "LP气体销售主任　1名　第1733号\n液化石油气设备技术员　3名　第44号\n液化石油气PE管技术管理员　1名　四国监第48号\n液化石油气PE管配管管理员　1名　四国监第47号\n气体软管施工技术员　3名　第16号\n净化池设备技术员　1名　第970053477号\n净化池管理员　1名　第31391号\n净化池技术管理员　1名　第5681号\n2级土木施工管理技师　2名　第99865991号　98864424号\n2级管道工程施工管理技师　2名　1级配管技能士　78-1-046-36-0008\n给水装置工程主任技术员　1名　2级配管技能士 76-2-046-36-0026\n普利司通流体技高压软管制作技术资格者　2名"
+      },
+      {
+        "title": "年销售额",
+        "description": "26,500,000,000日元（令和3年度）"
+      },
+      {
+        "title": "董事",
+        "description": "7名"
+      },
+      {
+        "title": "员工",
+        "description": "35名"
+      },
+      {
+        "title": "主要客户",
+        "description": "政府机关、自治体市厅、JA全農徳岛\nJA农业合作社、燃气表制造商\n液化石油气销售公司、给水工程公司\n燃气工程公司、五金销售公司、建材销售公司\n住宅设备工程公司、住宅建筑工程公司\n建筑机械修理厂、建筑机械租赁公司\n农业机械销售公司、铁工所\n石油销售公司、液化石油气钢瓶复检工厂"
+      },
+      {
+        "title": "制造/施工相关",
+        "description": "燃气表交叉单元制造和销售\n镁模拟阳性Mg Denbo制造和销售\n液压高压软管生产和销售\n液化石油气集合发生设备设计施工\n自然排水用给水过滤设备制造和销售\n净化池设备施工工程\n土木建设工程\n给水设施工程"
+      }
+    ],
+    "history": [
+      {
+        "title": "1977年5月",
+        "description": "在德岛市富田桥通8丁目创立，主要从事工业用橡胶制品、给水设备、液化石油气设备及器材、住宅设备等的批发及相关工程。"
+      },
+      {
+        "title": "1978年2月",
+        "description": "以1亿日元的注册资本设立为株式会社泰信。"
+      },
+      {
+        "title": "1979年5月",
+        "description": "为建设公司大楼取得了位于德岛市北岛田3-2-4的500平方米地块。"
+      },
+      {
+        "title": "1979年12月",
+        "description": "在德岛市北岛田3-2-4竣工了总建筑面积693平方米、3层楼高的公司大楼。"
+      },
+      {
+        "title": "1981年6月",
+        "description": "取得了位于德岛市北岛田3-2-7的200平方米公司自有地。"
+      },
+      {
+        "title": "1982年5月",
+        "description": "作为公司成立5周年纪念活动进行了北海道考察旅行。"
+      },
+      {
+        "title": "1982年10月",
+        "description": "取得了位于德岛市北岛田3-2-9的133平方米公司自有地。"
+      },
+      {
+        "title": "1983年12月",
+        "description": "注册资本增至1700万日元。"
+      },
+      {
+        "title": "1985年4月",
+        "description": "取得了位于德岛市北岛田3-2-8的100平方米公司自有地。"
+      },
+      {
+        "title": "1986年10月",
+        "description": "注册资本增至2240万日元。"
+      },
+      {
+        "title": "1987年3月",
+        "description": "成为埋设管道的电触防护剂镁状Mg Denbo的开发制造销售商。"
+      },
+      {
+        "title": "1987年5月",
+        "description": "举办了创立10周年纪念展览会。"
+      },
+      {
+        "title": "1987年6月",
+        "description": "作为创立10周年纪念活动进行了中国考察工厂参观。"
+      },
+      {
+        "title": "1987年7月",
+        "description": "根据客户提议成立了泰信共荣会（44家成员公司）。"
+      },
+      {
+        "title": "1988年8月",
+        "description": "从1988年到1991年进行了供应商工厂参观，并举办了泰信共荣会的年度会议。"
+      },
+      {
+        "title": "1992年10月",
+        "description": "作为创立15周年纪念活动进行了泰信共荣会考察工厂参观，并举行了第5届年度会议。"
+      },
+      {
+        "title": "1993年5月",
+        "description": "通过煤气表交叉单元的发明开发成为全国制造商和经销商。"
+      },
+      {
+        "title": "1995年7月",
+        "description": "取得了位于德岛市北岛田3-2-3的106平方米公司自有地。"
+      },
+      {
+        "title": "1995年7月",
+        "description": "取得了位于德岛市北岛田2-30-9的1071平方米公司自有地。"
+      },
+      {
+        "title": "1996年2月",
+        "description": "在德岛市北岛田3-2-3进行了仓库扩建，增加了330平方米，2层楼高。"
+      },
+      {
+        "title": "1997年6月",
+        "description": "注册资本增至2700万日元。"
+      },
+      {
+        "title": "1997年6月",
+        "description": "作为创立20周年纪念活动进行了泰信共荣会考察工厂参观（第1组），并举行了第10届年度会议。"
+      },
+      {
+        "title": "1997年7月",
+        "description": "泰信共荣会举行了第10届年度会议。"
+      },
+      {
+        "title": "1997年9月",
+        "description": "作为创立20周年纪念活动进行了泰信共荣会考察工厂参观（第2组）。"
+      },
+      {
+        "title": "1999年10月",
+        "description": "在德岛市第38届发明创造展上获得了市长奖。"
+      },
+      {
+        "title": "2001年10月",
+        "description": "在第13届四国地区发明表彰大会上获得了全国发明协会奖。"
+      },
+      {
+        "title": "2002年4月",
+        "description": "作为创立25周年纪念活动进行了泰信共荣会考察工厂参观（第1组），并举行了新泰信共荣会的第1次会议。"
+      },
+      {
+        "title": "2002年4月",
+        "description": "举行了新泰信共荣会的第1次会议。"
+      },
+      {
+        "title": "2002年9月",
+        "description": "作为创立25周年纪念活动进行了泰信共荣会考察工厂参观（第2组）。"
+      },
+      {
+        "title": "2006年5月",
+        "description": "取得了德岛市北岛田町的568平方米公司自有地。"
+      },
+      {
+        "title": "2007年4月",
+        "description": "作为创立30周年纪念活动进行了泰信共荣会考察工厂参观（第1组）。"
+      },
+      {
+        "title": "2007年10月",
+        "description": "作为创立30周年纪念活动进行了泰信共荣会考察工厂参观（第2组）。"
+      },
+      {
+        "title": "2014年9月",
+        "description": "作为创立35周年纪念活动进行了泰信共荣会考察工厂参观（第1组）。"
+      },
+      {
+        "title": "2014年10月",
+        "description": "作为创立35周年纪念活动进行了泰信共荣会考察工厂参观（第2组）。"
+      },
+      {
+        "title": "2015年8月",
+        "description": "注册资本增至3000万日元。"
+      }
+    ]
   }
 ]

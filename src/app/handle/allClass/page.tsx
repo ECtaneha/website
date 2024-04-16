@@ -1,7 +1,7 @@
-import globalStyles from '../../page.module.scss'
+import globalStyles from '@/app/page.module.scss'
 import styles from '../page.module.scss'
 import Link from 'next/link'
-import datas from '../../../static/links.json'
+import datas from '@/static/links.json'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
 export default function Page() {

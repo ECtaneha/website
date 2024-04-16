@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './page.module.scss'
-import presidentPhoto from '/public/images/information/presidentPhoto.jpg'
 
 export const Employee = (props: any) => {
   const employeesArray = Array.isArray(props.info.employees)
@@ -17,7 +16,7 @@ export const Employee = (props: any) => {
               <div className={styles.memberPhotoWrapper}>
                 <Image
                   className={styles.memberPhoto}
-                  src={employee.photo}
+                  src={employee.photo.photo2}
                   width={200}
                   height={200}
                   alt={employee.name}

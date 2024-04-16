@@ -1,0 +1,38 @@
+.h1 {
+  width: fit-content;
+  margin: 0 auto 60px;
+  padding: 10px 30px;
+  border-bottom: 2px solid #d0d3ffcb;
+  text-align: center;
+  font-weight: bold;
+}
+
+.h2 {
+  margin: 20px auto;
+  padding: .5rem 1rem;
+  background-color: #dfe5ff;
+  font-weight: 400;
+  text-align: left;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 5px;
+    height: 52px;
+    background-color: rgb(118, 118, 255);
+    position: absolute;
+    top: 0;
+    left: -8px;
+  }
+}
+
+.sitePolicyContainer {
+  width: 60%;
+  height: fit-content;
+  margin: 100px auto 0;
+  margin-bottom: 100px;
+}
+
+.sitePolicyOl {
+  padding-left: 1.5rem;
+}

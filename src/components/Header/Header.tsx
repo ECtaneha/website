@@ -2,12 +2,12 @@
 import React, { useState } from 'react'
 import styles from './header.module.scss'
 import Link from 'next/link'
-import { SNS } from "../SNS/SNS"
+import { SNS } from "@/components/SNS/SNS"
 import EmailIcon from '@mui/icons-material/Email';
 import Image from 'next/image';
 import logo from '/public/images/header/logo-taishin.png'
-import { Hamburger } from '../Hamburger/Hamburger'
-import { Language } from '../Language/Language'
+import { Hamburger } from '@/components/Hamburger/Hamburger'
+import { Language } from '@/components/Language/Language'
 
 export const Header = () => {
   const [isOpenState, setIsOpenState] = useState<boolean>(false);
@@ -25,8 +25,12 @@ export const Header = () => {
         className={styles.logo}
         href='/'
       >
-        <h1 id="logo" className={styles.h1}>
+        <h1
+          id="logo"
+          className={styles.h1}
+        >
             <Image
+              className={styles.image}
               src={logo}
               width={256}
               height={31}

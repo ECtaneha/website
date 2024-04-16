@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import styles from './footer.module.scss'
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import Link from 'next/link';
-import { SiteMap } from '../SiteMap/SiteMap';
+import { SiteMap } from '@/components/SiteMap/SiteMap';
 
 
 const links =[
@@ -25,7 +25,7 @@ const links =[
   },
   {
     title: 'プライバシーポリシー',
-    url: '/policy',
+    url: '/policy/privacy',
   },
 ]
 
