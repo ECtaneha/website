@@ -1,8 +1,6 @@
 import React from 'react'
 import globalStyles from '@/app/page.module.scss'
 import styles from './mission.module.scss'
-import Image from 'next/image'
-import missionImage from '/public/images/mission/mission-1900-600.png'
 
 export const Mission = () => {
   const width = 800;
@@ -16,16 +14,8 @@ export const Mission = () => {
             <span>mission</span>
           </div>
         </h2>
-
+        <div className={styles.missionImage}>
       </div>
-      {/* <Image
-        className={styles.missionImage}
-        src={missionImage}
-        width={width}
-        height={height}
-        alt='タイシン３つの使命'
-      /> */}
-      <div className={styles.missionImage}>
     </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './page.module.scss'
+import { RenderParagraphs } from '@/lib/RenderParagraphs';
 
 export const Employee = (props: any) => {
   const employeesArray = Array.isArray(props.info.employees)
@@ -39,7 +40,7 @@ export const Employee = (props: any) => {
           </div>
           <div className={styles.messageWrapper}>
             <p className={styles.messageTitle}>{employee.messageTitle}</p>
-            <p className={styles.message}>{employee.message}</p>
+            <p className={styles.message}>{RenderParagraphs(employee.message, '\n')}</p>
           </div>
         </div>
       ))}
