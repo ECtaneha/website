@@ -20,7 +20,7 @@ export const EditForm = () => {
 
   useEffect(() => {
     fetchAnnouncements();
-  }, [announcements]);
+  }, []);
 
   const fetchAnnouncements = async () => {
     try {
@@ -71,6 +71,7 @@ export const EditForm = () => {
       }
       fetchAnnouncements();
       handleSelectAll();
+      alert('更新しました。')
     } catch (error) {
       console.error('Error updating selected announcements:', error);
     }
