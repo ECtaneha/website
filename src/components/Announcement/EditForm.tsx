@@ -110,6 +110,15 @@ export const EditForm = () => {
     setAnnouncements((prevAnnouncements) =>
       prevAnnouncements.map((announcement) => ({
         ...announcement,
+        selected: true,
+      }))
+    );
+  };
+
+  const handleDeselectAll = () => {
+    setAnnouncements((prevAnnouncements) =>
+      prevAnnouncements.map((announcement) => ({
+        ...announcement,
         selected: false,
       }))
     );
@@ -128,14 +137,18 @@ export const EditForm = () => {
       <div className={styles.buttonWrapper}>
         <button onClick={handleUpdateSelected}>更新</button>
         <button onClick={handleDeleteSelected}>削除</button>
-        <button onClick={handleSelectAll}>選択解除</button>
+        <button onClick={handleSelectAll}>全選択</button>
+        <button onClick={handleDeselectAll}>選択解除</button>
       </div>
       {announcements.map((announcement) => (
         <div
           key={announcement.id}
-          className={styles.editAnnouncementContainer}
+          className={`
+            ${styles.editAnnouncementContainer}
+            ${announcement.selected ? styles.checked : ''}
+          `}
         >
-          <label className={styles.editInput}>
+          <label className={styles.editInputLabel}>
             <input
               type="checkbox"
               checked={announcement.selected}

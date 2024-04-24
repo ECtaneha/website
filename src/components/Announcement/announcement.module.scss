@@ -132,7 +132,13 @@ $sp: 768px;
   border: 1px solid #444;
   display: flex;
   gap: 40px;
+
+  &.checked {
+    box-shadow: 0 0px 3px blue;
+  }
 }
+
+
 
 .editAnnouncementWrapper {
   width: 100%;
@@ -191,7 +197,7 @@ $sp: 768px;
   }
 }
 
-.editInput {
+.editInputLabel {
   width: 2rem;
   padding-inline: 20px;
   display: flex;
