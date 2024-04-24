@@ -154,7 +154,7 @@ export const EditForm = () => {
             <tr>
               <th>タグ</th>
               <td>
-                <input
+                <TextField
                   className={styles.editTag}
                   type="text"
                   value={announcement.tag}
@@ -165,7 +165,7 @@ export const EditForm = () => {
             <tr>
               <th>タイトル</th>
               <td>
-                <input
+                <TextField
                   className={styles.editTitle}
                   type="text"
                   value={announcement.title}
