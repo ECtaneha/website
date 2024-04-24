@@ -5,16 +5,15 @@ export async function POST(req: NextRequest) {
   const reqBody = await req.json();
   const { title, name, email, tel, message, company } = reqBody;
 
-  const user = process.env.NEXT_PUBLIC_GMAIL_ADDRESS;
-  const pass = process.env.NEXT_PUBLIC_GMAIL_PASSWORD;
+  const pass = process.env.NEXT_PUBLIC_MAIL_PASSWORD;
 
   try {
     const transporter = nodeMailer.createTransport({
-      host: 'smtp.gmail.com',
+      host: 'sv15052.xserver.jp',
       port: 587,
       secure: false,
       auth: {
-        user: user,
+        user: 'taishin_info@xs882411.xsrv.jp',
         pass: pass
       },
       tls: {
@@ -25,7 +24,7 @@ export async function POST(req: NextRequest) {
 
     const mailOptions = {
       from: 'タイシンHP',
-      to: user,
+      to: 'taishin_info@xs882411.xsrv.jp',
       subject: 'コンタクトページ',
       text: `
         件名：${title}\n\n

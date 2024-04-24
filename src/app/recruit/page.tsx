@@ -4,12 +4,6 @@ import globalStyles from '@/app/page.module.scss'
 import styles from './page.module.scss'
 import { BreadCrumb } from '@/components/BreadCrumb/BreadCrumb'
 import { useContext, useEffect, useState } from 'react';
-import Image from 'next/image'
-import presidentPhoto from '/public/images/recruit/hirota600-600.jpg'
-import photo1 from '/public/images/recruit/recruit-hirota-sakurai-nakayama300-450-1.jpg'
-import photo2 from '/public/images/recruit/recruit-nakayama-2-300-450.jpg'
-import photo3 from '/public/images/recruit/recruit-nakayama300-450.jpg'
-import photo4 from '/public/images/recruit/recruit-sakurai300-450.jpg'
 import datas from './contents.json'
 import { Employee } from './Employee'
 import { CurrentLanguage  }from '@/app/layout'
@@ -59,32 +53,24 @@ export default function Page() {
 
       <div className={styles.allMembersPhotoContainer}>
 				<div className={styles.allMembersPhotoWrapper}>
-					<Image
+					<img
 						className={styles.allMembersPhoto}
-						src={photo1}
-						width={200}
-						height={200}
+						src='/images/recruit/topImage1.jpg'
 						alt='member1'
 					/>
-					<Image
+					<img
 						className={styles.allMembersPhoto}
-						src={photo1}
-						width={200}
-						height={200}
+						src='/images/recruit/topImage1.jpg'
 						alt='member2'
 					/>
-					<Image
+					<img
 						className={styles.allMembersPhoto}
-						src={photo1}
-						width={200}
-						height={200}
+						src='/images/recruit/topImage1.jpg'
 						alt='member3'
 					/>
-					<Image
+					<img
 						className={styles.allMembersPhoto}
-						src={photo1}
-						width={200}
-						height={200}
+						src='/images/recruit/topImage1.jpg'
 						alt='member4'
 					/>
 				</div>
@@ -103,11 +89,9 @@ export default function Page() {
 				<div className={styles.greet}>
 					{RenderParagraphs(info.greet, '\n')}
 					<div className={styles.presidentSignatureContainer}>
-						<Image
+						<img
 							className={styles.presidentPhoto}
-							src={presidentPhoto}
-							width={200}
-							height={200}
+							src='/images/recruit/president.jpg'
 							alt='presidentPhoto'
 						/>
 						<div className={styles.presidentNameContainer}>

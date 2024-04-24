@@ -1,7 +1,6 @@
 'use client';
 import "./globals.css";
 import type { Metadata } from "next";
-import Favicon from '/public/images/Metadata/Favicon.ico';
 import { Inter } from "next/font/google";
 import { Header } from "@/components//Header/Header";
 import { Footer } from "@/components/Footer/Footer";
@@ -9,6 +8,7 @@ import { CssBaseline } from "@mui/material";
 import { ToTopButton } from "@/components/ToTopButton/ToTopButton";
 import { Suspense, useEffect } from "react";
 import { createContext, useState } from 'react';
+import MetaData from "@/components/MetaData/MetaData";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,7 +39,7 @@ export default function RootLayout({
       const savedLanguage = localStorage.getItem('selectedLanguage');
       return savedLanguage || '日本語';
     } else {
-      return '日本語'; // サーバーサイドで実行される場合はデフォルト値を設定する
+      return '日本語';
     }
   });
 
@@ -50,6 +50,9 @@ export default function RootLayout({
   return (
     <html lang="jp">
       {/* <body className={inter.className}> */}
+      <head>
+        <title>株式会社タイシン</title>
+      </head>
       <body>
         <CurrentLanguage.Provider value={{ language, setLanguage }}>
           <CssBaseline />

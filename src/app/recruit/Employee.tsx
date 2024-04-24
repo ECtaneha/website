@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import styles from './page.module.scss'
 import { RenderParagraphs } from '@/lib/RenderParagraphs';
 
@@ -15,11 +14,9 @@ export const Employee = (props: any) => {
           <div className={styles.interviewWrapper}>
             <div className={styles.memberWrapper}>
               <div className={styles.memberPhotoWrapper}>
-                <Image
+                <img
                   className={styles.memberPhoto}
                   src={employee.photo.photo2}
-                  width={200}
-                  height={200}
                   alt={employee.name}
                 />
               </div>

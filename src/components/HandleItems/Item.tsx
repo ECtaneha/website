@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import styles from './handleItems.module.scss'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
@@ -16,11 +15,9 @@ export const Item = (props: item) => {
 
   return (
     <div className={styles.itemContainer}>
-      <Image
+      <img
         className={styles.image}
         src={props.thumbnail}
-        width={props.width}
-        height={props.height}
         alt={props.alt}
       />
       <div className={styles.descriptionWrapper}>

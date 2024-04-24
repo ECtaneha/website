@@ -6,6 +6,7 @@ import WarningIcon from '@mui/icons-material/Warning';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { BreadCrumb } from '@/components/BreadCrumb/BreadCrumb';
+import { Confirmation } from '@/components/Confirmation/Confirmation';
 
 export default function Page() {
   const [title, setTitle] = useState<string>('');
@@ -33,10 +34,14 @@ export default function Page() {
       },
       body: JSON.stringify(formData),
     }).then((res) => {
-      if (res.status === 200) console.log(res);
-      reset();
-      alert('送信しました。')
-      setIsFormSubmitted(false);
+      if (res.status === 200) {
+        console.log(res);
+        reset();
+        alert('送信しました。')
+        setIsFormSubmitted(false);
+      } else if (res.status === 500) {
+        console.log(res);
+      }
     });
   };
 
@@ -47,51 +52,13 @@ export default function Page() {
   return (
     <div>
       {isFormSubmitted
-        ? <div className={styles.confirmContainer}>
-            <h2 className={styles.h2}>以下の内容で送信します。</h2>
-            <table>
-              <tbody>
-                <tr>
-                  <th className={styles.th}>件名</th>
-                  <td className={styles.td}>{title}</td>
-                </tr>
-                <tr>
-                  <th className={styles.th}>会社名</th>
-                  <td className={styles.td}>{company}</td>
-                </tr>
-                <tr>
-                  <th className={styles.th}>お名前</th>
-                  <td className={styles.td}>{name}</td>
-                </tr>
-                <tr>
-                  <th className={styles.th}>メールアドレス</th>
-                  <td className={styles.td}>{email}</td>
-                </tr>
-                <tr>
-                  <th className={styles.th}>電話番号</th>
-                  <td className={styles.td}>{tel}</td>
-                </tr>
-                <tr>
-                  <th className={styles.th}>お問い合わせ内容</th>
-                  <td className={styles.td}>{content}</td>
-                </tr>
-              </tbody>
-            </table>
-            <div className={styles.buttonWrapper}>
-              <button
-                className={styles.confirmButton}
-                onClick={handleSend}
-              >
-                送信
-              </button>
-              <button
-                className={styles.modifyButton}
-                onClick={handleEdit}
-              >
-                修正
-              </button>
-            </div>
-          </div>
+        ? (
+          <Confirmation
+            formData={formData}
+            onSend={handleSend}
+            onEdit={handleEdit}
+          />
+        )
         : (
           <div className={globalStyles.contentsWrapper}>
             <div className={styles.h1Container}>

@@ -4,8 +4,6 @@ import styles from './header.module.scss'
 import Link from 'next/link'
 import { SNS } from "@/components/SNS/SNS"
 import EmailIcon from '@mui/icons-material/Email';
-import Image from 'next/image';
-import logo from '/public/images/header/logo-taishin.png'
 import { Hamburger } from '@/components/Hamburger/Hamburger'
 import { Language } from '@/components/Language/Language'
 
@@ -29,11 +27,9 @@ export const Header = () => {
           id="logo"
           className={styles.h1}
         >
-            <Image
+            <img
               className={styles.image}
-              src={logo}
-              width={256}
-              height={31}
+              src='/images/header/logo-taishin.png'
               alt='logo'
               onClick={() => setIsOpenState(false)}
             />

@@ -17,13 +17,13 @@ export async function POST(req: NextRequest) {
         content,
         publication,
       },
-    })
+    });
     return new Response(JSON.stringify(announcement), {
       status: 200,
       headers: {
         'Content-Type': 'application/json',
       },
-    })
+    });
   } catch (error) {
     console.error(error)
     return new Response(JSON.stringify({ error: 'Failed to create announcement' }), {
@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
       headers: {
         'Content-Type': 'application/json',
       },
-    })
+    });
   }
 }
 

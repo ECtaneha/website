@@ -1,5 +1,4 @@
-'use client'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from './hamburger.module.scss'
 import Link from 'next/link'
 import { SiteMap } from '@/components/SiteMap/SiteMap'
@@ -10,7 +9,6 @@ type IsOpenState = {
 }
 
 export const Hamburger = (props: IsOpenState) => {
-
   return (
     <div className={styles.hamburgerContainer}>
       <input type="checkbox" className={styles.menuBtn} id="menu-btn" />

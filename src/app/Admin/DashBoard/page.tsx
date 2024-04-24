@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import PostForm from '@/components/Announcement/PostForm';
 import styles from './dashBoard.module.scss'
 import Link from 'next/link';
-import AnnouncementList from '@/components/Announcement/AnnouncementList';
 import { LoginForm } from '@/components/Announcement/LoginForm';
+import { EditForm } from '@/components/Announcement/EditForm';
 
 const url = 'https://vercel.com/ectanehas-projects/website/stores/postgres/store_Zsp9bNRFnpZ9Ns95/data';
 
@@ -40,11 +40,11 @@ export default function Page() {
               <span
                 className={`
                   ${styles.label}
-                  ${mode === 'Preview' && styles.active}
+                  ${mode === 'EditForm' && styles.active}
                 `}
-                onClick={() => setMode('Preview')}
+                onClick={() => setMode('EditForm')}
               >
-                Preview
+                EditForm
               </span>
               <span className={styles.label}>
                 <Link href={url}>DataBase</Link>
@@ -52,7 +52,7 @@ export default function Page() {
             </div>
             {mode === 'postForm'
               ? <PostForm />
-              : <AnnouncementList />
+              : <EditForm />
             }
           </>
         )

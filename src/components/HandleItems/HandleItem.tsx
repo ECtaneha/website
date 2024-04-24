@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import styles from './handleItems.module.scss'
 import Link from 'next/link'
 
@@ -12,11 +11,9 @@ export const HandleItem = (props: any) => {
         <div className={styles.groupImagesWrapper}>
           {props.classData && props.classData.src.map((url: string, index: number) => {
             return (
-              <Image
+              <img
                 key={index}
                 className={styles.groupImage}
-                width={300}
-                height={200}
                 src={url}
                 alt={`image${index + 1}`}
               />

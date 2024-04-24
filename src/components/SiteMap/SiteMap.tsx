@@ -1,8 +1,5 @@
 import React from 'react'
 import styles from './siteMap.module.scss'
-import nintei from '/public/images/footer/nintei_logo.jpg'
-import logo from '/public/images/header/logo-taishin.png'
-import Image from 'next/image';
 import Link from 'next/link';
 import { SNS } from '@/components/SNS/SNS';
 
@@ -12,8 +9,8 @@ export const SiteMap = () => {
       <div className={styles.informationWrapper}>
         <div className={styles.informationWrapperLeft}>
             <div>
-              <div className={styles.logo}>
-                <Image src={logo} width={250} height={30} alt='logo'/>
+              <div>
+                <img className={styles.logo} src='/images/header/logo-taishin.png' alt='logo'/>
               </div>
               <div className={styles.sns}>
                 <SNS />
@@ -34,15 +31,14 @@ export const SiteMap = () => {
             <p>FAX：088-632-7737</p>
           </div>
           <div className={styles.ninteiWrapper}>
-            <Image
+            <img
               className={styles.nintei}
-              src={nintei}
-              width={40}
-              height={40}
+              src='/images/footer/nintei_logo.jpg'
               alt='経済産業省認定マーク'
             />
           </div>
         </div>
       </div>
-    </div>  )
+    </div>
+  )
 }

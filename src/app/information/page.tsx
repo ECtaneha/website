@@ -2,8 +2,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import globalStyles from '@/app/page.module.scss'
 import styles from './page.module.scss'
-import Image from 'next/image'
-import presidentPhoto from '/public/images/information/presidentPhoto.jpg'
 import Link from 'next/link'
 import { BreadCrumb } from '@/components/BreadCrumb/BreadCrumb'
 import { usePathname } from 'next/navigation';
@@ -22,9 +20,6 @@ export default function Page() {
   const [isActiveLink, setIsActiveLink] = useState<boolean>(false);
   const d = new Date();
   const year = d.getFullYear();
-  const month = d.getMonth();
-  const YEAR = toFullWidth(year.toString());
-  const MONTH = toFullWidth(month.toString());
   const now = year - 1978;
   const _pathname = usePathname()
   const pathName = _pathname.replace(`/`, '');
@@ -94,17 +89,15 @@ export default function Page() {
             {information.linkMenu.menu[0].title}
           </h2>
           <div className={styles.greet}>
-            <Image
+            <img
               className={styles.presidentPhoto}
-              src={presidentPhoto}
-              width={200}
-              height={200}
+              src='/images/information/presidentPhoto.jpg'
               alt='presidentPhoto'
             />
             <div className={styles.greetWrapper}>
-              <p>
+              <div>
                 {RenderParagraphs(information.greet.content.replace('{now}', `${now}`), '\n')}
-              </p>
+              </div>
               <div className={styles.presidentNameContainer}>
                 {information.greet.company}
                 <br />
