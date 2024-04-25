@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './announcement.module.scss';
 import { TextField } from '@mui/material';
+import PageNation from '../PageNation/PageNation';
 
 interface Announcement {
   id: number;
@@ -17,6 +18,7 @@ export const EditForm = () => {
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
   const deleteUrl = '/api/deleteData';
   const getUrl = '/api/getData';
+  const [page, setPage] = useState<number>(1);
 
   useEffect(() => {
     fetchAnnouncements();
@@ -213,6 +215,12 @@ export const EditForm = () => {
           </div>
         </div>
       ))}
+
+      <PageNation
+        page={page}
+        setPage={setPage}
+        // maxPage={sortedAnnounce.length}
+      />
     </div>
   );
 };

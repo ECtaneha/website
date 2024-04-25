@@ -55,7 +55,6 @@ export default function PostForm() {
 
   return (
     <div>
-      <h2 className={styles.h2}>新規投稿</h2>
       {!isConfirm ? (
         <form className={styles.postFormContainer}>
           <input
@@ -91,7 +90,11 @@ export default function PostForm() {
             <option value='true'>公開</option>
             <option value='false'>非公開</option>
           </select>
-          <button className={styles.confirm} type="button" onClick={() => handleConfirm()}>
+          <button
+            className={styles.confirm}
+            type="button"
+            onClick={() => handleConfirm()}
+          >
             確認
           </button>
         </form>
