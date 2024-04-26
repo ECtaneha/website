@@ -108,7 +108,6 @@ $sp: 768px;
 .buttonWrapper {
   display: flex;
   justify-content: center;
-  gap: 20px;
 }
 
 .confirm {
@@ -116,13 +115,15 @@ $sp: 768px;
   width: 50%;
   margin-inline: auto;
   padding: 10px 20px;
-  background-color: #71cdff;
+  background-image: linear-gradient(90deg, rgba(141, 139, 226, 1), rgba(253, 187, 203, 1));
   border: 2px solid #2986ff;
+  color: #fff !important;
+  font-size: 1.5rem;
+  font-weight: 500;
   transition: .2s all;
 
   &:hover {
-    background-color: #2986ff;
-    color: #fff;
+    background-image: linear-gradient(90deg, rgba(226, 207, 255, 1), rgba(251, 253, 191, 1));
   }
 }
 
@@ -148,7 +149,7 @@ $sp: 768px;
   gap: 10px;
 
   & th {
-    width: 10rem;
+    min-width: 10rem;
     text-align: left;
   }
 
@@ -255,7 +256,19 @@ $sp: 768px;
 .loginFormContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px
+  gap: 20px;
+
+  & .loginButton {
+    width: 10rem;
+    height: 2rem;
+    background-image: linear-gradient(90deg, rgba(141, 139, 226, 1), rgba(253, 187, 203, 1));
+    border: none;
+    color: #fff;
+
+    &:hover {
+      background-image: linear-gradient(90deg, rgba(226, 207, 255, 1), rgba(251, 253, 191, 1));
+    }
+  }
 }
 
 .message,
@@ -312,17 +325,18 @@ $sp: 768px;
 
 .submit {
   width: 100%;
-  height: calc(2rem + 20px);
+  height: 3rem;
   margin-inline: auto;
-  background-color: #76b6ff;
+  background-image: linear-gradient(90deg, rgba(141, 139, 226, 1), rgba(253, 187, 203, 1));
   border: none;
-  border-radius: 5px;
-  color: #444;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
   cursor: pointer;
   transition: .2s all;
 
   &:hover {
-    background-color: #2949ff;
+    background-image: linear-gradient(90deg, rgba(226, 207, 255, 1), rgba(251, 253, 191, 1));
     color: #fff;
   }
 }

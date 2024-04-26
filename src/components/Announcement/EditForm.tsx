@@ -216,11 +216,11 @@ export const EditForm = () => {
         </div>
       ))}
 
-      <PageNation
+      {/* <PageNation
         page={page}
         setPage={setPage}
-        // maxPage={sortedAnnounce.length}
-      />
+        maxPage={sortedAnnounce.length}
+      /> */}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './announcement.module.scss'
+import { TextField } from '@mui/material';
 
 export const LoginForm = (props: any) => {
   const handleLogin = async (e: { preventDefault: () => void; }) => {
@@ -20,19 +21,24 @@ export const LoginForm = (props: any) => {
       className={styles.loginFormContainer}
       onSubmit={handleLogin}
     >
-      <input
+      <TextField
         type="text"
         placeholder="ユーザーID"
         value={props.userID}
         onChange={(e) => props.setUserID(e.target.value)}
       />
-      <input
+      <TextField
         type="password"
         placeholder="パスワード"
         value={props.password}
         onChange={(e) => props.setPassword(e.target.value)}
       />
-      <button type="submit">ログイン</button>
+      <button
+        className={styles.loginButton}
+        type="submit"
+      >
+        ログイン
+      </button>
     </form>
   );
 };

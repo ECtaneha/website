@@ -15,7 +15,7 @@
   &.active:after {
     content: '';
     width: 100%;
-    border-bottom: 1px solid #444;
+    border-bottom: 2px solid #444;
     transform-origin: 50% 100%;
     transition: .3s all;
     display: inline-block;
