@@ -6,7 +6,6 @@ import { RenderParagraphs } from '@/lib/RenderParagraphs';
 
 export const Announce = (props: any) => {
   const [isOpenAnnounce, setIsOpenAnnounce] = useState<boolean>(false);
-  const paragraphs = RenderParagraphs(props.item.content, '\n');
 
   return (
     <li
@@ -25,7 +24,7 @@ export const Announce = (props: any) => {
           ${styles.announcementContent}
           ${isOpenAnnounce && styles.open}
         `}>
-          <div>{paragraphs}</div>
+          <div>{RenderParagraphs(props.item.content, '\n')}</div>
         </div>
       </div>
       <KeyboardArrowDownIcon className={`

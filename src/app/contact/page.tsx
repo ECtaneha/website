@@ -161,7 +161,7 @@ export default function Page() {
                   placeholder='お問い合わせ内容を入力してください'
                   {...register('content', {
                     required: true,
-                    maxLength: 50,
+                    maxLength: 1000,
                   })}
                   size='medium'
                   sx={{marginTop: 2}}

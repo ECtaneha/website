@@ -127,55 +127,6 @@ $sp: 768px;
   }
 }
 
-.editAnnouncementContainer {
-  width: 70%;
-  margin: 20px auto;
-  padding: 20px 10px;
-  border: 1px solid #444;
-  display: flex;
-  gap: 40px;
-
-  &.checked {
-    box-shadow: 0 0px 3px blue;
-  }
-}
-
-
-
-.editAnnouncementWrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  & th {
-    min-width: 10rem;
-    text-align: left;
-  }
-
-  & td {
-    height: fit-content;
-
-    & select {
-      width: 5rem;
-      height: 2rem;
-      font-size: 1rem;
-    }
-  }
-
-  & input {
-    width: 30rem;
-    padding: 10px;
-    border: 1px solid #c7c7c7;
-    border-radius: 5px;
-  }
-
-
-  & .editContent {
-    width:  50rem;
-  }
-}
-
 .editContainer {
   width: 100%;
   margin: 0 auto 100px;
@@ -202,14 +153,91 @@ $sp: 768px;
       }
     }
   }
-}
 
-.editInputLabel {
-  width: 2rem;
-  padding-inline: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .editAnnouncementContainer {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px 10px;
+    border: 1px solid #444;
+    display: flex;
+    gap: 40px;
+
+    &.checked {
+      box-shadow: 0 0px 3px blue;
+    }
+
+    .editAnnouncementWrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      & .date {
+        display: flex;
+        gap: 40px;
+
+        & div span:first-child {
+          font-weight: bold;
+        }
+        & span + span {
+          margin-left: 10px;
+        }
+      }
+
+      & div span:first-child {
+        width: 5rem;
+        font-weight: bold;
+      }
+
+      & .editAnnouncementSpan {
+        width: 5rem;
+        margin-right: 0 !important;
+        display: inline-block;
+      }
+
+      & .editContentContainer {
+        & .editContent {
+          width:  50rem;
+        }
+      }
+
+      & input {
+        width: 30rem;
+        padding: 10px;
+        border: 1px solid #c7c7c7;
+        border-radius: 5px;
+      }
+
+      & .tagAndPub {
+        display: flex;
+        gap: 27px;
+
+        & div span {
+          margin-right: 10px;
+          font-weight: bold;
+        }
+
+        & .editTag {
+          width: 20rem;
+        }
+
+        & select {
+          width: 5rem;
+          height: 45px;
+          border-radius: 5px;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    & .editInputLabel {
+      width: 2rem;
+      padding-inline: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 .h2 {

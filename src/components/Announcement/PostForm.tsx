@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import styles from './announcement.module.scss'
+import { RenderParagraphs } from '@/lib/RenderParagraphs';
 
 export default function PostForm() {
   const [title, setTitle] = useState('');
@@ -33,7 +34,7 @@ export default function PostForm() {
       });
 
       if (response.ok) {
-        console.log('お知らせの投稿に成功しました');
+        alert('お知らせの投稿に成功しました');
         setTitle('');
         setContent('');
         setTag('');
@@ -103,7 +104,7 @@ export default function PostForm() {
           <h3>確認画面</h3>
           <p>タグ： {tag}</p>
           <p>タイトル：<br /> {title}</p>
-          <p>本文：<br /> {content}</p>
+          <p>本文：<br /> {RenderParagraphs(content, '\n')}</p>
           <p>公開可否： {publication === 'true' ? '公開' : '非公開'}</p>
           <div className={styles.buttonWrapper}>
             <button

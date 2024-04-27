@@ -157,52 +157,33 @@ export const EditForm = () => {
               onChange={() => handleCheckboxChange(announcement.id)}
             />
           </label>
+
           <div className={styles.editAnnouncementWrapper}>
-            <tr>
-              <th>作成日時</th>
-              <td>{new Date(announcement.createddate).toISOString().split('T')[0]}</td>
-            </tr>
-            <tr>
-              <th>最終更新日時</th>
-              <td>{new Date(announcement.lastupdated).toISOString().split('T')[0]}</td>
-            </tr>
-            <tr>
-              <th>タグ</th>
-              <td>
+            <div className={styles.date}>
+              <div>
+                <span>作成日時</span>
+                <span>{new Date(announcement.createddate).toISOString().split('T')[0]}</span>
+              </div>
+
+              <div>
+                <span>最終更新日時</span>
+                <span>{new Date(announcement.lastupdated).toISOString().split('T')[0]}</span>
+              </div>
+            </div>
+
+            <div className={styles.tagAndPub}>
+              <div>
+                <span className={styles.editAnnouncementSpan}>タグ</span>
                 <TextField
                   className={styles.editTag}
                   type="text"
                   value={announcement.tag}
                   onChange={(e) => handleInputChange(announcement.id, 'tag', e.target.value)}
                 />
-              </td>
-            </tr>
-            <tr>
-              <th>タイトル</th>
-              <td>
-                <TextField
-                  className={styles.editTitle}
-                  type="text"
-                  value={announcement.title}
-                  onChange={(e) => handleInputChange(announcement.id, 'title', e.target.value)}
-                />
-              </td>
-            </tr>
-            <tr className={styles.editContentContainer}>
-              <th>内容</th>
-              <td>
-                <TextField
-                  className={styles.editContent}
-                  type="text"
-                  multiline
-                  value={announcement.content}
-                  onChange={(e) => handleInputChange(announcement.id, 'content', e.target.value)}
-                />
-              </td>
-            </tr>
-            <tr>
-              <th>公開可否</th>
-              <td>
+              </div>
+
+              <div>
+                <span>公開可否</span>
                 <select
                   value={announcement.publication}
                   onChange={(e) => handleInputChange(announcement.id, 'publication', e.target.value)}
@@ -210,8 +191,29 @@ export const EditForm = () => {
                   <option value="true">True</option>
                   <option value="false">False</option>
                 </select>
-              </td>
-            </tr>
+              </div>
+            </div>
+
+            <div className={styles.editTitleContainer}>
+              <span className={styles.editAnnouncementSpan}>タイトル</span>
+              <TextField
+                className={styles.editTitle}
+                type="text"
+                value={announcement.title}
+                onChange={(e) => handleInputChange(announcement.id, 'title', e.target.value)}
+              />
+            </div>
+
+            <div className={styles.editContentContainer}>
+              <span className={styles.editAnnouncementSpan}>内容</span>
+              <TextField
+                className={styles.editContent}
+                type="text"
+                multiline
+                value={announcement.content}
+                onChange={(e) => handleInputChange(announcement.id, 'content', e.target.value)}
+              />
+            </div>
           </div>
         </div>
       ))}
