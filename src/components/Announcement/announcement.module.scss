@@ -176,28 +176,35 @@ $sp: 768px;
         display: flex;
         gap: 40px;
 
-        & div span:first-child {
-          font-weight: bold;
+        & div:first-child span {
+          width: 5rem;
         }
+
         & span + span {
           margin-left: 10px;
         }
       }
 
-      & div span:first-child {
-        width: 5rem;
-        font-weight: bold;
-      }
+
 
       & .editAnnouncementSpan {
-        width: 5rem;
+        width: 7rem;
         margin-right: 0 !important;
+        font-weight: bold;
         display: inline-block;
       }
 
       & .editContentContainer {
         & .editContent {
           width:  50rem;
+        }
+      }
+
+      & .editTitleContainer{
+        & span {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
 
@@ -215,6 +222,12 @@ $sp: 768px;
         & div span {
           margin-right: 10px;
           font-weight: bold;
+        }
+
+        & .editAnnouncementSpan {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
         }
 
         & .editTag {
@@ -239,6 +252,7 @@ $sp: 768px;
     }
   }
 }
+
 
 .h2 {
   width: fit-content;

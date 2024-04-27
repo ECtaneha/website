@@ -161,12 +161,12 @@ export const EditForm = () => {
           <div className={styles.editAnnouncementWrapper}>
             <div className={styles.date}>
               <div>
-                <span>作成日時</span>
+                <span className={styles.editAnnouncementSpan}>作成日時</span>
                 <span>{new Date(announcement.createddate).toISOString().split('T')[0]}</span>
               </div>
 
               <div>
-                <span>最終更新日時</span>
+                <span className={styles.editAnnouncementSpan}>最終更新日時</span>
                 <span>{new Date(announcement.lastupdated).toISOString().split('T')[0]}</span>
               </div>
             </div>
