@@ -17,11 +17,11 @@ export default function AnnouncementList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('/api/getData');
-        if (!res.ok) {
+        const response = await fetch('/api/getData');
+        if (!response.ok) {
           throw new Error('Network response was not ok');
         }
-        const data: announcement[] = await res.json();
+        const data: announcement[] = await response.json();
         setAnnounce(data);
 
         const uniqueTags = [...new Set(data.map(item => item.tag || ''))];

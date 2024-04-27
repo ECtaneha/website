@@ -16,8 +16,6 @@ interface Announcement {
 
 export const EditForm = () => {
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
-  const deleteUrl = '/api/deleteData';
-  const getUrl = '/api/getData';
   const [page, setPage] = useState<number>(1);
 
   useEffect(() => {
@@ -26,7 +24,7 @@ export const EditForm = () => {
 
   const fetchAnnouncements = async () => {
     try {
-      const response = await fetch(getUrl);
+      const response = await fetch('/api/getData');
       if (response.ok) {
         const data = await response.json();
         const sortedAnnouncements = data.sort((a: Announcement, b: Announcement) =>
@@ -95,7 +93,7 @@ export const EditForm = () => {
 
   const deleteAnnouncement = async (id: number) => {
     try {
-      await fetch(deleteUrl, {
+      await fetch('/api/deleteData', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
