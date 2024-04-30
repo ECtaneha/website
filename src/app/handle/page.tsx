@@ -58,6 +58,12 @@ export default function Page() {
                 ))}
               </Link>
             ))}
+            <Link
+              className={styles.link}
+              href='handle/allClass'
+            >
+              一覧
+            </Link>
           </div>
         </div>
       </div>

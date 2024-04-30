@@ -10,7 +10,6 @@ $sp: 768px;
 .contentsContainer {
   width: 100%;
   margin-inline: auto;
-  // padding-top: 110px;
 
   @media (max-width: $sp) {
     padding-top: 40px;
@@ -20,7 +19,7 @@ $sp: 768px;
 .contentsWrapper {
   width: 100%;
   margin: 200px auto 0;
-  background-color: #fff;
+  background-color: rgba($color: #fff, $alpha: 1.0);
 }
 
 .description {
@@ -106,7 +105,7 @@ $sp: 768px;
   height: fit-content;
   background-color: #fff;
   // background: url(/public/images/motonosumijinja001.jpg);
-  background: url(/images/backgroundImage/1.jpg);
+  // background: url(/images/backgroundImage/1.jpg);
   background-size: cover;
   background-attachment: fixed;
   scroll-behavior: smooth;

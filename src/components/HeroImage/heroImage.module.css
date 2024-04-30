@@ -33,6 +33,7 @@
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
+  background-image: url('/images/heroImage/heroImage-b3.jpg');
 
   @media (max-width: 768px) {
     width: 100%;

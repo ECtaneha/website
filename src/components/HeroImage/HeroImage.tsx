@@ -22,17 +22,18 @@ export const HeroImage = () => {
     if (viewport < 768) {
       return '/images/heroImage/heroImageSP.jpg';
     } else {
-      return '/images/heroImage/heroImage4k.jpg';
+      return '/images/heroImage/heroImage2k.jpg';
     }
   };
 
   return (
     <div className={styles.container}>
-      <img
+      {/* <img
         className={styles.image}
         src={getImagePath()}
         alt={'heroimage'}
-      />
+      /> */}
+      <div className={styles.image}></div>
     </div>
   )
 }
