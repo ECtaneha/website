@@ -21,16 +21,8 @@ const links =[
     url: '/handle/allClass',
   },
   {
-    title: 'プライバシーポリシー',
-    url: '/policy/privacy',
-  },
-  {
     title: 'お問い合わせ',
     url: '/contact',
-  },
-  {
-    title: '管理ページ',
-    url: '/Admin/DashBoard',
   },
 ]
 

@@ -5,19 +5,19 @@
     "linkMenu": [
       {
         "title": "社長あいさつ",
-        "url": "#president"
+        "url": "president"
       },
       {
         "title": "インタビュー",
-        "url": "#interview"
+        "url": "interview"
       },
       {
         "title": "募集要項",
-        "url": "#Requirements"
+        "url": "Requirements"
       },
       {
         "title": "福利厚生",
-        "url": "#Welfare"
+        "url": "Welfare"
       }
     ],
     "h1Greet": "採用情報",
@@ -91,15 +91,19 @@
     "linkMenu": [
       {
         "title": "president's greet",
-        "url": "#president"
+        "url": "president"
       },
       {
         "title": "interview",
-        "url": "#interview"
+        "url": "interview"
       },
       {
         "title": "Requirements",
-        "url": "#Requirements"
+        "url": "Requirements"
+      },
+      {
+        "title": "Welfare",
+        "url": "Welfare"
       }
     ],
     "h1Greet": "Recruitment Information",
@@ -182,6 +186,10 @@
       {
         "title": "申请要求",
         "url": "#Requirements"
+      },
+      {
+        "title": "福利",
+        "url": "Welfare"
       }
     ],
     "h1Greet": "招聘信息",

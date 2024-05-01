@@ -1,11 +1,18 @@
 $tab: 1280px;
 $sp: 768px;
 
+.information {
+  margin-left: 40px;
+  font-size: .8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .informationContainer {
   width: 100%;
   margin: 20px 0;
   color: #444;
-  display: flex;
 
   @media (max-width: $sp) {
     margin: 0;
@@ -19,8 +26,8 @@ $sp: 768px;
   width: 1000px;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 30px;
 
   @media (max-width: 1000px) {
     width: 100%;
@@ -28,44 +35,97 @@ $sp: 768px;
   }
 }
 
-.informationWrapperLeft,
-.informationWrapperRight {
+.informationWrapperLeft {
   width: fit-content;
-}
-
-.informationWrapperRight {
-  margin: 15px 0 0 20px;
+  position: relative;
   display: flex;
-  flex-direction: row;
-}
 
-.informationWrapperRight p{
-  white-space: nowrap;
-}
-
-.logo {
-  width: 250px;
-  height: 30px;
-}
-
-.mediaPolicy {
-  @media (max-width: $sp) {
-    display: none;
+  .nintei {
+    width: 48px;
+    height: auto;
+    margin-left: 60px;
   }
 }
 
-.nintei {
-  width: 45px;
-  height: 45px;
-  margin-bottom: 5px;
-}
-
-.ninteiWrapper {
+.informationWrapperRight {
+  width: 100%;
+  padding-left: 2rem;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-direction: row;
+  gap: 40px;
+
+  & div {
+    & h4 {
+      width: fit-content;
+      padding: 0 5px;
+      border-bottom: 1px solid #444;
+    }
+
+    & p {
+      margin: 5px 0 0;
+      padding-left: .5rem;
+      font-size: .75rem;
+      white-space: nowrap;
+    }
+
+    & .informationHandleItems {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+    }
+  }
+
+  .policy {
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    position: relative;
+  }
 }
 
-.space {
-  flex: 1;
+.logo {
+  width: 500px;
+  height: 60px;
+  // margin-bottom: 20px;
 }
+
+// .policyContainer {
+//   width: 100%;
+//   padding: 0 20px 10px 2rem;
+//   display: flex;
+//   justify-content: space-between;
+
+//   .policyWrapper{
+//     width: fit-content;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-end;
+
+//     .policy {
+//       width: fit-content;
+//       height: fit-content;
+//       display: inline-block;
+//       position: relative;
+
+//       &::after {
+//         content: '';
+//         width: calc(100% + 5px);
+//         border-bottom: 1px solid #444;
+//         display: block;
+//         transition: .2s ease-in-out;
+//         position: absolute;
+//         translate: -5px 0;
+//         transform-origin: 0 0;
+//         scale: 0 1;
+//       }
+
+//       &:hover::after {
+//         scale: 1;
+//       }
+
+//       @media (max-width: $sp) {
+//         display: none;
+//       }
+//     }
+//   }
+// }

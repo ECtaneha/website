@@ -48,7 +48,7 @@ const datas = [
   },
   {
     'title': '売上高',
-    'description': '26億5千万円\n（令和3年度）',
+    'description': '29億5千万円\n（令和4年度）',
     'src': '/images/aboutUs/sales.png',
     'alt': '売上高'
   },

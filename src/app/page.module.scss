@@ -18,7 +18,7 @@ $sp: 768px;
 
 .contentsWrapper {
   width: 100%;
-  margin: 200px auto 0;
+  margin: 100px auto 0;
   background-color: rgba($color: #fff, $alpha: 1.0);
 }
 
@@ -102,10 +102,9 @@ $sp: 768px;
 
 .main {
   width: 100%;
-  height: fit-content;
+  height: auto;
+  padding-bottom: 100px;
   background-color: #fff;
-  // background: url(/public/images/motonosumijinja001.jpg);
-  // background: url(/images/backgroundImage/1.jpg);
   background-size: cover;
   background-attachment: fixed;
   scroll-behavior: smooth;

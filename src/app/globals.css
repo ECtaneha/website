@@ -93,7 +93,7 @@ html {
 
 body {
   position: relative;
-  background-color: #fff;
+  /* background-color: #fff; */
   font-family: "Noto Sans JP", sans-serif, serif;
   overflow-wrap: normal;
   line-break: strict;

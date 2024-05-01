@@ -1,5 +1,6 @@
 'use client'
 import React, { useContext, useEffect, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import globalStyles from '@/app/page.module.scss'
 import styles from './page.module.scss'
 import Link from 'next/link'
@@ -8,13 +9,6 @@ import { usePathname } from 'next/navigation';
 import { RenderParagraphs } from '@/lib/RenderParagraphs'
 import { CurrentLanguage } from '@/app/layout'
 import datas from './information.json'
-
-function toFullWidth(str: string) {
-  str = str.replace(/[A-Za-z0-9]/g, function(s) {
-    return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
-  });
-  return str;
-}
 
 export default function Page() {
   const [isActiveLink, setIsActiveLink] = useState<boolean>(false);
@@ -39,6 +33,24 @@ export default function Page() {
       name: ''
     },
   });
+
+  const searchParams = useSearchParams();
+  const jump = searchParams.get('jumpId');
+  const [jumpId, setJumpId] = useState("");
+
+  useEffect(() => {
+    if (jump) {
+      setJumpId(jump);
+    }
+
+    if (jumpId) {
+      const element = document.getElementById(jumpId);
+
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [jump, jumpId]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -75,7 +87,7 @@ export default function Page() {
                 ${styles.link}
                 ${isActiveLink && styles.isActiveLink}
               `}
-              href={menu.url}
+              href={`#${menu.url}`}
             >
               {menu.title}
             </Link>

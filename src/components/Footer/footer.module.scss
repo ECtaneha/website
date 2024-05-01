@@ -25,20 +25,22 @@
 .footer {
   width: 100%;
   height: fit-content;
-  background-color: #fff;
-  // position: fixed;
-  // left: 0;
-  // bottom: -181px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   transition: 0.2s ease-out;
   z-index: 25;
+  position: relative;
 
-
-  @media (max-width: 1000px) {
-    // bottom: -180px;
+  & .admin {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    cursor: default;
   }
 
   @media (max-width: 768px) {

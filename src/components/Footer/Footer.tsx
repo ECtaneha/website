@@ -2,6 +2,7 @@
 import React from 'react'
 import styles from './footer.module.scss'
 import { SiteMap } from '@/components/SiteMap/SiteMap';
+import Link from 'next/link';
 
 export const Footer = () => {
 
@@ -12,6 +13,10 @@ export const Footer = () => {
     <footer className={styles.footer}>
       <SiteMap />
       <small className={styles.small}>©Taishin Co.,Ltd. {now} since1978</small>
+      <Link
+        className={styles.admin}
+        href='/Admin/DashBoard'
+      />
     </footer>
   )
 }

@@ -8,15 +8,15 @@
       "menu": [
         {
           "title": "社長あいさつ",
-          "url": "#president"
+          "url": "president"
         },
         {
           "title": "会社沿革",
-          "url": "#history"
+          "url": "history"
         },
         {
           "title": "会社情報",
-          "url": "#information"
+          "url": "information"
         }
       ]
     },
@@ -92,8 +92,8 @@
         "description": "LPガス販売主任者　1名　第1733号\n液化石油ガス設備士　3名　第44号\n液化石油ガスPE管技術管理者　1名　四国監第48号\n液化石油ガスPE管配管管理者　1名　四国監第47号\nガスフレキ管施工技術者　3名　第16号\n浄化槽設備士　1名　第970053477号\n浄化槽管理士　1名　第31391号\n浄化槽技術管理者　1名　第5681号\n2級土木施工管理技士　2名　第99865991号　98864424号\n2級管工事施工管理技士　2名　1級配管技能士　78-1-046-36-0008\n給水装置工事主任技術者　1名　2級配管技能士 76-2-046-36-0026\nブリジストンフローテック高圧ホース製作技術資格者　2名"
       },
       {
-        "title": "26億5千万円（令和3年度）",
-        "description": "26億5千万円（令和3年度）"
+        "title": "売上",
+        "description": "29億5千万円（令和4年度）"
       },
       {
         "title": "役員",
@@ -268,15 +268,15 @@
       "menu":[
         {
           "title": "president's greet",
-          "url": "#president"
+          "url": "president"
         },
         {
           "title": "history",
-          "url": "#history"
+          "url": "history"
         },
         {
           "title": "information",
-          "url": "#information"
+          "url": "information"
         }
       ]
     },
@@ -353,7 +353,7 @@
       },
       {
         "title": "Annual Sales",
-        "description": "2,650,000,000 yen (Fiscal Year 3 of Reiwa)"
+        "description": "2,950,000,000 yen (Fiscal Year 2022)"
       },
       {
         "title": "Officers",
@@ -524,15 +524,15 @@
       "menu": [
         {
           "title": "总裁致辞",
-          "url": "#president"
+          "url": "president"
         },
         {
           "title": "公司历史",
-          "url": "#history"
+          "url": "history"
         },
         {
           "title": "公司信息",
-          "url": "#information"
+          "url": "information"
         }
       ]
     },
@@ -609,7 +609,7 @@
       },
       {
         "title": "年销售额",
-        "description": "26,500,000,000日元（令和3年度）"
+        "description": "29,500,000,000日元（令和4年度）"
       },
       {
         "title": "董事",
