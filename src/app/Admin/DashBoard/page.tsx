@@ -12,8 +12,8 @@ export default function Page() {
   const [userID, setUserID] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [isLogin, setIsLogin] = useState<boolean>(false);
-
   const [mode, setMode] = useState<string>('postForm');
+
   return (
     <div className={styles.adminContainer}>
       {!isLogin

@@ -6,7 +6,10 @@ import Link from 'next/link';
 
 export const ToTopButton = () => {
   return (
-    <Link className={styles.toTopButton} href='#header'>
+    <Link
+      className={styles.toTopButton}
+      href='#header'
+    >
       <KeyboardArrowUpIcon className={styles.upArrow}/>
     </Link>
   )

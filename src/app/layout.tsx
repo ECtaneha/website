@@ -9,6 +9,7 @@ import { ToTopButton } from "@/components/ToTopButton/ToTopButton";
 import { Suspense, useEffect } from "react";
 import { createContext, useState } from 'react';
 import MetaData from "@/components/MetaData/MetaData";
+import { usePathname } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +35,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+
   const [language, setLanguage] = useState<string>(() => {
     if (typeof window !== 'undefined') {
       const savedLanguage = localStorage.getItem('selectedLanguage');
@@ -61,7 +64,8 @@ export default function RootLayout({
             {children}
           </Suspense>
           <ToTopButton />
-          <Footer />
+
+          {pathname !== '/Admin/DashBoard' && <Footer />}
         </CurrentLanguage.Provider>
       </body>
     </html>
