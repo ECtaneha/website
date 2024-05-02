@@ -3,7 +3,7 @@ import nodeMailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
   const reqBody = await req.json();
-  const { title, name, email, tel, message, company } = reqBody;
+  const { title, name, email, tel, content, company } = reqBody;
 
   const pass = process.env.NEXT_PUBLIC_MAIL_PASSWORD;
 
@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
         会社名：${company}\n\n
         メールアドレス：${email}\n\n
         電話番号：${tel}\n\n
-        メッセージ：${message}
+        メッセージ：${content}
       `
     };
 

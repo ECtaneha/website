@@ -1,3 +1,6 @@
+$tab: 1280px;
+$sp: 768px;
+
 .openFooter {
   bottom: 0 !important;
 }
@@ -25,7 +28,7 @@
 .footer {
   width: 100%;
   height: fit-content;
-  padding-top: 20px;
+  border: 20px ridge #71cdff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -35,19 +38,66 @@
   position: relative;
 
   & .admin {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: -20px;
+    bottom: -20px;
     cursor: default;
   }
 
   @media (max-width: 768px) {
-    display: none;
+    // display: none;
   }
 }
 
+.informationWrapper {
+  width: 100%;
+  margin: 20px auto;
+  padding-inline: 20px;
+  position: relative;
+  display: flex;
+  gap: 40px;
+
+  @media (max-width: $sp) {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .information {
+    font-size: .8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+
+    .informationAddress {
+      .address {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .tel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+    }
+
+    .nintei {
+      width: 36px;
+      height: auto;
+
+      @media (max-width: $sp) {
+        width: 78px;
+      }
+    }
+
+    @media (max-width: $sp) {
+      padding-left: 1rem;
+      font-size: 1rem;
+    }
+  }
+}
 
 .linksContainer {
   width: 100%;

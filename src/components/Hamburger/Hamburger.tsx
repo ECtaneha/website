@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './hamburger.module.scss'
 import Link from 'next/link'
-import { SiteMap } from '@/components/SiteMap/SiteMap'
 
 type IsOpenState = {
   isOpenState: any;
@@ -47,7 +46,6 @@ export const Hamburger = (props: IsOpenState) => {
             </li>
           ))}
           </ul>
-        <SiteMap />
       </div>
     </div>
   )
@@ -64,7 +62,7 @@ const data = [
 
   {
     'title': '取扱品目',
-    'url': '/handle'
+    'url': '/handle/allClass'
   },
   {
     'title': 'お問い合わせ',

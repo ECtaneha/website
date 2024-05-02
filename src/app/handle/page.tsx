@@ -6,6 +6,7 @@ import datas from '@/static/links.json'
 import { BreadCrumb } from '@/components/BreadCrumb/BreadCrumb'
 import { HandleItem } from '@/components/HandleItems/HandleItem'
 import Link from 'next/link'
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export default function Page() {
   const searchParams = useSearchParams();
@@ -49,6 +50,7 @@ export default function Page() {
                   query: { id: data.id, name: data.name }
                 }}
               >
+                <KeyboardArrowRightIcon className={styles.linkArrow}/>
                 {data.class.map((array, key)=> (
                   <span
                     key={key}
@@ -62,6 +64,7 @@ export default function Page() {
               className={styles.link}
               href='handle/allClass'
             >
+              <KeyboardArrowRightIcon className={styles.linkArrow}/>
               一覧
             </Link>
           </div>

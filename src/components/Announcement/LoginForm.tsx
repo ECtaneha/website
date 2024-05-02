@@ -22,12 +22,14 @@ export const LoginForm = (props: any) => {
       onSubmit={handleLogin}
     >
       <TextField
+        className={styles.textField}
         type="text"
         placeholder="ユーザーID"
         value={props.userID}
         onChange={(e) => props.setUserID(e.target.value)}
       />
       <TextField
+        className={styles.textField}
         type="password"
         placeholder="パスワード"
         value={props.password}

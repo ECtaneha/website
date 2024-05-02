@@ -14,8 +14,7 @@ export const AboutUs = () => {
             <span>about us</span>
           </div>
         </h2>
-        <div className={styles.cardWrapper}>
-          <div className={styles.space}></div>
+        <div className={styles.cardContainer}>
           {datas.map((data, key) =>
             <Card
               key={key}

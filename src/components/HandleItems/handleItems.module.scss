@@ -8,13 +8,8 @@ $sp: 768px;
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: $tab) {
-    // width: 90%;
-  }
-
   @media (max-width: $sp) {
-    // width: 90%;
-    // padding: 40px 0;
+    padding-inline: 20px;
   }
 }
 
@@ -40,7 +35,6 @@ $sp: 768px;
 }
 
 .companyLink {
-  // font-size: 12px;
   width: fit-content;
   display: block;
   position: relative;
@@ -152,8 +146,17 @@ $sp: 768px;
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: 740px) {
+  @media (max-width: 600px) {
+    width: 80%;
     grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 500px) {
+    width: 90%;
+  }
+
+  @media (max-width: 400px) {
+    width: 100%;
   }
 }
 

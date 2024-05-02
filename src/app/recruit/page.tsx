@@ -33,6 +33,7 @@ export default function Page() {
       }
     }
   }, [jump, jumpId]);
+	
   useEffect(() => {
     const infoData = datas.find(item => item.language === language);
     setInfo(infoData);

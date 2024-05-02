@@ -1,25 +1,50 @@
+$tab: 1280px;
+$sp: 768px;
+
+.addSpace {
+  padding-bottom: 40px;
+}
+
 .missionContainer {
-  padding: 40px 0;
+  height: fit-content;
+  padding: 40px 40px 0;
+  position: relative;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+
+  @media (max-width: $sp) {
+    min-height: 000px;
+    padding-inline: 20px;
+  }
 }
 
 .missionImage {
   width: 100%;
+  min-height: 660px;
   aspect-ratio: 19 / 6;
-  background: url('/images/mission/mission.jpg') 0 0 no-repeat;
-  background-size: 100% auto;
+  background: url('/images/mission/mission.jpg') 50% 50% no-repeat;
+
+  @media (max-width: $tab) {
+    background: url('/images/mission/missionTAB.jpg') 50% 50% no-repeat;
+  }
+
+  @media (max-width: $sp) {
+    min-height: 0;
+    aspect-ratio: 19 / 12;
+    background: url('/images/mission/missionSP.jpg') 50% 50% no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    inset: 0 0 40px;
+  }
 }
 
-.missionWrapper {
-  width: 80%;
-  height: 600px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.h2 {
-  width: 100%;
-  margin-bottom: 40px;
-  padding: 15px 0 5px;
-  background-color: #71cdff;
-  text-align: center;
+.missionTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 1rem;
 }

@@ -4,12 +4,13 @@ import { RenderParagraphs } from '@/lib/RenderParagraphs';
 
 export const Employee = (props: any) => {
   const employeesArray = Array.isArray(props.info.employees)
-  ? props.info.employees
-  : Object.values(props.info.employees);
+    ? props.info.employees
+    : Object.values(props.info.employees);
 
   return (
     <div className={styles.bgc}>
       {employeesArray.map((employee: any, key: number) => (
+        employee.name !== '' &&
         <div key={key} className={styles.interviewContainer}>
           <div className={styles.interviewWrapper}>
             <div className={styles.memberWrapper}>

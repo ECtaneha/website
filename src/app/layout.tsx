@@ -64,7 +64,6 @@ export default function RootLayout({
             {children}
           </Suspense>
           <ToTopButton />
-
           {pathname !== '/Admin/DashBoard' && <Footer />}
         </CurrentLanguage.Provider>
       </body>

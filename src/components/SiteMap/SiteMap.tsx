@@ -10,28 +10,7 @@ export const SiteMap = () => {
   return (
     <div className={styles.informationContainer}>
       <div className={styles.informationWrapper}>
-        <div className={styles.informationWrapperLeft}>
-            <img
-              className={styles.logo}
-              src='/images/header/logo-taishin.png'
-              alt='logo'
-            />
-            <div className={styles.information}>
-              <p>〒770-0051</p>
-              <p>徳島県徳島市北島田町3-2-4</p>
-              <div>
-                <span>TEL：088-632-6565</span>
-                <span>　FAX：088-632-7737</span>
-              </div>
-            </div>
-            <img
-              className={styles.nintei}
-              src='/images/footer/nintei_logo.jpg'
-              alt='経済産業省認定マーク'
-            />
-        </div>
-
-        <div className={styles.informationWrapperRight}>
+        <div className={styles.sitMap}>
           <div>
             <Link href='/information'>
               <h4>{information[0].linkMenu.h1}</h4>

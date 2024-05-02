@@ -26,6 +26,8 @@ export default function Page() {
   };
 
   const handleSend = async () => {
+    console.log(formData);
+
     const response = await fetch('/api/sendMail', {
       method: 'POST',
       headers: {
@@ -73,7 +75,9 @@ export default function Page() {
               <div className={styles.attention2}>
                 <WarningIcon color='warning' className={styles.icon}/>
                 &nbsp;&nbsp;
-                <span>個人情報、パスワード、ID、クレジットカードなどの情報は、お問い合わせ内容に入力されないようお願いします。</span>
+                <span>
+                  個人情報、パスワード、ID、クレジットカードなどの情報は、お問い合わせ内容に入力されないようお願いします。
+                </span>
               </div>
 
               <p>*は必須項目です。</p>
@@ -91,7 +95,7 @@ export default function Page() {
                     required: true,
                     maxLength: 50,
                   })}
-                  sx={{marginTop: 2}}
+                  sx={{marginTop: 2, borderRadius: '50%'}}
                   onChange={(e) => setTitle(e.target.value)}
                 />
 

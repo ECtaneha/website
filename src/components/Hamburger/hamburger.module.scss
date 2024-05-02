@@ -9,57 +9,6 @@
   text-align: center;
 }
 
-.menu {
-  width: 100%;
-  height: auto;
-  background: #fff;
-  list-style: none;
-  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
-  transform-origin: top;
-  scale: 1 1;
-
-  &.menuOpen {
-    transform: scale(1, 1);
-    transform-origin: top;
-    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
-  }
-
-  & a {
-    width: fit-content;
-    margin: 0 auto;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 2px;
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #000;
-    display: block;
-    opacity: 0;
-    transition: 0.5s;
-  }
-
-  & li {
-  border-top: 1px solid rgb(75, 75, 75);
-  margin: 0 50px;
-  padding: 15px 0;
-  opacity: 0;
-  transition: 0.5s;
-
-  &:first-child {
-    border-top: none;
-  }
-
-  &:last-child {
-    border-bottom: 1px solid rgb(75, 75, 75);
-  }
-}
-}
-
-.menu .liOpen {
-  opacity: 1;
-  transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
-}
-
 .menuBtn {
   display: none;
 }
@@ -70,7 +19,7 @@
   background-color: #fff;
   position: absolute;
   transform-origin: 0 0;
-  top: 58px;
+  top: 50px;
   left: 0;
   scale: 1 0;
   z-index: 100;
@@ -78,6 +27,57 @@
 
   &.menuOpen {
     scale: 1 1;
+  }
+
+  .menu {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    list-style: none;
+    transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+    transform-origin: top;
+    scale: 1 1;
+
+    &.menuOpen {
+      transform: scale(1, 1);
+      transform-origin: top;
+      transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.1008s;
+    }
+
+    a {
+      width: fit-content;
+      margin: 0 auto;
+      text-decoration: none;
+      font-weight: 500;
+      letter-spacing: 2px;
+      font-size: 16px;
+      text-transform: capitalize;
+      color: #000;
+      display: block;
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    li {
+      border-top: 1px solid rgb(75, 75, 75);
+      margin: 0 50px;
+      padding: 15px 0;
+      opacity: 0;
+      transition: 0.5s;
+
+      &:first-child {
+        border-top: none;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid rgb(75, 75, 75);
+      }
+    }
+
+    .liOpen {
+      opacity: 1;
+      transition: 0.3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) 0.2s;
+    }
   }
 }
 

@@ -85,11 +85,13 @@ $sp: 768px;
   width: 100%;
   margin-bottom: 10px;
   padding-left: 2.5rem;
+  @media (max-width: $sp) {
+    padding-left: 1rem;
+  }
 }
 
 .bgc {
   width: 100%;
-  // padding: 40px 0;
 }
 
 .breadList {
@@ -125,7 +127,7 @@ $sp: 768px;
 
 .h1, .h2 {
   width: fit-content;
-  margin: 120px auto 40px;
+  margin: 0 auto 40px;
   padding: 10px 30px;
   border-bottom: 2px solid #d0d3ffcb;
   font-weight: bold;
@@ -178,6 +180,7 @@ $sp: 768px;
 
   @media (max-width: $sp) {
     width: 90%;
+    padding: 40px 20px;
   }
 }
 
@@ -210,6 +213,12 @@ $sp: 768px;
 
   &:hover::after {
     scale: 1;
+  }
+
+  @media (max-width:$sp) {
+    &:hover::after {
+      scale: 1;
+    }
   }
 }
 
@@ -309,7 +318,7 @@ $sp: 768px;
 .presidentGreetContainer {
   @extend .recruitWrapper;
   width: 60%;
-  margin: 40px auto 0;
+  margin: 80px auto 0;
 
 
   @media (max-width: 1280px) {
@@ -343,6 +352,7 @@ $sp: 768px;
 
   @media (max-width: $sp) {
     width: 100%;
+    margin-right: 0;
     flex-direction: row;
     align-items: flex-end;
   }
@@ -410,13 +420,17 @@ $sp: 768px;
 .requirementsHeader2 {
   text-align: left;
 
-  & th, td {
+  th, td {
     padding: 5px .5rem;
   }
 
-  & th {
+  th {
     width: 200px;
     background-color: #cbe7ff;
+
+    @media (max-width: $sp) {
+      width: fit-content;
+    }
   }
 }
 

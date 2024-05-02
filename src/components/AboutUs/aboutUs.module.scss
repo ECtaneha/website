@@ -23,46 +23,62 @@ $sp: 768px;
   padding: 40px;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: $sp) {
+    padding-inline: 20px;
+  }
 }
 
 .cardContainer {
-  width: 100%;
-  min-width: 150px;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 2px #aaa;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
-
-  @media (max-width: $tab) {
-    max-width: 200px;
-    margin-right: 0;
-  }
-
-  @media (max-width: $sp) {
-    height: auto;
-    aspect-ratio: 2 / 2.5;
-  }
-}
-
-.cardWrapper {
   width: 60%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
 
-  @media (max-width: 1280px) {
+  @media (max-width: $tab) {
     width: fit-content;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+  }
+
+  @media (max-width: 400px) {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .cardWrapper {
+    width: 100%;
+    min-width: 150px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px #aaa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+
+    @media (max-width: $tab) {
+      max-width: 200px;
+      margin-right: 0;
+    }
+
+    @media (max-width: $sp) {
+      min-width: 110px;
+      height: auto;
+      aspect-ratio: 2 / 2.5;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
   }
 }
 
@@ -87,14 +103,6 @@ $sp: 768px;
   width: 100%;
   height: auto;
   padding: 15px;
-}
-
-.space {
-  flex: 1;
-
-  @media (max-width: 1280px) {
-    display: none;
-  }
 }
 
 .title {

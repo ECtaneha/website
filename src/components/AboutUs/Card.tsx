@@ -9,7 +9,7 @@ type item = {
 
 export const Card = (props: item) => {
   return (
-    <div className={styles.cardContainer}>
+    <div className={styles.cardWrapper}>
       <h3 className={styles.h3}>{props.title}</h3>
       <p className={styles.description}>{props.description}</p>
       <div className={styles.space}></div>

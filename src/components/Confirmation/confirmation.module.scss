@@ -1,5 +1,8 @@
+$tab: 1280px;
+$sp: 768px;
+
 .buttonWrapper {
-  width: 60%;
+  width: 100%;
   margin: 20px auto;
   display: flex;
   gap: 20px;
@@ -7,27 +10,67 @@
 
 .confirmButton,
 .modifyButton {
-  width: 200px;
+  width: 100%;
   height: 40px;
   margin: 20px 0;
+  background-color: rgba(197, 197, 255, .6);
   border-radius: 5px;
   border: none;
   color: #fff;
   font-size: 20px;
   transition: .2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    width: inherit;
+    height: inherit;
+    border-radius: 50px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    scale: 0;
+    transition: .1s ease-out;
+    transform-origin: 50% 50%;
+    z-index: -1;
+  }
+
+  &:hover::before{
+    scale: 1.1 1.1;
+
+    @media (max-width: $sp) {
+      scale: 0;
+    }
+  }
 }
 
 .confirmButton {
-  background-color: rgb(197, 197, 255);
-
-  &:hover {
-    background-color: rgb(97, 97, 255);
+  &::before {
+    background-color: rgba(118, 118, 255, .3);
   }
 }
 
 .confirmContainer {
   width: 60%;
-  margin: 100px auto 0;
+  padding-inline: 20px;
+  margin: 130px auto 120px;
+
+  @media (max-width: $tab) {
+    width: 80%;
+    margin-block: 100px;
+  }
+
+  @media (max-width: $sp) {
+    width: 100%;
+  }
+
+  & .p {
+    width: fit-content;
+    margin: 40px auto 20px;
+  }
 }
 
 .h2 {
@@ -49,3 +92,39 @@
   }
 }
 
+.modifyButton {
+  background-color: rgba(214, 214, 214, 1);
+
+  &::before {
+    background-color: rgba(169, 169, 169, 0.7);
+  }
+}
+
+.tableContainer {
+  padding-inline: 20px;
+
+  @media (max-width: $sp) {
+  padding-inline: 0;
+  }
+
+  .tr {
+    display: flex;
+
+    @media (max-width: $sp) {
+      margin-bottom: 5px;
+      flex-direction: column;
+    }
+
+    .th {
+      width: 150px;
+      margin: 5px 10px 5px 0;
+      display: inline-block;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .td {
+
+    }
+  }
+}
