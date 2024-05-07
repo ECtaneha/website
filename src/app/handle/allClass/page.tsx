@@ -1,10 +1,22 @@
+'use client'
 import globalStyles from '@/app/page.module.scss'
 import styles from '../page.module.scss'
 import Link from 'next/link'
 import datas from '@/static/links.json'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import Select from '@mui/material/Select';
+import { useEffect, useState } from 'react';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import { SetCategory } from './SetCategory';
 
 export default function Page() {
+  const [category, setCategory] = useState<string>('#class1');
+  const [isBrowser, setIsBrowser] = useState(false);
+
+  useEffect(() => {
+    setIsBrowser(true);
+  }, []);
 
   return (
     <div className={globalStyles.contentsWrapper}>
@@ -14,48 +26,36 @@ export default function Page() {
       <div className={styles.linksContainer}>
         <div className={styles.contentsContainer}>
           <div>
-            <div className={styles.allClass}>
-              {datas.map((data, key) => (
-                <ul
-                  key={key}
-                  className={styles.companyUlAllClass}
-                >
-                  <h2
-                    id={data.name}
-                    className={`
-                      ${styles.h2}
-                      ${styles.listTitle}
-                    `}
+            <div className={styles.selectBox}>
+              <InputLabel id="">カテゴリー</InputLabel>
+              <Select
+                labelId=""
+                id=""
+                value={category}
+                label="カテゴリー"
+                fullWidth
+                onChange={(e) => setCategory(e.target.value)}
+              >
+                {datas.map((data)=>
+                  <MenuItem
+                    key={data.id}
+                    value={data.id}
                   >
-                    <Link href={{
-                      pathname: `/handle`,
-                      query: { id: data.id, name: data.name }
-                    }}>
-                      <div className={styles.classNameWrapper}>
-                        <div>
-                          {data.class.map((prevClass, key) => (
-                            <span key={key}>{prevClass}　</span>
-                          ))}
-                        </div>
-                        <PlayArrowIcon className={styles.arrow}/>
-                      </div>
-                    </Link>
-                  </h2>
-                  {data.links.map((link, subKey) => (
-                    <li
-                      key={subKey}
-                      className={styles.companyLi}
-                    >
-                      <Link
-                        className={styles.companyLink}
-                        href={link.url}
-                      >
-                        {link.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              ))}
+                    {data.name}
+                  </MenuItem>
+                )}
+              </Select>
+            </div>
+
+            <div className={styles.allClass}>
+              {isBrowser && window.innerWidth <= 768
+                ? datas.map((data, key: number) => (
+                    data.id === category && <SetCategory key={key} {...data} />
+                  ))
+                : datas.map((data, key: number) => (
+                    <SetCategory key={key} {...data} />
+                  ))
+              }
             </div>
           </div>
         </div>
