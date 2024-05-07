@@ -57,6 +57,7 @@ $sp: 768px;
   padding-inline: 20px;
   position: relative;
   display: flex;
+  justify-content: center;
   gap: 40px;
 
   @media (max-width: $sp) {
