@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation';
 import { RenderParagraphs } from '@/lib/RenderParagraphs'
 import { CurrentLanguage } from '@/app/layout'
 import datas from './information.json'
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export default function Page() {
   const [isActiveLink, setIsActiveLink] = useState<boolean>(false);
@@ -79,7 +80,9 @@ export default function Page() {
           childPath={information.linkMenu.h1}
         />
 
+
         <div className={styles.links}>
+          <hr />
           {information.linkMenu.menu.map((menu, key) => (
             <Link
               key={key}
@@ -89,9 +92,11 @@ export default function Page() {
               `}
               href={`#${menu.url}`}
             >
+              <KeyboardArrowRightIcon />
               {menu.title}
             </Link>
           ))}
+          <hr />
         </div>
 
         <div

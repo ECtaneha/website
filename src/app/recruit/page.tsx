@@ -9,6 +9,7 @@ import { Employee } from './Employee'
 import { CurrentLanguage  }from '@/app/layout'
 import { RenderParagraphs } from '@/lib/RenderParagraphs'
 import { useSearchParams } from 'next/navigation'
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 export default function Page() {
 	const { language, setLanguage } = useContext(CurrentLanguage);
@@ -33,7 +34,7 @@ export default function Page() {
       }
     }
   }, [jump, jumpId]);
-	
+
   useEffect(() => {
     const infoData = datas.find(item => item.language === language);
     setInfo(infoData);
@@ -56,6 +57,7 @@ export default function Page() {
         />
 
         <div className={styles.links}>
+					<hr />
           {info.linkMenu.map((menu, key) => (
             <Link
               key={key}
@@ -65,9 +67,11 @@ export default function Page() {
               `}
               href={`#${menu.url}`}
 						>
+							<KeyboardArrowRightIcon />
               {menu.title}
             </Link>
           ))}
+					<hr />
         </div>
       </div>
 

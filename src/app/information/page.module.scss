@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Yuji+Hentaigana+Akebono&display=swap');
 
+$tab: 1280px;
+$sp: 768px;
+
 .greet {
   padding: 40px;
   height: auto;
@@ -8,7 +11,7 @@
   display: flex;
   gap: 40px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $sp) {
     height: fit-content;
     flex-direction: column;
   }
@@ -42,7 +45,14 @@
 }
 
 .h2 {
-  margin: 40px auto 40px;
+  width: fit-content;
+  margin: 40px auto;
+
+  @media (max-width: $sp) {
+    padding: 10px 60px;
+    border: 3px double #444;
+    border-inline: none;
+  }
 }
 
 .informationContainer {
@@ -50,13 +60,13 @@
   margin: 0 auto 100px;
   padding: 0 ;
 
-  @media (max-width: 1280px) {
+  @media (max-width: $tab) {
     width: calc(100% - 40px);
     margin: 0 20px 100px;
     padding: 0;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $sp) {
     width: calc(100% - 40px);
     margin: 0 20px 100px;
     padding: 0;
@@ -67,42 +77,53 @@
   margin-bottom: 40px;
   padding: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $sp) {
     padding: 20px 0;
   }
 }
 
 .links {
-  width: 400px;
   margin: 40px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 60px;
   font-weight: bold;
-}
 
-.link {
-  width: fit-content;
-  height: 20px;
-  margin: 0 10px;
-  text-align: center;
-  display: block;
-  position: relative;
-
-  &::after {
-    content: '';
-    width: 120%;
-    border-bottom: 1px solid #444;
-    display: block;
-    transition: .2s ease-in-out;
-    position: absolute;
-    translate: -10% 0;
-    scale: 0;
+  @media (max-width: $sp) {
+    margin-block: 20px;
+    flex-direction: column;
+    gap: 10px;
   }
 
-  &:hover::after {
-    scale: 1;
+  .link {
+    width: fit-content;
+    height: 24px;
+    margin: 0 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @media (min-width: 769px) {
+      &::after {
+        content: '';
+        width: 120%;
+        border-bottom: 1px solid #444;
+        display: block;
+        transition: .2s ease-in-out;
+        position: absolute;
+        translate: -10% 0;
+        scale: 0;
+      }
+
+      &:hover::after {
+        scale: 1;
+      }
+    }
   }
 }
+
+
 
 .presidentNameContainer {
   margin-top: 20px;
@@ -120,7 +141,7 @@
 .presidentPhoto {
   width: 200px;
 
-  @media (max-width: 768px) {
+  @media (max-width: $sp) {
     width: 100%;
     height: auto;
     float: none;

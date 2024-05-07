@@ -90,6 +90,10 @@ body {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+
+  @media (max-width: 768px) {
+    scroll-padding-top: 40px;
+  }
 }
 
 body {
