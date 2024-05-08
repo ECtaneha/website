@@ -11,7 +11,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { SetCategory } from './SetCategory';
 
 export default function Page() {
-  const [category, setCategory] = useState<string>('#class1');
+  const [category, setCategory] = useState<string>('一覧');
   const [isBrowser, setIsBrowser] = useState(false);
 
   useEffect(() => {
@@ -36,6 +36,7 @@ export default function Page() {
                 fullWidth
                 onChange={(e) => setCategory(e.target.value)}
               >
+                <MenuItem value='一覧'>一覧</MenuItem>
                 {datas.map((data)=>
                   <MenuItem
                     key={data.id}
@@ -49,7 +50,11 @@ export default function Page() {
 
             <div className={styles.allClass}>
               {isBrowser && window.innerWidth <= 768
-                ? datas.map((data, key: number) => (
+                ? category === '一覧'
+                  ? datas.map((data, key: number) => (
+                    <SetCategory key={key} {...data} />
+                  ))
+                  : datas.map((data, key: number) => (
                     data.id === category && <SetCategory key={key} {...data} />
                   ))
                 : datas.map((data, key: number) => (

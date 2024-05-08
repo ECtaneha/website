@@ -10,6 +10,10 @@ import { CurrentLanguage  }from '@/app/layout'
 import { RenderParagraphs } from '@/lib/RenderParagraphs'
 import { useSearchParams } from 'next/navigation'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import EmblaCarousel from '@/components/Carousel/EmblaCarousel'
+
+const SLIDE_COUNT = 5
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 export default function Page() {
 	const { language, setLanguage } = useContext(CurrentLanguage);
@@ -235,7 +239,14 @@ export default function Page() {
 			</div>
 
 			<div id='Welfare'>
-					<h2>福利厚生</h2>
+					<h2 className={styles.h2}>福利厚生施設</h2>
+					<EmblaCarousel slides={SLIDES}/>
+					<div className={styles.welfareDescription}>
+						<p>ベイコート倶楽部（芦屋、東京、蒲郡、横浜）はラグジュアリースウィートに｡</p>
+						<p>全国27箇所に有るエクシブはどこでも、どんなグレードの部屋でも利用可能｡</p>
+						<p>勤続5年毎に家族5人でスーパースウィートルームに宿泊できます｡</p>
+						<p>同時に平日二日の休日も支給されるので、混雑を避けたリゾートを楽めます。</p>
+					</div>
 			</div>
     </div>
   )
@@ -287,3 +298,26 @@ type Photo = {
 	photo1: string;
 	photo2: string;
 }
+
+const images = [
+	{
+		url: 'images/recruit/arima.jpg',
+		alt: 'エクシブ有馬'
+	},
+	{
+		url: 'images/recruit/rokko.jpg',
+		alt: 'エクシブ六甲'
+	},
+	{
+		url: 'images/recruit/kyoto.jpg',
+		alt: 'エクシブ京都'
+	},
+	{
+		url: 'images/recruit/kobe.jpg',
+		alt: 'エクシブ神戸'
+	},
+	{
+		url: 'images/recruit/naruto.jpg',
+		alt: 'エクシブ鳴門'
+	}
+]

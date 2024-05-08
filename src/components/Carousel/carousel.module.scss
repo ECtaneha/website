@@ -1,0 +1,27 @@
+$sp: 768px;
+
+.embla {
+  overflow: hidden;
+}
+
+.emblaContainer {
+}
+
+.emblaSlide {
+  width: 60%;
+  margin-inline: auto;
+  overflow: hidden;
+
+  flex: 0 0 100%;
+  display: flex;
+
+  @media (max-width: $sp) {
+    width: 90%;
+  }
+}
+
+.emblaSlideImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+}

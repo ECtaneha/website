@@ -145,6 +145,10 @@ $sp: 768px;
   box-shadow: 0 8px 8px 0 #a5a5a5;
 }
 
+.h2 {
+  margin-top: 40px;
+}
+
 .interview {
   width: calc(100% - 340px);
   overflow-wrap: break-word;
@@ -451,4 +455,17 @@ $sp: 768px;
 .welfare {
   color: blue;
   text-decoration: underline;
+}
+
+.welfareDescription {
+  width: 60%;
+  margin: 20px auto;
+
+  p {
+    margin-block: 5px;
+  }
+
+  @media (max-width: $sp) {
+    width: 90%;
+  }
 }
