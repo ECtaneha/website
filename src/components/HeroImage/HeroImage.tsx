@@ -28,11 +28,6 @@ export const HeroImage = () => {
 
   return (
     <div className={styles.container}>
-      {/* <img
-        className={styles.image}
-        src={getImagePath()}
-        alt={'heroimage'}
-      /> */}
       <div className={styles.image}></div>
     </div>
   )

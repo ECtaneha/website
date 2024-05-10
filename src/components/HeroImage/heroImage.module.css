@@ -33,12 +33,13 @@
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
-  background-image: url('/images/heroImage/heroImage-b3.jpg');
+  background: url('/images/heroImage/heroImage-b3.jpg') 0 0 no-repeat;
   background-size: cover;
 
   @media (max-width: 768px) {
     height: 100vh;
-    background-image: url('/images/heroImage/heroImageSP.jpg');
+    background: url('/images/heroImage/heroImageSP.jpg') 0 0 no-repeat;
+    background-size: contain;
   }
 }
 
