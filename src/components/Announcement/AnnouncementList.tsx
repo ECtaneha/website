@@ -15,6 +15,8 @@ export default function AnnouncementList() {
   const [pageSize] = useState<number>(5);
 
   useEffect(() => {
+    console.log(1);
+
     const fetchData = async () => {
       try {
         const response = await fetch('/api/getData');

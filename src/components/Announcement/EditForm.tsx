@@ -23,6 +23,8 @@ export const EditForm = () => {
   }, []);
 
   const fetchAnnouncements = async () => {
+    console.log(editform);
+
     try {
       const response = await fetch('/api/getData');
       if (response.ok) {
@@ -73,7 +75,7 @@ export const EditForm = () => {
       fetchAnnouncements();
       handleSelectAll();
       alert('更新しました。')
-      
+
     } catch (error) {
       console.error('Error updating selected announcements:', error);
     }
