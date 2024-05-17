@@ -1,7 +1,9 @@
 {
-  "rewrites": [
-    { "source":  "/api/:path*",
-      "destination": "https://taishin-mirror.vercel.app/api/:path*"
+  "routes": [
+    {
+      "src": "/api/.*",
+      "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      "allow": ["http://xs882411.xsrv.jp/", "http://taishin1977.jp/", "https://taishin-mirror.vercel.app/", "http://localhost:3000/"]
     }
   ]
 }
