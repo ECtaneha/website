@@ -5,7 +5,6 @@ const prisma = new PrismaClient()
 
 export async function GET(request: Request) {
   const data: announcement[] = await prisma.announcement.findMany();
-  console.log(data);
 
   return new Response(JSON.stringify(data), {
     status: 200,

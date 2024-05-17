@@ -17,9 +17,13 @@ interface Announcement {
 export const EditForm = () => {
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
   const [page, setPage] = useState<number>(1);
+  console.log(1);
+
 
   useEffect(() => {
     fetchAnnouncements();
+    console.log(2);
+
   }, []);
 
   const fetchAnnouncements = async () => {
@@ -35,7 +39,7 @@ export const EditForm = () => {
           ...announcement,
           selected: false,
         }));
-        console.log(announcementsWithSelection);
+        console.log("aws"+response);
 
         setAnnouncements(announcementsWithSelection);
       } else {
