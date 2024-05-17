@@ -23,7 +23,7 @@ export const EditForm = () => {
   }, []);
 
   const fetchAnnouncements = async () => {
-    console.log(editform);
+    console.log("editform");
 
     try {
       const response = await fetch('/api/getData');
