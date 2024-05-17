@@ -13,11 +13,12 @@ export default function AnnouncementList() {
   const [page, setPage] = useState<number>(1);
   const [maxPage, setMaxPage] = useState<number>(1);
   const [pageSize] = useState<number>(5);
+  const url = process.env.NEXT_PUBLIC_VERCEL_HOST;
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/getData', {
+        const response = await fetch(url+'getData', {
           method: 'GET',
           mode: 'cors',
           headers: {
