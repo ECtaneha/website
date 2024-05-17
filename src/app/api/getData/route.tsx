@@ -10,6 +10,7 @@ export async function GET(request: Request) {
     status: 200,
     headers: {
       'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     },
   });
 }

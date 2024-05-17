@@ -15,11 +15,15 @@ export default function AnnouncementList() {
   const [pageSize] = useState<number>(5);
 
   useEffect(() => {
-
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/getData');
-
+        const response = await fetch('/api/getData', {
+          method: 'GET',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
