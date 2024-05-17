@@ -18,14 +18,16 @@ export const EditForm = () => {
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
   const [page, setPage] = useState<number>(1);
   const [fetchTrigger, setFetchTrigger] = useState<boolean>(false);
+  const url = process.env.NEXT_PUBLIC_VERCEL_HOST;
 
   useEffect(() => {
     fetchAnnouncements();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchTrigger]);
 
   const fetchAnnouncements = async () => {
     try {
-      const response = await fetch('/api/getData');
+      const response = await fetch(url+'getData');
       if (response.ok) {
         const data = await response.json();
         const sortedAnnouncements = data.sort((a: Announcement, b: Announcement) =>
@@ -57,7 +59,7 @@ export const EditForm = () => {
     try {
       const selectedAnnouncements = announcements.filter((announcement) => announcement.selected);
       for (const announcement of selectedAnnouncements) {
-        await fetch(`/api/updateData`, {
+        await fetch(url+`updateData`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -95,7 +97,7 @@ export const EditForm = () => {
 
   const deleteAnnouncement = async (id: number) => {
     try {
-      await fetch('/api/deleteData', {
+      await fetch(url+'deleteData', {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

@@ -15,10 +15,10 @@ export default function PostForm() {
 
     const currentDate = new Date();
     const createddate = currentDate.toISOString();
-    const url = '/api/createData';
+    const url = process.env.NEXT_PUBLIC_VERCEL_HOST;
 
     try {
-      const response = await fetch(url, {
+      const response = await fetch(url+'createData', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
