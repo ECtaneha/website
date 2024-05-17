@@ -1,10 +1,16 @@
-import prisma from '../../lib/prisma'
-import { announcement } from '@prisma/client'
+import { PrismaClient, announcement } from '@prisma/client'
 import { NextResponse } from 'next/server'
+
+const prisma = new PrismaClient()
 
 export async function GET(request: Request) {
   const data: announcement[] = await prisma.announcement.findMany()
-  return NextResponse.json(data)
+  return new Response(JSON.stringify(data), {
+    status: 200,
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
 }
 
 export async function HEAD(request: Request) {
