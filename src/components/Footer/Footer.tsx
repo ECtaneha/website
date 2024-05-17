@@ -40,7 +40,7 @@ export const Footer = () => {
       <small className={styles.small}>©Taishin Co.,Ltd. {now} since1978</small>
       <Link
         className={styles.admin}
-        href='/Admin/DashBoard'
+        href='https://website-3x62o1lop-ectanehas-projects.vercel.app/Admin/DashBoard'
       />
     </footer>
   )

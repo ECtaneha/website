@@ -58,8 +58,6 @@ export const Header = () => {
         </p>
       </Link>
       <div className={styles.space}></div>
-      {/* <SNS /> */}
-      {/* <Language /> */}
 
       <div className={styles.linksContainer}>
         <div className={styles.linksWrapper}>

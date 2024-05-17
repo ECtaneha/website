@@ -14,10 +14,13 @@ export default function AnnouncementList() {
   const [maxPage, setMaxPage] = useState<number>(1);
   const [pageSize] = useState<number>(5);
 
+  const url = '/api/getData'
+  // const url = 'https://vercel.com/ectanehas-projects/website/stores/postgres/store_Zsp9bNRFnpZ9Ns95/data';
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/getData');
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }

@@ -94,6 +94,11 @@ $sp: 768px;
     flex-direction: column;
     gap: 10px;
   }
+  hr {
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
 
   .link {
     width: fit-content;
@@ -107,13 +112,13 @@ $sp: 768px;
     @media (min-width: 769px) {
       &::after {
         content: '';
-        width: 120%;
+        width: 110%;
+        height: inherit;
         border-bottom: 1px solid #444;
         display: block;
         transition: .2s ease-in-out;
         position: absolute;
-        translate: -10% 0;
-        scale: 0;
+        scale: 0 1;
       }
 
       &:hover::after {

@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server';
 import prisma from '@/app/lib/prisma';
 
-export  async function PUT(req: NextRequest) {
+export async function PUT(req: NextRequest) {
   if (req.method === 'PUT') {
     const { id, tag, title, content, publication } = await req.json();
 

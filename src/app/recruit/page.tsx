@@ -11,7 +11,6 @@ import { RenderParagraphs } from '@/lib/RenderParagraphs'
 import { useSearchParams } from 'next/navigation'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Carousel } from '@/components/Carousel/Carousel'
-import Carousel2 from '@/components/Carousel/Carousel2'
 
 export default function Page() {
 	const { language, setLanguage } = useContext(CurrentLanguage);
