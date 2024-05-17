@@ -15,13 +15,10 @@ export default function AnnouncementList() {
   const [pageSize] = useState<number>(5);
 
   useEffect(() => {
-    console.log(1);
 
     const fetchData = async () => {
       try {
         const response = await fetch('/api/getData');
-        console.log(response);
-
 
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -37,7 +34,8 @@ export default function AnnouncementList() {
       }
     }
     fetchData();
-  }, [pageSize]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const filteredAnnounce = selectedTag === 'すべて'
     ? announce

@@ -17,14 +17,13 @@ interface Announcement {
 export const EditForm = () => {
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
   const [page, setPage] = useState<number>(1);
+  const [fetchTrigger, setFetchTrigger] = useState<boolean>(false);
 
   useEffect(() => {
     fetchAnnouncements();
-  }, []);
+  }, [fetchTrigger]);
 
   const fetchAnnouncements = async () => {
-    console.log("editform");
-
     try {
       const response = await fetch('/api/getData');
       if (response.ok) {
@@ -72,7 +71,7 @@ export const EditForm = () => {
           }),
         });
       }
-      fetchAnnouncements();
+      setFetchTrigger(!fetchTrigger);
       handleSelectAll();
       alert('更新しました。')
 
@@ -88,7 +87,7 @@ export const EditForm = () => {
         .map((announcement) => announcement.id);
 
       await Promise.all(selectedIds.map((id) => deleteAnnouncement(id)));
-      fetchAnnouncements();
+      setFetchTrigger(!fetchTrigger);
     } catch (error) {
       console.error('Error deleting selected announcements:', error);
     }
