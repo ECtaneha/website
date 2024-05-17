@@ -17,17 +17,12 @@ interface Announcement {
 export const EditForm = () => {
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
   const [page, setPage] = useState<number>(1);
-  console.log(1);
-
 
   useEffect(() => {
     fetchAnnouncements();
-    console.log(2);
-
   }, []);
 
   const fetchAnnouncements = async () => {
-    console.log("read it");
     try {
       const response = await fetch('/api/getData');
       if (response.ok) {
@@ -39,7 +34,6 @@ export const EditForm = () => {
           ...announcement,
           selected: false,
         }));
-        console.log("aws"+response);
 
         setAnnouncements(announcementsWithSelection);
       } else {
@@ -79,6 +73,7 @@ export const EditForm = () => {
       fetchAnnouncements();
       handleSelectAll();
       alert('更新しました。')
+      
     } catch (error) {
       console.error('Error updating selected announcements:', error);
     }
