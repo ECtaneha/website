@@ -59,7 +59,7 @@ export const EditForm = () => {
     try {
       const selectedAnnouncements = announcements.filter((announcement) => announcement.selected);
       for (const announcement of selectedAnnouncements) {
-        await fetch(url+`updateData`, {
+        await fetch(`api/updateData`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
