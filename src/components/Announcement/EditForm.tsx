@@ -34,6 +34,8 @@ export const EditForm = () => {
           ...announcement,
           selected: false,
         }));
+        console.log(announcementsWithSelection);
+
         setAnnouncements(announcementsWithSelection);
       } else {
         console.error('Failed to fetch announcements:', response.statusText);
