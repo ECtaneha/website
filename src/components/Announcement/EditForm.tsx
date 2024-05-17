@@ -90,7 +90,6 @@ export const EditForm = () => {
     }
   };
 
-
   const deleteAnnouncement = async (id: number) => {
     try {
       await fetch('/api/deleteData', {
@@ -104,7 +103,6 @@ export const EditForm = () => {
       console.error(`Error deleting announcement with id ${id}:`, error);
     }
   };
-
 
   const handleSelectAll = () => {
     setAnnouncements((prevAnnouncements) =>
