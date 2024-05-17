@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 
 const prisma = new PrismaClient();
 
-export const corsHeaders = {
+const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET",
   "Access-Control-Allow-Headers": "Content-Type, Authorization",
