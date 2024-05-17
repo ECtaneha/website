@@ -25,8 +25,6 @@ export const EditForm = () => {
   const fetchAnnouncements = async () => {
     try {
       const response = await fetch('/api/getData');
-      console.log(response);
-
       if (response.ok) {
         const data = await response.json();
         const sortedAnnouncements = data.sort((a: Announcement, b: Announcement) =>
@@ -36,8 +34,6 @@ export const EditForm = () => {
           ...announcement,
           selected: false,
         }));
-        console.log(announcementsWithSelection);
-
         setAnnouncements(announcementsWithSelection);
       } else {
         console.error('Failed to fetch announcements:', response.statusText);
