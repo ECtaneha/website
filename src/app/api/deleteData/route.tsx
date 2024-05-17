@@ -1,8 +1,6 @@
 import { NextRequest } from 'next/server';
 import prisma from '@/app/lib/prisma';
 
-export const dynamic = 'force-dynamic'; // 動的生成を強制
-
 export async function DELETE(req: NextRequest) {
   try {
     const { id } = await req.json();
