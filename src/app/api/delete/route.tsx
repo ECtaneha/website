@@ -22,13 +22,19 @@ export async function DELETE(req: NextRequest) {
 
     return new Response(JSON.stringify({ message: 'Announcement deleted successfully' }), {
       status: 200,
-      headers: corsHeaders,
-    });
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders,
+      },
+  });
   } catch (error) {
     console.error('Error deleting announcement:', error);
     return new Response(JSON.stringify({ error: 'Error deleting announcement' }), {
       status: 500,
-      headers: corsHeaders,
-    });
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders,
+      },
+  });
   }
 }
