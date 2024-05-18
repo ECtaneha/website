@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 import { NextRequest } from 'next/server'
-import { corsHeaders } from '@/lib/CornHeaders'
+import { corsHeaders } from '@/lib/CorsHeaders'
 
 const prisma = new PrismaClient()
 
@@ -21,13 +21,19 @@ export async function POST(req: NextRequest) {
     });
     return new Response(JSON.stringify(announcement), {
       status: 200,
-      headers: corsHeaders,
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders,
+      },
     });
   } catch (error) {
     console.error(error)
     return new Response(JSON.stringify({ error: 'Failed to create announcement' }), {
       status: 500,
-      headers: corsHeaders,
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders,
+      },
     });
   }
 }

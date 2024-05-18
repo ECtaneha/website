@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { NextRequest } from 'next/server';
-import { corsHeaders } from '@/lib/CornHeaders'
+import { corsHeaders } from '@/lib/CorsHeaders'
 
 const prisma = new PrismaClient();
 
@@ -12,6 +12,7 @@ export async function PUT(req: NextRequest) {
         status: 200,
         headers: {
           'Content-Type': 'application/json',
+          ...corsHeaders,
         },
       })
     }
@@ -29,13 +30,19 @@ export async function PUT(req: NextRequest) {
 
       return new Response(JSON.stringify(updatedAnnouncement), {
         status: 200,
-        headers: corsHeaders,
+        headers: {
+          'Content-Type': 'application/json',
+          ...corsHeaders,
+        },
       });
     } catch (error) {
       console.error('Error updating announcement:', error);
       return new Response(JSON.stringify({ error: 'Error updating announcement' }), {
         status: 500,
-        headers: corsHeaders,
+        headers: {
+          'Content-Type': 'application/json',
+          ...corsHeaders,
+        },
       });
     }
   }
