@@ -1,5 +1,6 @@
 import { NextRequest } from 'next/server';
 import prisma from '@/app/lib/prisma';
+import { corsHeaders } from '@/lib/CornHeaders'
 
 export async function PUT(req: NextRequest) {
   if (req.method === 'PUT') {
@@ -8,9 +9,7 @@ export async function PUT(req: NextRequest) {
     if (!id) {
       return new Response(JSON.stringify('ID parameter is required'), {
         status: 200,
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: corsHeaders,
       })
     }
 
@@ -26,26 +25,19 @@ export async function PUT(req: NextRequest) {
       });
       return new Response(JSON.stringify(updatedAnnouncement), {
         status: 200,
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: corsHeaders,
       });
     } catch (error) {
       console.error('Error updating announcement:', error);
       return new Response(JSON.stringify({ error: 'Error updating announcement' }), {
         status: 500,
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: corsHeaders,
       });
     }
   } else {
     return new Response(JSON.stringify('Method not allowed'), {
       status: 405,
-      headers: {
-        'Allow': 'PUT',
-        'Content-Type': 'application/json',
-      },
+      headers: corsHeaders,
     });
   }
 }
