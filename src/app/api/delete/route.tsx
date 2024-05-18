@@ -35,6 +35,13 @@ export async function DELETE(req: NextRequest) {
         'Content-Type': 'application/json',
         ...corsHeaders,
       },
-  });
+    });
   }
+}
+
+export async function OPTIONS() {
+  return new Response(null, {
+    status: 204, // No Content
+    headers: corsHeaders,
+  });
 }
