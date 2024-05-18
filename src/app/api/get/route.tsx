@@ -5,15 +5,28 @@ import { corsHeaders } from '@/lib/CorsHeaders'
 const prisma = new PrismaClient();
 
 export async function GET() {
-  const data: announcement[] = await prisma.announcement.findMany();
+  try{
+    const data: announcement[] = await prisma.announcement.findMany();
 
-  return new Response(JSON.stringify(data), {
-    status: 200,
-    headers: {
-      'Content-Type': 'application/json',
-      ...corsHeaders,
-    },
-  });
+    if(data){
+      return new Response(JSON.stringify(data), {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+          ...corsHeaders,
+        },
+      });
+    }
+  } catch (error) {
+    console.error('Error getting announcement:', error);
+    return new Response(JSON.stringify({ error: 'Error getting announcement' }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders,
+      },
+    });
+  }
 }
 
 // export async function HEAD() {
