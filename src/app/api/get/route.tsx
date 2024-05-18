@@ -16,7 +16,17 @@ export async function GET() {
   });
 }
 
-export async function HEAD() {
-  const data: announcement[] = await prisma.announcement.findMany();
-  return NextResponse.json({ length: data.length });
+// export async function HEAD() {
+//   const data: announcement[] = await prisma.announcement.findMany();
+//   return NextResponse.json({ length: data.length });
+// }
+
+export async function OPTIONS() {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      'Content-Type': 'application/json',
+      ...corsHeaders,
+    },
+  });
 }

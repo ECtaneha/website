@@ -25,11 +25,13 @@ export default function AnnouncementList() {
             'Content-Type': 'application/json',
           },
         });
+
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
         const data: announcement[] = await response.json();
         setAnnounce(data);
+        console.log(data);
 
         const uniqueTags = [...new Set(data.map(item => item.tag || ''))];
         setTags(['すべて', ...uniqueTags]);
