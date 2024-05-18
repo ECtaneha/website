@@ -21,37 +21,36 @@ export const EditForm = () => {
   const url = process.env.NEXT_PUBLIC_VERCEL_HOST;
 
   useEffect(() => {
-    fetchAnnouncements();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [fetchTrigger]);
+    const fetchAnnouncements = async () => {
+      try {
+        const response = await fetch(url+'get', {
+          method: 'GET',
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        if (response.ok) {
+          const data = await response.json();
+          const sortedAnnouncements = data.sort((a: Announcement, b: Announcement) =>
+            a.createddate.localeCompare(b.createddate)
+          ).reverse();
+          const announcementsWithSelection = sortedAnnouncements.map((announcement: Announcement) => ({
+            ...announcement,
+            selected: false,
+          }));
 
-  const fetchAnnouncements = async () => {
-    try {
-      const response = await fetch(url+'get', {
-        method: 'GET',
-        mode: 'cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      if (response.ok) {
-        const data = await response.json();
-        const sortedAnnouncements = data.sort((a: Announcement, b: Announcement) =>
-          a.createddate.localeCompare(b.createddate)
-        ).reverse();
-        const announcementsWithSelection = sortedAnnouncements.map((announcement: Announcement) => ({
-          ...announcement,
-          selected: false,
-        }));
-
-        setAnnouncements(announcementsWithSelection);
-      } else {
-        console.error('Failed to fetch announcements:', response.statusText);
+          setAnnouncements(announcementsWithSelection);
+        } else {
+          console.error('Failed to fetch announcements:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Error fetching announcements:', error);
       }
-    } catch (error) {
-      console.error('Error fetching announcements:', error);
-    }
-  };
+    };
+
+    fetchAnnouncements();
+  }, [fetchTrigger, url]);
 
   const handleCheckboxChange = (id: number) => {
     setAnnouncements((prevAnnouncements) =>
