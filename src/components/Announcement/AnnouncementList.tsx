@@ -18,7 +18,7 @@ export default function AnnouncementList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(url+'getData', {
+        const response = await fetch(url+'get', {
           method: 'GET',
           mode: 'cors',
           headers: {
