@@ -38,3 +38,12 @@ export async function POST(req: NextRequest) {
   }
 }
 
+export async function OPTIONS() {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      'Content-Type': 'application/json',
+      ...corsHeaders,
+    },
+  });
+}

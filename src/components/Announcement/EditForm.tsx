@@ -27,7 +27,13 @@ export const EditForm = () => {
 
   const fetchAnnouncements = async () => {
     try {
-      const response = await fetch(url+'get');
+      const response = await fetch(url+'get', {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
       if (response.ok) {
         const data = await response.json();
         const sortedAnnouncements = data.sort((a: Announcement, b: Announcement) =>
