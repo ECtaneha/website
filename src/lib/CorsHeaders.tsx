@@ -1,4 +1,4 @@
-const url = process.env.NEXT_PUBLIC_VERCEL_HOST;
+const url = process.env.NEXT_PUBLIC_ALLOW_URL;
 
 export const corsHeaders = {
   "Access-Control-Allow-Origin": "http://localhost:3000",
