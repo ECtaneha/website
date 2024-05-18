@@ -100,6 +100,7 @@ export const EditForm = () => {
     try {
       await fetch(url+'delete', {
         method: 'DELETE',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
         },

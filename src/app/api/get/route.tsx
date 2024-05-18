@@ -1,6 +1,6 @@
 import { PrismaClient, announcement } from '@prisma/client'
 import { NextResponse } from 'next/server'
-import { corsHeaders } from '@/lib/CornHeaders'
+import { corsHeaders } from '@/lib/CorsHeaders'
 
 const prisma = new PrismaClient();
 
@@ -9,7 +9,10 @@ export async function GET() {
 
   return new Response(JSON.stringify(data), {
     status: 200,
-    headers: corsHeaders
+    headers: {
+      'Content-Type': 'application/json',
+      ...corsHeaders,
+    },
   });
 }
 
