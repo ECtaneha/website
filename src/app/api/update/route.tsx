@@ -1,6 +1,8 @@
+import { PrismaClient } from '@prisma/client';
 import { NextRequest } from 'next/server';
-import prisma from '@/app/lib/prisma';
 import { corsHeaders } from '@/lib/CornHeaders'
+
+const prisma = new PrismaClient();
 
 export async function PUT(req: NextRequest) {
     const { id, tag, title, content, publication } = await req.json();
@@ -8,7 +10,9 @@ export async function PUT(req: NextRequest) {
     if (!id) {
       return new Response(JSON.stringify('ID parameter is required'), {
         status: 200,
-        headers: corsHeaders,
+        headers: {
+          'Content-Type': 'application/json',
+        },
       })
     }
 
@@ -22,6 +26,7 @@ export async function PUT(req: NextRequest) {
           publication,
         },
       });
+
       return new Response(JSON.stringify(updatedAnnouncement), {
         status: 200,
         headers: corsHeaders,

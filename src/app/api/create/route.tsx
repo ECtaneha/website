@@ -1,5 +1,5 @@
-import type { NextRequest, NextResponse } from 'next/server'
 import { PrismaClient } from '@prisma/client'
+import { NextRequest } from 'next/server'
 import { corsHeaders } from '@/lib/CornHeaders'
 
 const prisma = new PrismaClient()

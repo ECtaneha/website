@@ -18,8 +18,9 @@ export default function PostForm() {
     const url = process.env.NEXT_PUBLIC_VERCEL_HOST;
 
     try {
-      const response = await fetch(url+'create', {
+      const response = await fetch('/api/create', {
         method: 'POST',
+        mode: 'cors',
         headers: {
           'Content-Type': 'application/json'
         },

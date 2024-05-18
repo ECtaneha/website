@@ -4,7 +4,7 @@ import { corsHeaders } from '@/lib/CornHeaders'
 
 const prisma = new PrismaClient();
 
-export async function GET(request: Request) {
+export async function GET() {
   const data: announcement[] = await prisma.announcement.findMany();
 
   return new Response(JSON.stringify(data), {
@@ -13,7 +13,7 @@ export async function GET(request: Request) {
   });
 }
 
-export async function HEAD(request: Request) {
+export async function HEAD() {
   const data: announcement[] = await prisma.announcement.findMany();
   return NextResponse.json({ length: data.length });
 }
