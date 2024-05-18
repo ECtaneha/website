@@ -30,7 +30,6 @@ export default function Page() {
 
     const response = await fetch(url+'sendMail', {
       method: 'POST',
-      mode: 'cors',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',

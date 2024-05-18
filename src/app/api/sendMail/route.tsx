@@ -1,5 +1,4 @@
-import { corsHeaders } from '@/lib/CorsHeaders';
-import { NextRequest } from 'next/server'
+import { NextResponse, NextRequest } from 'next/server'
 import nodeMailer from 'nodemailer'
 
 export async function POST(req: NextRequest) {
@@ -38,21 +37,10 @@ export async function POST(req: NextRequest) {
     };
 
     const info = await transporter.sendMail(mailOptions);
-    return new Response(JSON.stringify('Email sent successfully '), {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        ...corsHeaders,
-      },
-    });
+    console.log('成功しました');
+    return NextResponse.json({message: '成功しました'})
   } catch (error) {
     console.log(error);
-    return new Response(JSON.stringify('Failed to send Email'), {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        ...corsHeaders,
-      },
-    });
+    return NextResponse.json({message: '失敗しました'})
   }
 }
