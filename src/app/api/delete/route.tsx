@@ -11,9 +11,8 @@ export async function DELETE(req: NextRequest) {
         status: 400,
         headers: {
           'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': 'http://localhost:3000', // または '*' など適切なオリジン
-          'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-          'Access-Control-Allow-Headers': 'Content-Type, Authorization',        },
+          ...corsHeaders,
+        },
       });
     }
 
@@ -25,30 +24,27 @@ export async function DELETE(req: NextRequest) {
       status: 200,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'http://localhost:3000', // または '*' など適切なオリジン
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization',      },
-  });
+        ...corsHeaders,
+      },
+    });
   } catch (error) {
     console.error('Error deleting announcement:', error);
     return new Response(JSON.stringify({ error: 'Error deleting announcement' }), {
       status: 500,
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': 'http://localhost:3000', // または '*' など適切なオリジン
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type, Authorization',      },
+        ...corsHeaders,
+      },
     });
   }
 }
 
 export async function OPTIONS() {
   return new Response(null, {
-    status: 204, // No Content
+    status: 204,
     headers: {
-      'Access-Control-Allow-Origin': 'http://localhost:3000', // または '*' など適切なオリジン
-      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+      'Content-Type': 'application/json',
+      ...corsHeaders,
     },
   });
 }
