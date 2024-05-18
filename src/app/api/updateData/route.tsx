@@ -3,7 +3,6 @@ import prisma from '@/app/lib/prisma';
 import { corsHeaders } from '@/lib/CornHeaders'
 
 export async function PUT(req: NextRequest) {
-  if (req.method === 'PUT') {
     const { id, tag, title, content, publication } = await req.json();
 
     if (!id) {
@@ -34,10 +33,4 @@ export async function PUT(req: NextRequest) {
         headers: corsHeaders,
       });
     }
-  } else {
-    return new Response(JSON.stringify('Method Not Allowed'), {
-      status: 405,
-      headers: corsHeaders,
-    });
   }
-}
