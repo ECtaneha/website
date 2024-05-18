@@ -35,7 +35,7 @@ export async function PUT(req: NextRequest) {
       });
     }
   } else {
-    return new Response(JSON.stringify('Method not allowed'), {
+    return new Response(JSON.stringify('Method Not Allowed'), {
       status: 405,
       headers: corsHeaders,
     });
