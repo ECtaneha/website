@@ -80,6 +80,7 @@ export const EditForm = () => {
           }),
         });
       }
+
       setFetchTrigger(!fetchTrigger);
       handleSelectAll();
       alert('更新しました。')
@@ -112,6 +113,8 @@ export const EditForm = () => {
         },
         body: JSON.stringify({ id: id }),
       });
+
+      setFetchTrigger(!fetchTrigger);
     } catch (error) {
       console.error(`Error deleting announcement with id ${id}:`, error);
     }
