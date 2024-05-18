@@ -27,7 +27,7 @@ export const EditForm = () => {
 
   const fetchAnnouncements = async () => {
     try {
-      const response = await fetch(url+'getData');
+      const response = await fetch(url);
       if (response.ok) {
         const data = await response.json();
         const sortedAnnouncements = data.sort((a: Announcement, b: Announcement) =>
@@ -59,7 +59,7 @@ export const EditForm = () => {
     try {
       const selectedAnnouncements = announcements.filter((announcement) => announcement.selected);
       for (const announcement of selectedAnnouncements) {
-        await fetch(url+`updateData`, {
+        await fetch(url, {
           method: 'PUT',
           mode: 'cors',
           headers: {
@@ -98,7 +98,7 @@ export const EditForm = () => {
 
   const deleteAnnouncement = async (id: number) => {
     try {
-      await fetch(url+'deleteData', {
+      await fetch(url, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
