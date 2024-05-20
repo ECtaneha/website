@@ -2,23 +2,21 @@
 import React, { useState } from 'react'
 import styles from './header.module.scss'
 import Link from 'next/link'
-import EmailIcon from '@mui/icons-material/Email';
 import { Hamburger } from '@/components/Hamburger/Hamburger'
-import { Language } from '@/components/Language/Language'
-import { SNS } from "@/components/SNS/SNS"
-import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
+const url = process.env.NEXT_PUBLIC_PRODUCTION_URL;
+
 const links =[
   {
     title: '会社概要',
-    url: '/information',
+    url: `${url}/information`,
   },
   {
     title: '採用情報',
-    url: '/recruit',
+    url: `${url}/recruit`,
   },
   {
     title: '取扱品目',
-    url: '/handle/allClass',
+    url: `${url}/handle/allClass`,
   },
   {
     title: 'お問い合わせ',
@@ -40,7 +38,7 @@ export const Header = () => {
     >
       <Link
         className={styles.logo}
-        href='/'
+        href={`${url}`}
       >
         <h1
           id="logo"
