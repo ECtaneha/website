@@ -5,6 +5,7 @@ import { SiteMap } from '@/components/SiteMap/SiteMap';
 import Link from 'next/link';
 
 export const Footer = () => {
+  const url = process.env.NEXT_PUBLIC_VERCEL_HOST;
 
   const d = new Date();
   const now = d.getFullYear();
@@ -40,7 +41,7 @@ export const Footer = () => {
       <small className={styles.small}>©Taishin Co.,Ltd. {now} since1978</small>
       <Link
         className={styles.admin}
-        href='https://taishin-mirror.vercel.app/Admin/DashBoard'
+        href='https://taishin1977.vercel.app/Admin/DashBoard'
       />
     </footer>
   )
