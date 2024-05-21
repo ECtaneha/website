@@ -8,15 +8,15 @@ const url = process.env.NEXT_PUBLIC_PRODUCTION_URL;
 const links =[
   {
     title: '会社概要',
-    url: `${url}/information`,
+    url: `${url}information`,
   },
   {
     title: '採用情報',
-    url: `${url}/recruit`,
+    url: `${url}recruit`,
   },
   {
     title: '取扱品目',
-    url: `${url}/handle/allClass`,
+    url: `${url}handle/allClass`,
   },
   {
     title: 'お問い合わせ',

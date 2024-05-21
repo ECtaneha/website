@@ -28,7 +28,8 @@ $sp: 768px;
 .footer {
   width: 100%;
   height: fit-content;
-  border: 20px ridge #71cdff;
+  padding-block: 40px;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -37,7 +38,7 @@ $sp: 768px;
   z-index: 25;
   position: relative;
 
-  & .admin {
+  .admin {
     width: 20px;
     height: 20px;
     position: absolute;
@@ -46,95 +47,71 @@ $sp: 768px;
     cursor: default;
   }
 
-  @media (max-width: 768px) {
-    // display: none;
-  }
-}
-
-.informationWrapper {
-  width: 100%;
-  margin: 20px auto;
-  padding-inline: 20px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-
-  @media (max-width: $sp) {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .information {
-    font-size: .8rem;
+  .informationContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 20px;
+    margin-bottom: 40px;
 
-    .informationAddress {
-      .address {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .tel {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      }
-    }
-
-    .nintei {
-      width: 36px;
-      height: auto;
+    .informationWrapper {
+      width: 100%;
+      margin: 20px auto;
+      padding-inline: 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
 
       @media (max-width: $sp) {
-        width: 78px;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .information {
+        font-size: .8rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 20px;
+
+        .informationAddress {
+          padding-left: 1rem;
+
+          .address {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .tel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+          }
+        }
+
+        .nintei {
+          width: 36px;
+          height: auto;
+
+          @media (max-width: $sp) {
+            width: 78px;
+          }
+        }
+
+        @media (max-width: $sp) {
+          padding-left: 1rem;
+          font-size: 1rem;
+        }
+      }
+
+      .logo {
+        width: 300px;
+        height: auto;
+        aspect-ratio: 25 / 3;
       }
     }
-
-    @media (max-width: $sp) {
-      padding-left: 1rem;
-      font-size: 1rem;
-    }
-  }
-}
-
-.linksContainer {
-  width: 100%;
-  background-color: #71cdff;
-  display: flex;
-  justify-content: center;
-
-  & .linksWrapper {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-
-    @media (max-width: 1280px) {
-      width: 100%;
-    }
   }
 
-  & .link {
-    width: fit-content;
-    margin-right: 20px;
-    padding: 8px;
+  .small {
+    margin-bottom: 10px;
     color: #444;
-    font-weight: 600;
-    line-height: 2;
-    transition: .3s ease-in;
-
-    &:hover {
-      background-color: #fff;
-      color: #444;
-      transition: .2s ease-in;
-    }
   }
 }
 
-
-.small {
-  margin-bottom: 10px;
-  color: #444;
-}
