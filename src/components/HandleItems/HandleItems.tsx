@@ -25,7 +25,7 @@ export const HandleItems = () => {
               key={key}
               className={styles.link}
               href={{
-                pathname: `handle/`,
+                pathname: `/handle`,
                 query: { id: data.id, name: data.name }
               }}
             >

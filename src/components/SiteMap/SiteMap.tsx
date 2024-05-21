@@ -18,7 +18,7 @@ export const SiteMap = () => {
             {information[0].linkMenu.menu.map((prev, key) => (
               <div key={key}>
                 <Link href={{
-                  pathname: `information/`,
+                  pathname: `/information`,
                   query: { jumpId: `${prev.url}` }
                 }}>
                   <p>{`- ${prev.title}`}</p>
@@ -33,7 +33,7 @@ export const SiteMap = () => {
             {recruit[0].linkMenu.map((prev, key) => (
               <div key={key}>
                 <Link href={{
-                  pathname: `recruit/`,
+                  pathname: `/recruit`,
                   query: { jumpId: `${prev.url}` }
                 }}>
                   <p>{`- ${prev.title}`}</p>

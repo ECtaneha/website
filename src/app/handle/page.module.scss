@@ -3,7 +3,6 @@ $sp: 768px;
 
 .allClass {
   width: 100%;
-  padding-block: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 20px;
