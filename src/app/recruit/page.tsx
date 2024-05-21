@@ -77,7 +77,7 @@ export default function Page() {
       </div>
 
       <div className={styles.allMembersPhotoContainer}>
-				<div className={styles.allMembersPhotoWrapper}>
+				{/* <div className={styles.allMembersPhotoWrapper}>
 					<img
 						className={styles.allMembersPhoto}
 						src='/images/recruit/topImage1.jpg'
@@ -99,7 +99,7 @@ export default function Page() {
 						alt='member4'
 					/>
 				</div>
-			</div>
+			</div> */}
 
       <div
 				id='president'
