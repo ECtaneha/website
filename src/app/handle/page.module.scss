@@ -1,24 +1,32 @@
 $tab: 1280px;
 $sp: 768px;
 
-.allClass {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  gap: 20px;
+.allClassContainer {
+  width: 70%;
+  margin-inline: auto;
+  padding-inline: 40px;
 
   @media (max-width: $sp) {
     width: 90%;
-    margin: 20px auto 0;
-    padding: 0;
-    grid-template-columns: 1fr;
+    padding-inline: 0;
   }
 
-  .companyUlAllClass {
+  .allClass {
     width: 100%;
-    margin-bottom: 60px;
-    padding: 10px;
-    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 20px;
+
+    @media (max-width: $sp) {
+      grid-template-columns: 1fr;
+    }
+
+    .companyUlAllClass {
+      width: 100%;
+      margin-bottom: 60px;
+      padding: 10px;
+      list-style: none;
+    }
   }
 }
 
@@ -86,12 +94,6 @@ $sp: 768px;
   @media (max-width: $sp) {
     font-size: 1rem;
   }
-}
-
-.allClassContainer {
-  width: 70%;
-  margin-inline: auto;
-  padding-inline: 40px;
 }
 
 .handleContainer {
@@ -277,18 +279,10 @@ $sp: 768px;
   }
 }
 
-.selectBox {
-  width: 80%;
-  margin: 20px auto;
-
-  @media (min-width: 769px) {
-    display: none;
-  }
-}
-
 .space {
   padding-right: 10px;
 }
+
 .tradingCompany {
   margin-top: 40px;
 }
