@@ -51,13 +51,15 @@ export default function Page() {
                 }}
               >
                 <KeyboardArrowRightIcon className={styles.linkArrow}/>
-                {data.class.map((array, key)=> (
-                  <span
-                    key={key}
-                    className={styles.classArray}>
-                    {array}
-                  </span>
-                ))}
+                <div className={styles.categoryNameContainer}>
+                  {data.class.map((array, key)=> (
+                    <span
+                      key={key}
+                      className={styles.classArray}>
+                      {array}
+                    </span>
+                  ))}
+                </div>
               </Link>
             ))}
             <Link

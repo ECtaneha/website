@@ -173,14 +173,19 @@ $sp: 768px;
 .link {
   width: fit-content;
   font-size: .8rem;
-  white-space: nowrap;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   position: relative;
+
+  .categoryNameContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .linkArrow {
     width: 1rem;
     height: auto;
+    margin-top: 2px;
   }
 
   &::after {
