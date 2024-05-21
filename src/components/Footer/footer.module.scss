@@ -66,6 +66,7 @@ $sp: 768px;
 
       @media (max-width: $tab) {
         flex-direction: row;
+        justify-content: center;
         gap: 20px;
       }
 
