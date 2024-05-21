@@ -38,9 +38,9 @@
   background-size: cover;
 
   @media (max-width: 768px) {
-    height: 100vh;
+    aspect-ratio: 1 / 2;
     background: url('/images/heroImage/heroImageSP.jpg') 0 0 no-repeat;
-    background-size: contain;
+    background-size: cover;
   }
 }
 
