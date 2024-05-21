@@ -117,8 +117,11 @@ $sp: 768px;
   height: fit-content;
   padding: 40px;
   background-color: #fff;
-  box-shadow: 7px 7px 7px #ddd;
-
+  box-shadow:
+    7px 7px 7px #ddd,
+    -7px 7px 7px #ddd,
+    7px -7px 7px #ddd,
+    -7px -7px 7px #ddd;
 
   @media (max-width: 500px) {
     padding: 40px 20px;
@@ -166,7 +169,9 @@ $sp: 768px;
   background-color: #fff;
   box-shadow:
     7px 7px 7px #ddd,
-    -1px -1px 5px #eee;
+    -7px 7px 7px #ddd,
+    7px -7px 7px #ddd,
+    -7px -7px 7px #ddd;
   display: flex;
   flex-direction: column;
 
