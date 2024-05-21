@@ -22,7 +22,7 @@ export default function Page() {
         <div className={styles.handleContainer}>
           <BreadCrumb
             parentPath='トップ'
-            childPath='取扱品目'
+            childPath={`${className}`}
           />
           <div className={styles.linksContainer}>
             <div className={styles.contentsContainer}>
