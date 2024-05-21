@@ -76,8 +76,8 @@ export default function Page() {
         </div>
       </div>
 
-      <div className={styles.allMembersPhotoContainer}>
-				{/* <div className={styles.allMembersPhotoWrapper}>
+      {/* <div className={styles.allMembersPhotoContainer}>
+				<div className={styles.allMembersPhotoWrapper}>
 					<img
 						className={styles.allMembersPhoto}
 						src='/images/recruit/topImage1.jpg'
