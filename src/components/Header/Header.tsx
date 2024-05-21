@@ -3,20 +3,19 @@ import React, { useState } from 'react'
 import styles from './header.module.scss'
 import Link from 'next/link'
 import { Hamburger } from '@/components/Hamburger/Hamburger'
-const url = process.env.NEXT_PUBLIC_PRODUCTION_URL;
 
 const links =[
   {
     title: '会社概要',
-    url: `${url}information`,
+    url: '/information',
   },
   {
     title: '採用情報',
-    url: `${url}recruit`,
+    url: '/recruit',
   },
   {
     title: '取扱品目',
-    url: `${url}handle/allClass`,
+    url: '/handle/allClass',
   },
   {
     title: 'お問い合わせ',
@@ -38,7 +37,7 @@ export const Header = () => {
     >
       <Link
         className={styles.logo}
-        href={`${url}`}
+        href='/'
       >
         <h1
           id="logo"
