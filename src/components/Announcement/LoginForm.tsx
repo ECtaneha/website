@@ -9,7 +9,13 @@ export const LoginForm = (props: any) => {
     const adminID = process.env.NEXT_PUBLIC_ADMIN_ID;
     const adminPassword = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
 
-    if(props.userID === adminID && props.password === adminPassword){
+    const users = JSON.parse(process.env.NEXT_PUBLIC_USERS || '[]');
+    const foundUser = users.find((user: {
+       id: any;
+       password: any;
+      }) => user.id === props.userID && user.password === props.password
+    );
+    if(foundUser){
       props.setIsLogin(true);
     } else {
       alert('idまたはpasswordが違います。')
