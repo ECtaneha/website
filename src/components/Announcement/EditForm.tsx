@@ -63,6 +63,12 @@ export const EditForm = () => {
   const handleUpdateSelected = async () => {
     try {
       const selectedAnnouncements = announcements.filter((announcement) => announcement.selected);
+
+      if (selectedAnnouncements.length === 0) {
+        alert('選択されたお知らせがありません。');
+        return;
+      };
+
       for (const announcement of selectedAnnouncements) {
         await fetch(url+'update', {
           method: 'PUT',
@@ -81,7 +87,7 @@ export const EditForm = () => {
       }
 
       setFetchTrigger(!fetchTrigger);
-      handleSelectAll();
+      handleDeselectAll();
       alert('更新しました。')
 
     } catch (error) {
@@ -95,8 +101,14 @@ export const EditForm = () => {
         .filter((announcement) => announcement.selected)
         .map((announcement) => announcement.id);
 
+      if (selectedIds.length === 0) {
+        alert('選択されたお知らせがありません。');
+        return;
+      };
+
       await Promise.all(selectedIds.map((id) => deleteAnnouncement(id)));
       setFetchTrigger(!fetchTrigger);
+      alert('削除しました。');
     } catch (error) {
       console.error('Error deleting selected announcements:', error);
     }
@@ -113,6 +125,7 @@ export const EditForm = () => {
         body: JSON.stringify({ id: id }),
       });
 
+      handleDeselectAll();
       setFetchTrigger(!fetchTrigger);
     } catch (error) {
       console.error(`Error deleting announcement with id ${id}:`, error);
