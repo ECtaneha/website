@@ -16,7 +16,6 @@ $sp: 768px;
 
 
   @media (max-width: $sp) {
-    min-height: 000px;
     padding-inline: 20px;
   }
 }
@@ -26,16 +25,19 @@ $sp: 768px;
   min-height: 660px;
   aspect-ratio: 19 / 6;
   background: url('/images/mission/mission.jpg') 50% 50% no-repeat;
+  background-size: contain;
 
   @media (max-width: $tab) {
+    aspect-ratio: 19 / 14;
+    background-size: cover;
     background: url('/images/mission/missionTAB.jpg') 50% 50% no-repeat;
   }
 
   @media (max-width: $sp) {
     min-height: 0;
-    aspect-ratio: 19 / 12;
+    aspect-ratio: 19 / 15;
     background: url('/images/mission/missionSP.jpg') 50% 50% no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     position: relative;
     inset: 0 0 40px;
   }

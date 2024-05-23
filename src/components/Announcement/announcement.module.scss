@@ -2,95 +2,103 @@ $tab: 1280px;
 $sp: 768px;
 
 .announcementContainer {
+  margin-bottom: 300px;
   padding: 40px;
 
   @media (max-width: $sp) {
     padding-inline: 20px;
   }
-}
 
-.announcementContent {
-  width: 100%;
-  margin-top: 10px;
-  font-size: 0.8rem;
-  transition: .2s ease-in-out;
-  transform-origin: 0 0;
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: .2s grid-template-rows ease;
+  .announcementWrapper {
+    width: 80%;
+    height: auto;
+    margin: 0 auto 100px;
+    margin-inline: auto;
 
-  div {
-    overflow: hidden;
-  }
+    @media (max-width: $sp) {
+      width: 100%;
+      margin: 0;
+    }
 
-  &.open {
-    grid-template-rows: 1fr;
-  }
-}
+    .announcementUl {
+      height: auto;
 
-.announcementContentWrapper {
-  width: 100%;
-  height: fit-content;
-}
+      .announcementLi {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #444;
+        display: flex;
+        flex-direction: column;
+        position: relative;
 
-.announcementDate {
-  width: 30%;
-}
+        .announcementContentWrapper {
+          width: 100%;
+          height: fit-content;
 
-.announcementHeader {
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-}
+          .announcementContent {
+            width: 100%;
+            margin-top: 10px;
+            transition: .2s ease-in-out;
+            transform-origin: 0 0;
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: .2s grid-template-rows ease;
 
-.announcementLi {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 5px 10px;
-  border-bottom: 1px solid #444;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
+            div {
+              overflow: hidden;
+            }
 
-.announcementSelectTag {
-  width: fit-content;
-  min-width: 70px;
-  height: 24px;
-  margin-left: 5px;
-  padding: 2px 5px;
-  background-color: #fff;
-  border: 1px solid;
-  font-size: 0.75rem;
-  text-align: center;
-}
+            &.open {
+              grid-template-rows: 1fr;
+            }
+          }
 
-.announcementTag {
-  width: 80px;
-  padding: 2px;
-  border: 1px solid;
-  border-radius: 0px;
-  font-size: 0.75rem;
-  text-align: center;
-}
+          .announcementTitle {
+            font-size: 1.25rem;
+            font-weight: bold;
+          }
+        }
 
-.announcementTitle {
-  font-weight: bold;
-}
+        .announcementHeader {
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: space-between;
 
-.announcementUl {
-  height: auto;
-}
+          .announcementDate {
+            width: 30%;
+          }
 
-.announcementWrapper {
-  width: 80%;
-  height: auto;
-  margin: 0 auto 100px;
-  margin-inline: auto;
+          .announcementTag {
+            width: 80px;
+            padding: 2px;
+            border: 1px solid;
+            border-radius: 0px;
+            font-size: 0.75rem;
+            text-align: center;
+          }
+        }
+      }
+    }
 
-  @media (max-width: $sp) {
-    width: 100%;
-    margin: 0;
+    .tagWrapper {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+
+      .announcementSelectTag {
+        width: fit-content;
+        min-width: 70px;
+        height: 24px;
+        margin-left: 5px;
+        padding: 2px 5px;
+        background-color: #fff;
+        border: 1px solid;
+        font-size: 0.75rem;
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -172,69 +180,67 @@ $sp: 768px;
       flex-direction: column;
       gap: 10px;
 
-      & .date {
+      .date {
         display: flex;
         gap: 40px;
 
-        & div:first-child span {
+        div:first-child span {
           width: 5rem;
         }
 
-        & span + span {
+        span + span {
           margin-left: 10px;
         }
       }
 
-
-
-      & .editAnnouncementSpan {
+      .editAnnouncementSpan {
         width: 7rem;
         margin-right: 0 !important;
         font-weight: bold;
         display: inline-block;
       }
 
-      & .editContentContainer {
-        & .editContent {
+      .editContentContainer {
+        .editContent {
           width:  50rem;
         }
       }
 
-      & .editTitleContainer{
-        & span {
+      .editTitleContainer{
+        span {
           position: relative;
           top: 50%;
           transform: translateY(-50%);
         }
       }
 
-      & input {
+      input {
         width: 30rem;
         padding: 10px;
         border: 1px solid #c4c4c4;
         border-radius: 5px;
       }
 
-      & .tagAndPub {
+      .tagAndPub {
         display: flex;
         gap: 27px;
 
-        & div span {
+        div span {
           margin-right: 10px;
           font-weight: bold;
         }
 
-        & .editAnnouncementSpan {
+        .editAnnouncementSpan {
           position: relative;
           top: 50%;
           transform: translateY(-50%);
         }
 
-        & .editTag {
+        .editTag {
           width: 20rem;
         }
 
-        & select {
+        select {
           width: 5rem;
           height: 45px;
           border-radius: 5px;
@@ -243,7 +249,7 @@ $sp: 768px;
       }
     }
 
-    & .editInputLabel {
+    .editInputLabel {
       width: 2rem;
       padding-inline: 20px;
       display: flex;
@@ -273,7 +279,7 @@ $sp: 768px;
     width: 100%;
   }
 
-  & .loginButton {
+  .loginButton {
     width: 100%;
     height: 56px;
     background-image: linear-gradient(90deg, rgba(141, 139, 226, 1), rgba(253, 187, 203, 1));
@@ -383,11 +389,5 @@ $sp: 768px;
   }
 }
 
-.tagWrapper {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
 
 

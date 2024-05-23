@@ -97,12 +97,8 @@ $sp: 768px;
         }
 
         .nintei {
-          width: 36px;
+          width: 4rem;
           height: auto;
-
-          @media (max-width: $sp) {
-            width: 44px;
-          }
         }
 
         @media (max-width: $sp) {

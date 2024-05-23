@@ -33,11 +33,16 @@ export default function Home() {
       style={{'backgroundImage': backgroundImage}}
     >
       <HeroImage />
+      <div className={styles.space}></div>
       <div className={styles.contentsContainer}>
         <AboutUs />
+        <div className={styles.space}></div>
         <Mission />
+        <div className={styles.space}></div>
         <HandleItems />
+        <div className={styles.space}></div>
         <AnnouncementList />
+        <div className={styles.space}></div>
       </div>
     </main>
   );
