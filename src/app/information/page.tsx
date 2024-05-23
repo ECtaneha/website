@@ -108,7 +108,7 @@ export default function Page() {
           <div className={styles.greet}>
             <img
               className={styles.presidentPhoto}
-              src='/images/information/presidentPhoto.jpg'
+              src='/images/recruit/president.jpg'
               alt='presidentPhoto'
             />
             <div className={styles.greetWrapper}>
