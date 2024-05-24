@@ -12,7 +12,7 @@ export const Card = (props: item) => {
   return (
     <div className={styles.cardWrapper}>
       <h3 className={styles.h3}>{props.title}</h3>
-      <p className={styles.description}>{RenderParagraphs(props.description, '\n')}</p>
+      <div className={styles.description}>{RenderParagraphs(props.description, '\n')}</div>
       <div className={styles.space}></div>
       <img
         className={styles.image}
