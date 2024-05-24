@@ -300,27 +300,27 @@ type Photo = {
 const slides = [
 	{
 		index: 0,
-		url: 'images/recruit/arima.jpg',
+		url: '/images/recruit/arima.jpg',
 		alt: 'エクシブ有馬'
 	},
 	{
 		index: 1,
-		url: 'images/recruit/rokko.jpg',
+		url: '/images/recruit/rokko.jpg',
 		alt: 'エクシブ六甲'
 	},
 	{
 		index: 2,
-		url: 'images/recruit/kyoto.jpg',
+		url: '/images/recruit/kyoto.jpg',
 		alt: 'エクシブ京都'
 	},
 	{
 		index: 3,
-		url: 'images/recruit/kobe.jpg',
+		url: '/images/recruit/kobe.jpg',
 		alt: 'エクシブ神戸'
 	},
 	{
 		index: 4,
-		url: 'images/recruit/naruto.jpg',
+		url: '/images/recruit/naruto.jpg',
 		alt: 'エクシブ鳴門'
 	}
 ]
