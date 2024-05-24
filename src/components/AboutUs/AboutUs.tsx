@@ -59,7 +59,7 @@ const datas = [
   },
   {
     'title': '取引社数',
-    'description': 'description',
+    'description': '500社',
     'src': '/images/aboutUs/tradingCompanies.png',
     'alt': '取引社数'
   },
