@@ -260,12 +260,16 @@ $sp: 768px;
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 3px 3px 3px #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: .1s ease-in;
 
   &:hover {
     translate: 2px 2px;
     box-shadow: 0px 0px 0px #999;
   }
+
 }
 
 .title {

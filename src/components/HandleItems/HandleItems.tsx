@@ -40,11 +40,12 @@ export const HandleItems = () => {
             </Link>
           )}
         </div>
-        <button className={styles.list}>
-          <Link href='handle/allClass'>
-            一覧はこちら
-          </Link>
-        </button>
+        <Link
+          className={styles.list}
+          href='handle/allClass'
+        >
+          <p>一覧はこちら</p>
+        </Link>
       </div>
     </article>
   )
