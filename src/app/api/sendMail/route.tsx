@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
       port: 587,
       secure: false,
       auth: {
-        user: 'admin@taishin1977.jp',
+        user: 'taishin1977.jp',
         pass: pass
       },
       tls: {
@@ -25,7 +25,7 @@ export async function POST(req: NextRequest) {
 
     const mailOptions = {
       from: 'タイシンHP',
-      to: 'admin@taishin1977.jp',
+      to: 'taishin1977.jp',
       subject: 'コンタクトページ',
       text: `
         件名：${title}\n\n

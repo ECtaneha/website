@@ -26,9 +26,10 @@ export default function Page() {
   };
 
   const handleSend = async () => {
-    const url = process.env.NEXT_PUBLIC_VERCEL_HOST;
+    const url = 'http://localhost:8000/postMail';
+    // const url = process.env.NEXT_PUBLIC_VERCEL_HOST+'sendMail';
 
-    const response = await fetch(url+'sendMail', {
+    const response = await fetch(url, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
