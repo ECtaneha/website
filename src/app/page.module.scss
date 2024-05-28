@@ -10,10 +10,6 @@ $sp: 768px;
 .contentsContainer {
   width: 100%;
   margin-inline: auto;
-
-  @media (max-width: $sp) {
-    padding-top: 40px;
-  }
 }
 
 .contentsWrapper {
@@ -123,7 +119,11 @@ $sp: 768px;
 }
 
 .space {
-  margin-bottom: 300px;
+  margin-bottom: 400px;
+
+  @media (max-width: $sp) {
+    margin-bottom: 200px;
+  }
 }
 
 /* Enable hover only on non-touch devices */

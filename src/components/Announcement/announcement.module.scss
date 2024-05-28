@@ -6,6 +6,7 @@ $sp: 768px;
   padding: 40px;
 
   @media (max-width: $sp) {
+    margin-bottom: 0;
     padding-inline: 20px;
   }
 
