@@ -27,10 +27,10 @@ export default function Page() {
   };
 
   const handleSend = async () => {
-    const url = 'http://localhost:8000/postMail';
-    // const url = process.env.NEXT_PUBLIC_VERCEL_HOST+'sendMail';
+    // const url = 'http://localhost:8000/postMail';
+    const url = process.env.NEXT_PUBLIC_VERCEL_HOST;
 
-    const response = await fetch(url, {
+    const response = await fetch(url+'sendMail', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
