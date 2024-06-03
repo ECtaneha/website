@@ -38,7 +38,7 @@ export const Employee = (props: any) => {
           </div>
           <div className={styles.messageWrapper}>
             <p className={styles.messageTitle}>{employee.messageTitle}</p>
-            <p className={styles.message}>{RenderParagraphs(employee.message, '\n')}</p>
+            <div className={styles.message}>{RenderParagraphs(employee.message, '\n')}</div>
           </div>
         </div>
       ))}

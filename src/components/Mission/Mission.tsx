@@ -13,10 +13,10 @@ export const Mission = () => {
         <h2 className={globalStyles.h2}>
           <div className={globalStyles.h2Wrapper}>
             <div className={styles.missionTitle}>
-              <p>タイシン</p>
-              <p>３つの使命</p>
+              <p>タイシン　３つの使命</p>
+              {/* <p>３つの使命</p> */}
             </div>
-            <span>mission</span>
+            <span>社会的意義</span>
           </div>
         </h2>
       </div>

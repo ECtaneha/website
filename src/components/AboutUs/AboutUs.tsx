@@ -11,7 +11,7 @@ export const AboutUs = () => {
         <h2 className={globalStyles.h2}>
           <div className={globalStyles.h2Wrapper}>
             <p>タイシンについて</p>
-            <span>about us</span>
+            <span>会社情報</span>
           </div>
         </h2>
         <div className={styles.cardContainer}>

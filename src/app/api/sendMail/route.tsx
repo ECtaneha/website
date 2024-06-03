@@ -11,15 +11,16 @@ export async function POST(req: NextRequest) {
   try {
     const transporter = nodeMailer.createTransport({
       host: 'sv15052.xserver.jp',
-      port: 587,
-      secure: false,
+      // port: 587,
+      port: 465,
+      // secure: false,
       auth: {
         user: 'admin@taishin1977.jp',
         pass: pass
       },
-      tls: {
-        rejectUnauthorized: false
-      },
+      // tls: {
+      //   rejectUnauthorized: false
+      // },
       authMethod: 'PLAIN'
     })
 

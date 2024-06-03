@@ -152,6 +152,26 @@ $sp: 768px;
   margin-top: 40px;
 }
 
+.h3 {
+  width: 100%;
+  margin-top: 50px;
+  padding: 12px 20px;
+  border-top: 4px solid #000b84;
+  border-bottom: 2px solid #000b84;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 4px;
+    height: calc(1rem + 4px);
+    border-left: 4px solid #000b84;
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    translate: 0 calc(-50% + 2px);
+  }
+}
+
 .interview {
   width: calc(100% - 340px);
   overflow-wrap: break-word;
@@ -335,8 +355,6 @@ $sp: 768px;
   }
 }
 
-
-
 .presidentNameContainer {
   width: fit-content;
   margin-top: 20px;
@@ -458,6 +476,27 @@ $sp: 768px;
   border: 1px solid #444;
 }
 
+.resortWrapper {
+  margin-block: 10px;
+
+  .resortLink {
+    padding: 15px 5px;
+    border-bottom: 1px dashed #b5b5b5;
+    display: flex;
+    align-items: center;
+
+    .resortArrow {
+      width: 1.2rem;
+      color: #b5b5b5;
+      translate: 0 2px;
+    }
+
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
 .sp {
   display: none;
 
@@ -469,6 +508,10 @@ $sp: 768px;
 .welfare {
   color: blue;
   text-decoration: underline;
+}
+
+.welfareContainer {
+  margin-bottom: 100px;
 }
 
 .welfareDescription {

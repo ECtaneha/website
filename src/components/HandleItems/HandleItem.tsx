@@ -22,7 +22,7 @@ export const HandleItem = (props: any) => {
         </div>
       </div>
 
-      <h2 className={styles.h2}>取引業者一覧</h2>
+      <h2 className={styles.h2}>取引業者リンク一覧</h2>
       <ul className={styles.companyUl}>
         {props.classData && props.classData.links.map((
           link: { name: string, url: string },
@@ -32,12 +32,15 @@ export const HandleItem = (props: any) => {
             key={key}
             className={styles.companyLi}
           >
-            <Link
-              className={styles.companyLink}
-              href={link.url}
-            >
-              {link.name}
-            </Link>
+            {link.url
+              ? <Link
+                  className={styles.companyLink}
+                  href={link.url}
+                >
+                  {link.name}
+                </Link>
+              : <span>{link.name}</span>
+            }
           </li>
         ))}
       </ul>

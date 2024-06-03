@@ -43,7 +43,7 @@ export const SiteMap = () => {
           </div>
           <div>
             <Link href='/handle/allClass'>
-              <h4>取扱品目</h4>
+              <h4>取扱メーカーリンク</h4>
             </Link>
             <div className={styles.informationHandleItems}>
               {links.map((link) => (

@@ -11,6 +11,8 @@ import { RenderParagraphs } from '@/lib/RenderParagraphs'
 import { useSearchParams } from 'next/navigation'
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Carousel } from '@/components/Carousel/Carousel'
+import resort from './resort.json'
+import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 
 export default function Page() {
 	const { language, setLanguage } = useContext(CurrentLanguage);
@@ -223,7 +225,7 @@ export default function Page() {
 								正社員登用有<br />
 								エクシブスーパースイートルーム全国27か所宿泊などの福利厚生あり（詳細は下記
 								<Link
-								className={styles.welfare}
+									className={styles.welfare}
 									href='#Welfare'
 								>
 									福利厚生
@@ -235,16 +237,40 @@ export default function Page() {
 				</table>
 			</div>
 
-			<div id='Welfare'>
+			<div
+				id='Welfare'
+				className={styles.welfareContainer}
+			>
 				<h2 className={styles.h2}>福利厚生施設</h2>
 				<div className={styles.welfareDescription}>
-					<p>ベイコート倶楽部（芦屋、東京、蒲郡、横浜）はラグジュアリースウィートに｡</p>
-					<p>全国27箇所に有るエクシブはどこでも、どんなグレードの部屋でも利用可能｡</p>
-					<p>勤続5年毎に家族5人でスーパースウィートルームに宿泊できます｡</p>
-					<p>同時に平日二日の休日も支給されるので、混雑を避けたリゾートを楽めます。</p>
+					<h3 className={`${styles.h3}`}>社員旅行よりも 家族旅行</h3>
+					<p style={{textAlign: 'center', lineHeight: '2.5rem'}}>ベイコート倶楽部（芦屋、東京、蒲郡、横浜）はラグジュアリースウィートに｡<br />
+					全国27箇所に有るエクシブはどこでも、どんなグレードの部屋でも利用可能｡<br />
+					勤続5年毎に家族5人でスーパースウィートルームに宿泊できます｡<br />
+					同時に平日二日の休日も支給されるので、混雑を避けたリゾートを楽めます♬<br />
+					タイシン入社3～5年目から リゾートトラスト株式会社が運営する会員制リゾートホテル「エクシブ・ベイコート倶楽部」を利用できます。</p>
+					<div>画像</div>
+					<p>上記外観写真以外の掲載写真は弊社社員が撮影した写真となります。</p>
+					{resort.map((prevResort, key) => (
+						<div
+							className={styles.resortWrapper}
+							key={key}
+						>
+							{prevResort.image &&
+								<div>
+									<h3 className={styles.h3}>{prevResort.h3}</h3>
+									<img src={`prevResort.image`} alt={prevResort.linkTitle}/>
+								</div>
+							}
+							<Link
+								className={styles.resortLink}
+								href={prevResort.url}>
+								<PlayCircleIcon className={styles.resortArrow}/>
+								<span>{prevResort.linkTitle}</span>
+							</Link>
+						</div>
+					))}
 				</div>
-				<Carousel slides={slides}/>
-				{/* <Carousel2 /> */}
 			</div>
     </div>
   )

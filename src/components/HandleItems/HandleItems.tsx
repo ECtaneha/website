@@ -16,7 +16,7 @@ export const HandleItems = () => {
         <h2 className={globalStyles.h2}>
           <div className={globalStyles.h2Wrapper}>
             <p>取扱品目</p>
-            <span>handle items</span>
+            <span>取扱メーカーリンク</span>
           </div>
         </h2>
         <div className={styles.handleItemsContainer}>

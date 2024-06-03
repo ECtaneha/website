@@ -14,7 +14,7 @@ const links =[
     url: '/recruit',
   },
   {
-    title: '取扱品目',
+    title: '取扱メーカーリンク',
     url: '/handle/allClass',
   },
   {

@@ -70,15 +70,16 @@ $sp: 768px;
 }
 
 .companyLink {
-  font-size: 12px;
   width: fit-content;
+  color: blue;
+  font-size: 12px;
   display: block;
   position: relative;
 
   &::after {
     content: '';
     width: 110%;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid blue;
     display: block;
     transition: .2s ease-in-out;
     position: absolute;
@@ -184,31 +185,34 @@ $sp: 768px;
 
   .link {
     width: fit-content;
+    border-bottom: 1px solid blue;
     font-size: .8rem;
     white-space: nowrap;
     display: flex;
     align-items: center;
     position: relative;
+    // text-decoration: underline;
+    color: blue;
 
     .linkArrow {
       width: 1rem;
       height: auto;
     }
 
-    &::after {
-      content: '';
-      width: calc(100% + 3px);
-      height: 100%;
-      border-bottom: 1px solid #444;
-      transition: .2s ease-in-out;
-      position: absolute;
-      transform-origin: 0 0;
-      scale: 0 1;
-    }
+    // &::after {
+    //   content: '';
+    //   width: calc(100% + 3px);
+    //   height: 100%;
+    //   border-bottom: 1px solid #444;
+    //   transition: .2s ease-in-out;
+    //   position: absolute;
+    //   transform-origin: 0 0;
+    //   scale: 0 1;
+    // }
 
-    &:hover::after {
-      scale: 1;
-    }
+    // &:hover::after {
+    //   scale: 1;
+    // }
   }
 }
 

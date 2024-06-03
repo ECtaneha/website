@@ -50,7 +50,7 @@ export default function Page() {
                   query: { id: data.id, name: data.name }
                 }}
               >
-                <KeyboardArrowRightIcon className={styles.linkArrow}/>
+                {/* <KeyboardArrowRightIcon className={styles.linkArrow}/> */}
                 <div className={styles.categoryNameContainer}>
                   {data.class.map((array, key)=> (
                     <span
@@ -66,7 +66,7 @@ export default function Page() {
               className={styles.link}
               href='handle/allClass'
             >
-              <KeyboardArrowRightIcon className={styles.linkArrow}/>
+              {/* <KeyboardArrowRightIcon className={styles.linkArrow}/> */}
               一覧
             </Link>
           </div>

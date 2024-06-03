@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './handleItems.module.scss'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 type item = {
   name: string,
   class: string[],
-  thumbnail: string,
+  thumbnail: string[],
   width: number,
   height: number,
   alt: string,
@@ -17,7 +17,7 @@ export const Item = (props: item) => {
     <div className={styles.itemContainer}>
       <img
         className={styles.image}
-        src={props.thumbnail}
+        src={props.thumbnail[0]}
         alt={props.alt}
       />
       <div className={styles.descriptionWrapper}>
@@ -32,7 +32,15 @@ export const Item = (props: item) => {
           ))}
         </p>
       </div>
-      <ArrowForwardIosIcon className={styles.itemArrow}/>
+      <p className={styles.itemInduction}>詳細ページへ</p>
+      {/* <KeyboardArrowDownIcon className={styles.itemArrow}/> */}
+      <div className={styles.popUp}>
+        <img
+          className={styles.popUpImage}
+          src={props.thumbnail[1]}
+          alt={props.alt}
+        />
+      </div>
     </div>
   )
 }

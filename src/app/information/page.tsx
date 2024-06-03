@@ -92,7 +92,7 @@ export default function Page() {
               `}
               href={`#${menu.url}`}
             >
-              <KeyboardArrowRightIcon />
+              <KeyboardArrowRightIcon className={styles.arrow}/>
               {menu.title}
             </Link>
           ))}
