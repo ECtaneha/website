@@ -8,7 +8,7 @@ type Data = {
   name: string;
   class: string[];
   description: string;
-  thumbnail: string;
+  thumbnail: string[];
   src: string[];
   minorClass: string[];
   minorClassDescription: string[];
