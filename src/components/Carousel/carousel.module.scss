@@ -2,8 +2,7 @@ $tab: 1280px;
 $sp: 768px;
 
 .carouselContainer {
-  width: 60%;
-  margin: 0 auto 40px;
+  margin: 20px 0;
   overflow: hidden;
   transition: .2s ease-in-out;
   position: relative;
@@ -35,6 +34,7 @@ $sp: 768px;
 
 .Slider {
   display: flex;
+  transition: .2s ease-in-out;
 
   .slideTitle {
     width: 100%;

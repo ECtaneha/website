@@ -256,15 +256,18 @@ export default function Page() {
 							className={styles.resortWrapper}
 							key={key}
 						>
-							{prevResort.image &&
+							{prevResort.published === "true" &&
 								<div>
 									<h3 className={styles.h3}>{prevResort.h3}</h3>
-									<img src={`prevResort.image`} alt={prevResort.linkTitle}/>
+									<Carousel slides={prevResort.image}/>
 								</div>
 							}
 							<Link
 								className={styles.resortLink}
-								href={prevResort.url}>
+								href={prevResort.url}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<PlayCircleIcon className={styles.resortArrow}/>
 								<span>{prevResort.linkTitle}</span>
 							</Link>
@@ -322,31 +325,3 @@ type Photo = {
 	photo1: string;
 	photo2: string;
 }
-
-const slides = [
-	{
-		index: 0,
-		url: '/images/recruit/arima.jpg',
-		alt: 'エクシブ有馬'
-	},
-	{
-		index: 1,
-		url: '/images/recruit/rokko.jpg',
-		alt: 'エクシブ六甲'
-	},
-	{
-		index: 2,
-		url: '/images/recruit/kyoto.jpg',
-		alt: 'エクシブ京都'
-	},
-	{
-		index: 3,
-		url: '/images/recruit/kobe.jpg',
-		alt: 'エクシブ神戸'
-	},
-	{
-		index: 4,
-		url: '/images/recruit/naruto.jpg',
-		alt: 'エクシブ鳴門'
-	}
-]

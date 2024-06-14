@@ -13,7 +13,6 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 type SlideProps = {
-  index: number,
   url: string,
   alt: string
 }
@@ -28,12 +27,11 @@ export const Carousel = (props: Props) => {
       <CarouselProvider
         naturalSlideWidth={0}
         naturalSlideHeight={0}
-        totalSlides={5}
+        totalSlides={3}
       >
         <Slider classNameTray={styles.Slider}>
           {props.slides.map((slide: SlideProps, key: number) => (
-            <Slide key={key} index={slide.index}>
-              <p className={styles.slideTitle}>{slide.alt}</p>
+            <Slide key={key} index={key}>
               <img
                 className={styles.img}
                 src={slide.url}
