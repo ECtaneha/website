@@ -19,7 +19,7 @@ const links =[
   },
   {
     title: 'お問い合わせ',
-    url: '/contact',
+    url: 'mailto:admin&#64;taishin1977.jp',
   },
 ]
 
