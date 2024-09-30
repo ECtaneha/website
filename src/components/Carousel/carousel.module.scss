@@ -28,6 +28,7 @@ $sp: 768px;
 
   @media (max-width: $sp) {
     width: 90%;
+    margin-inline: auto;
     height: auto;
   }
 }
