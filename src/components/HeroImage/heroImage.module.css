@@ -8,6 +8,10 @@
   display: flex;
   justify-content: space-between;
   font-family: 'Noto Serif JP', serif;
+
+  @media (max-width: 768px) {
+    aspect-ratio: 1 / 2;
+  }
 }
 
 .catchCopy {
@@ -38,7 +42,6 @@
   background-size: cover;
 
   @media (max-width: 768px) {
-    aspect-ratio: 1 / 2;
     background: url('/images/heroImage/heroImageSP.jpg') 0 0 no-repeat;
     background-size: cover;
   }
